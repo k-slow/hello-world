@@ -15,3 +15,124 @@ p {
   margin: 50px auto;
   font: 30px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
 }
+
+.gsd-link {
+  display: block;
+  width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  font: 20px Monaco,"Courier New",monospace;
+  color: #333;
+}
+
+/* Get Shit Done page styles */
+.gsd-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: Monaco,"Courier New","DejaVu Sans Mono",monospace;
+}
+
+.gsd-title {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+.gsd-subtitle {
+  font-size: 14px !important;
+  width: auto !important;
+  text-align: center;
+  color: #666;
+  margin: 0 auto 30px !important;
+}
+
+.gsd-input-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.gsd-input {
+  flex: 1;
+  padding: 10px 12px;
+  font-size: 16px;
+  font-family: inherit;
+  border: 2px solid #333;
+  outline: none;
+}
+
+.gsd-input:focus {
+  border-color: #000;
+}
+
+.gsd-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family: inherit;
+  background: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.gsd-btn:hover {
+  background: #000;
+}
+
+.gsd-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.gsd-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 16px;
+}
+
+.gsd-check {
+  cursor: pointer;
+  margin-right: 12px;
+  font-size: 20px;
+  user-select: none;
+}
+
+.gsd-text {
+  flex: 1;
+}
+
+.gsd-done .gsd-text {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.gsd-delete {
+  cursor: pointer;
+  color: #ccc;
+  font-size: 20px;
+  padding: 0 4px;
+  user-select: none;
+}
+
+.gsd-delete:hover {
+  color: #e33;
+}
+
+.gsd-stats {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #999;
+}
+
+.gsd-back {
+  display: block;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 14px;
+  color: #666;
+}
