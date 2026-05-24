@@ -10,7 +10,7 @@ Grace,
 
 I run the highest revenue and EBITDA per head in all of B2B SaaS worldwide, as CEO of **Trilogy**.
 
-Francisco Partners buys distressed software and rebuilds it. That's exactly the work I want next.
+I'm already fixing distressed software companies inside Trilogy, but Francisco Partners has a larger appetite for that work than Trilogy does at the moment. That's exactly what I want to focus on next.
 
 20 minutes this week? [Calendar link].
 
@@ -26,7 +26,7 @@ Best,
 - **Subject is bait, not pitch.** "Trilogy CEO open to next chapter" earns the open on curiosity alone: a sitting CEO of a known software operator signaling availability is unusual and clickable. Save the metrics for the body so the open and the credibility hit happen in sequence, not on top of each other.
 - **Present tense, currently-CEO framing.** "I run" not "I ran." Signals confidence and scarcity. PE talent partners respond differently to a sitting CEO than to one between jobs.
 - **Body opens with the proof points.** Highest revenue and EBITDA per head, worldwide. Two operational-efficiency metrics in one sentence, both per-head. Exactly how PE firms internally evaluate turnaround talent.
-- **Second paragraph mirrors FP's thesis back to them.** "Buys distressed software and rebuilds it" is the firm's own framing. "That's exactly the work I want next" closes the loop: this is a choice, not a job hunt.
+- **Second paragraph does three things at once.** (1) "I'm already fixing distressed software inside Trilogy" tells her you're not learning on her dime, you already do the work. (2) "Francisco Partners has a larger appetite for that work than Trilogy does at the moment" is a graceful, non-disparaging exit narrative: you're not leaving because something is wrong at Trilogy, you're leaving because the supply of the work you love is bigger at FP. (3) It mirrors FP's own thesis back to them without sounding rehearsed.
 - **No team mention, no attachment, no portfolio name-drops.** All of that comes out on the call when she asks.
 
 ## Tactical notes
