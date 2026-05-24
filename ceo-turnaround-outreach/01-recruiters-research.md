@@ -142,7 +142,7 @@ Following Nada Usina's departure to found NU Advisory Partners, RRA's tech CEO b
 ### 22. Andy Thompson — Notch Partners
 - **Title:** CEO & Co-Founder
 - **Why relevant:** *Highest-conviction match.* Notch pairs PE firms with executive-led investment theses pre-signing. Clients: Advent, Charlesbank, Warburg Pincus, AEA. Network of 40,000 executives.
-- **Office:** Far Hills, NJ
+- **Office:** Millburn, NJ (56 Main St, Suite 300, 07041)
 - **Email:** athompson@notchpartners.com (confirmed via ZoomInfo)
 - **LinkedIn:** https://www.linkedin.com/in/andrew-thompson-15958/
 

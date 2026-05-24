@@ -167,10 +167,14 @@
 ## Segment 3 — Direct Lenders / Private Credit to Mid-Market SaaS
 
 ### Vista Credit Partners (most software-focused private credit shop)
-**50. David Flannery** — President & SMD, Vista Credit Partners, NYC
-- Runs $6B+ AUM enterprise-software credit platform. Email: `dflannery@vistaequitypartners.com`. LinkedIn: https://www.linkedin.com/in/davidflannery-ny
+**50. Greg Galligan** — SMD & **Co-Head, Vista Credit Partners**, NYC
+- *Primary VCP contact going forward.* Ex-Ares 11 yrs. Runs $6B+ AUM enterprise-software credit platform alongside Pete Fisher.
 
-**51. Greg Galligan** — SMD & Co-Head, Vista Credit Partners (ex-Ares)
+**51. Pete Fisher** — SMD & **Co-Head, Vista Credit Partners**, NYC
+- Co-head since 2019. Pair with Galligan for VCP outreach.
+
+**52. David Flannery** — **Senior Advisor** (former President; stepped back to advisory in 2025), Vista Credit Partners
+- Still a network node but no longer operationally running VCP. Email: `dflannery@vistaequitypartners.com`. LinkedIn: https://www.linkedin.com/in/davidflannery-ny
 
 ### Blue Owl (Owl Rock)
 **52. Erik Bissonnette** — SMD, Co-Head of Technology Investing & President of Blue Owl Technology Finance Corp.
@@ -206,7 +210,7 @@
 | **1** | **Steve Zelin** | PJT — Global Head of Restructuring & Special Situations | Most influential restructuring banker in the world. Email + direct phone are public: `zelin@pjtpartners.com` / 212-364-2400. |
 | **2** | **Ryan Lund** | Houlihan Lokey — Co-Head US Tech & Global Co-Head Software | Bridges the largest restructuring practice with software M&A. |
 | **3** | **Jim Mesterharm** | AlixPartners — Global Co-Lead Turnaround & Restructuring | Highest-leverage CRO-placement channel. |
-| **4** | **David Flannery** | Vista Credit Partners — President | Most software-specialized private credit shop. |
+| **4** | **Greg Galligan & Pete Fisher** | Vista Credit Partners — Co-Heads | Most software-specialized private credit shop. Hit both. (Flannery — listed elsewhere as President — stepped back to Senior Advisor in 2025; route to Galligan/Fisher.) |
 | **5** | **Ted Smith** | Union Square Advisors — Co-Founder & President | Pure-play software M&A boutique in $100M–$500M band. |
 
 **Second wave:** Bojmel (Guggenheim), Cowan (Lazard), Derrough (Moelis), Bissonnette (Blue Owl), Solovy (Monroe), Casey (Moelis), Kuo (Hercules), Moses (Province), Shah (Evercore), Kussmaul (AGC).

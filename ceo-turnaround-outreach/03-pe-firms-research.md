@@ -10,7 +10,7 @@ Email format: `first.last@vistaequitypartners.com` (also `flast@`)
 
 | Name | Title | Office | Notes |
 |---|---|---|---|
-| **Patrick Severson** | SMD & sole Head of Foundation Funds ($100–500M revenue band) | Austin | Co-head Marc Teillon exited Q1 2023; Severson now solo. [LinkedIn](https://www.linkedin.com/in/patrickseverson) |
+| **Patrick Severson** | SMD & Co-Head of Foundation Funds ($100–500M revenue band) | Austin | Still listed by Vista as Co-Head as of late 2024/early 2026. [LinkedIn](https://www.linkedin.com/in/patrickseverson) |
 | **Rachel Arnold** | SMD, Co-Head Endeavor Fund | Austin | [LinkedIn](https://www.linkedin.com/in/rachel-arnold-a25a492/) |
 | **René Stewart** | SMD, Co-Head Endeavor Fund | Austin | — |
 | **Elizabeth Knuppel** | MD, Talent Value Creation | Austin | Owns executive succession/CEO placement across portcos |
@@ -241,8 +241,8 @@ Email format: `first.last@stg.com`
 ### 1. Grace Kim — Partner, Head of Talent, Francisco Partners (SF)
 Most important contact in the list. As Head of Talent at $45B AUM software-pure PE firm, she's the literal phone call deal partners make when a portco needs a new CEO. Try `grace.kim@franciscopartners.com`.
 
-### 2. Patrick Severson — SMD & sole Head of Foundation Fund, Vista Equity Partners (Austin)
-Foundation IS the $100–500M revenue software fund. Solo at the top. Pair with **Elizabeth Knuppel** (MD, Talent Value Creation) same day. Try `patrick.severson@vistaequitypartners.com` or `psevers@`.
+### 2. Patrick Severson — SMD & Co-Head of Foundation Fund, Vista Equity Partners (Austin)
+Foundation IS the $100–500M revenue software fund. Pair with **Elizabeth Knuppel** (MD, Talent Value Creation) same day — she's the higher-leverage talent-side contact for CEO conversations. Try `patrick.severson@vistaequitypartners.com` or `psevers@`.
 
 ### 3. Hudson Smith — Partner, Discover Fund, Thoma Bravo (Miami)
 Discover Fund II ($2.4B) targets exactly $100–500M revenue software. Thoma Bravo is the most active operator-installing PE firm in software. Cc **Robert "Tre" Sayle**.
