@@ -2,7 +2,7 @@
 
 **To:** grace.kim@franciscopartners.com
 **Cc:** (leave blank for first touch - add Brittany Stewart for second round if no reply)
-**Subject:** Highest revenue and EBITDA per head in B2B SaaS worldwide, Trilogy CEO open to next chapter
+**Subject:** Trilogy CEO open to next chapter
 
 ---
 
@@ -23,11 +23,10 @@ Best,
 
 ## Why this version
 
-- **Present tense, currently-CEO framing.** "I run" not "I ran." Signals confidence, scarcity, and that you're choosing your next chapter from a position of strength, not hunting for one out of necessity. PE talent partners respond very differently to a sitting CEO than to one between jobs.
-- **Proof points first, role second.** "Highest revenue per headcount AND highest EBITDA per head" is two operational-efficiency metrics in the same sentence, both per-head. That is exactly how PE firms internally evaluate turnaround talent: can this operator make a bloated org produce more with less? You answer that question in the first line.
-- **"Worldwide" raises the stakes** without sounding boastful, because it's bracketed by specific, falsifiable metrics. Easy to verify, hard to dismiss.
-- **Trilogy name appears second** so the metrics carry the credibility, not the brand. (Trilogy is well-known in software-PE circles, so the name then reinforces the claim rather than doing the heavy lifting alone.)
-- **Second paragraph mirrors FP's thesis back to them.** "Buying distressed software and rebuilding them" is exactly how the firm describes itself. Then "what I enjoy and what I'm built for" closes the loop: this is a choice, not a job hunt.
+- **Subject is bait, not pitch.** "Trilogy CEO open to next chapter" earns the open on curiosity alone: a sitting CEO of a known software operator signaling availability is unusual and clickable. Save the metrics for the body so the open and the credibility hit happen in sequence, not on top of each other.
+- **Present tense, currently-CEO framing.** "I run" not "I ran." Signals confidence and scarcity. PE talent partners respond differently to a sitting CEO than to one between jobs.
+- **Body opens with the proof points.** Highest revenue and EBITDA per head, worldwide. Two operational-efficiency metrics in one sentence, both per-head. Exactly how PE firms internally evaluate turnaround talent.
+- **Second paragraph mirrors FP's thesis back to them.** "Buys distressed software and rebuilds it" is the firm's own framing. "That's exactly the work I want next" closes the loop: this is a choice, not a job hunt.
 - **No team mention, no attachment, no portfolio name-drops.** All of that comes out on the call when she asks.
 
 ## Tactical notes
