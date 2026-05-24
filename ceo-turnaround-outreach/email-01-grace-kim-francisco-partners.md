@@ -8,11 +8,11 @@
 
 Grace,
 
-I run the highest revenue per headcount and highest EBITDA per head in all of B2B SaaS worldwide, as CEO of **Trilogy**.
+I run the highest revenue and EBITDA per head in all of B2B SaaS worldwide, as CEO of **Trilogy**.
 
-Francisco Partners has built a great track record buying distressed software companies and rebuilding them. That work is exactly what I enjoy and what I'm built for. I'd value 20 minutes to talk through where I might fit.
+Francisco Partners buys distressed software and rebuilds it. That's exactly the work I want next.
 
-[Calendar link], or reply with two windows that work this week.
+20 minutes this week? [Calendar link].
 
 Best,
 [Your name]
@@ -32,7 +32,7 @@ Best,
 
 ## Tactical notes
 
-- **Send 7:30–8:00 AM Pacific Monday.** Grace is San Francisco-based per FP's site.
+- **Send 7:30 to 8:00 AM Pacific Monday.** Grace is San Francisco-based per FP's site.
 - **No LinkedIn message same day.** Wait 48 hours. If no email reply by Wednesday AM, send a one-line LinkedIn note: *"Sent you a note Monday on a turnaround CEO conversation - happy to resend if it didn't land."*
 - **If she replies:** Have your one-pager ready (1 page, top half = Trilogy results, bottom half = turnaround thesis + senior team composition). Send it within 30 minutes of her reply.
 - **If she punts to a colleague (likely Brittany Stewart, Sr. Operating Advisor, Executive Talent):** Take the meeting with Stewart - she's also a real decision node, not a deflection.
