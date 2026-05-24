@@ -2,13 +2,13 @@
 
 **To:** grace.kim@franciscopartners.com
 **Cc:** (leave blank for first touch - add Brittany Stewart for second round if no reply)
-**Subject:** Available CEO - ran Trilogy at the highest EBITDA margin in B2B SaaS
+**Subject:** Available CEO - ran Trilogy at the highest EBITDA margin and revenue-per-employee in B2B SaaS
 
 ---
 
 Grace,
 
-I spent the last three years as CEO of **Trilogy**, where we ran what I believe is the highest EBITDA margin operation in B2B SaaS - at scale. I have a loyal senior team that would come with me.
+I spent the last three years as CEO of **Trilogy**, where we ran what I believe is the highest EBITDA margin operation in B2B SaaS, with the highest revenue-per-employee at scale in the category. I have a loyal senior team that would come with me.
 
 I'm now looking for my next chapter: turnaround CEO at a B2B SaaS company in the $100–500M revenue range. Francisco Partners' portfolio sits squarely in the kind of complexity my playbook is built for - high-margin, multi-product, mature SaaS that needs operational discipline and a re-set on focus.
 
@@ -25,8 +25,8 @@ Best,
 
 ## Why this version
 
-- **Subject line does the work.** "Trilogy" + "highest EBITDA margin in B2B SaaS" is a credibility one-two punch. Grace Kim opens it because she immediately knows you're not a tire-kicker. Most PE talent partner inboxes are 80% noise; this earns a click in under a second.
-- **Opening sentence repeats the proof point** so even a 5-second scan transmits the signal.
+- **Subject line does the work.** "Trilogy" + "highest EBITDA margin AND revenue-per-employee" is the credibility one-two punch a PE talent partner cares about most: profit and operational efficiency in the same sentence. Grace Kim opens it because she immediately knows you're not a tire-kicker. Most PE talent partner inboxes are 80% noise; this earns a click in under a second.
+- **Opening sentence repeats both proof points** so even a 5-second scan transmits the signal. Revenue-per-employee is the metric PE firms use internally when evaluating turnaround candidates: it tells them you know how to right-size a bloated org without breaking it.
 - **"Loyal senior team"** is the implied-not-named version you asked for - leaves you flexibility to reveal names on the call.
 - **Specific framing of FP's portfolio** ("high-margin, multi-product, mature SaaS") signals you've done the homework without listing companies. She'll mentally run through Forcepoint, Quest (their stake), Renaissance, BluJay, Trax, Bazaarvoice etc. and start matching.
 - **"20 minutes" + calendar link + "two windows"** gives her two zero-friction ways to say yes. Don't ask for a longer call on first touch.
