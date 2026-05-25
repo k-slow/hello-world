@@ -1,7 +1,7 @@
-# Executive Search Firms & Recruiters for Turnaround B2B SaaS CEO Roles ($100M–$500M)
+# Executive Search Firms & Recruiters for Turnaround B2B SaaS CEO Roles ($100M-$500M)
 
 **Prepared:** 2026-05-24
-**Use case:** CEO with senior team seeking turnaround CEO role at a troubled B2B SaaS company, $100M–$500M revenue. Most of these companies will be PE-owned at that size, so PE-portfolio specialists are weighted heavily.
+**Use case:** CEO with senior team seeking turnaround CEO role at a troubled B2B SaaS company, $100M-$500M revenue. Most of these companies will be PE-owned at that size, so PE-portfolio specialists are weighted heavily.
 
 **Note on email formats:** Where direct emails aren't published, the firm's standard pattern is shown (verified via public listings). Standard patterns: Heidrick = `firstinitiallastname@heidrick.com` or `firstname.lastname@heidrick.com`; Spencer Stuart = `firstinitiallastname@spencerstuart.com` (e.g., `jcitrin@spencerstuart.com`); Russell Reynolds = `firstname.lastname@russellreynolds.com`; Egon Zehnder = `firstname.lastname@egonzehnder.com`; Korn Ferry = `firstname.lastname@kornferry.com`; Bespoke = `firstname@bespokepartners.com`; True = `firstname.lastname@trueplatform.com`; JM Search = `firstname.lastname@jmsearch.com`.
 

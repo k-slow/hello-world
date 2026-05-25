@@ -10,7 +10,7 @@ Email format: `first.last@vistaequitypartners.com` (also `flast@`)
 
 | Name | Title | Office | Notes |
 |---|---|---|---|
-| **Patrick Severson** | SMD & Co-Head of Foundation Funds ($100–500M revenue band) | Austin | Still listed by Vista as Co-Head as of late 2024/early 2026. [LinkedIn](https://www.linkedin.com/in/patrickseverson) |
+| **Patrick Severson** | SMD & Co-Head of Foundation Funds ($100-500M revenue band) | Austin | Still listed by Vista as Co-Head as of late 2024/early 2026. [LinkedIn](https://www.linkedin.com/in/patrickseverson) |
 | **Rachel Arnold** | SMD, Co-Head Endeavor Fund | Austin | [LinkedIn](https://www.linkedin.com/in/rachel-arnold-a25a492/) |
 | **René Stewart** | SMD, Co-Head Endeavor Fund | Austin | - |
 | **Elizabeth Knuppel** | MD, Talent Value Creation | Austin | Owns executive succession/CEO placement across portcos |
@@ -28,14 +28,14 @@ Email format: `first.last@thomabravo.com` or `flast@thomabravo.com`
 | Name | Title | Office | Notes |
 |---|---|---|---|
 | **Holden Spaht** | Managing Partner - leads largest software deals (Anaplan, Coupa, SailPoint, Dayforce) | SF | Direct line for $100M+ SaaS CEO conversations |
-| **Hudson Smith** | Partner - leads **Discover Fund** (sub-$1.5B EV, exactly the $100–500M revenue band) | Miami | [Profile](https://www.thomabravo.com/team/hudson-smith) |
+| **Hudson Smith** | Partner - leads **Discover Fund** (sub-$1.5B EV, exactly the $100-500M revenue band) | Miami | [Profile](https://www.thomabravo.com/team/hudson-smith) |
 | **A.J. Rohde** | Partner - Discover Fund | SF | - |
 | **Robert "Tre" Sayle** | Partner - operations/portfolio playbook architect | SF | 15+ platforms, 40+ add-ons |
 | **Carl Thoma** | Co-founder, Managing Partner | Chicago | - |
 | **Orlando Bravo** | Founder, Managing Partner | Miami | Top of org |
 | **Erwin Mock** | MD, Head of Capital Markets | SF | Useful for distressed-debt situations |
 
-**Distress signals:** Coupa (~30% layoffs 900–1,100 post-acquisition), Sophos (400+ layoffs Feb 2025, ~6–10% workforce), Anaplan (multiple restructurings since $10.7B take-private), SailPoint (post-IPO re-tooling), ConnectWise.
+**Distress signals:** Coupa (~30% layoffs 900-1,100 post-acquisition), Sophos (400+ layoffs Feb 2025, ~6-10% workforce), Anaplan (multiple restructurings since $10.7B take-private), SailPoint (post-IPO re-tooling), ConnectWise.
 
 ---
 
@@ -57,7 +57,7 @@ Email format: `first.last@franciscopartners.com`
 ---
 
 ### Silver Lake (Menlo Park / NYC / London)
-For $100–500M SaaS turnaround, Silver Lake's mainline Partners would route - most relevant: **Joe Osnoss** (Managing Partner), **Christian Lucas** (London), **Lee Wittlinger** (Menlo Park / software). Email format: `first.last@silverlake.com`. **Confidence: Medium** - Silver Lake plays large-cap.
+For $100-500M SaaS turnaround, Silver Lake's mainline Partners would route - most relevant: **Joe Osnoss** (Managing Partner), **Christian Lucas** (London), **Lee Wittlinger** (Menlo Park / software). Email format: `first.last@silverlake.com`. **Confidence: Medium** - Silver Lake plays large-cap.
 
 ---
 
@@ -118,7 +118,7 @@ Email format: `first.last@hgcapital.com`
 |---|---|---|---|
 | **Matthew Brockman** | Managing Partner & CIO | London | Top of investment org |
 | **Justin von Simson** | Managing Partner, Co-Head **Saturn** (large-cap fund) | Munich | - |
-| **Jean-Baptiste "JB" Brian** | Managing Partner & Co-CEO; heads **Genesis Fund** (mid-market) | London | Genesis = $100–500M revenue band |
+| **Jean-Baptiste "JB" Brian** | Managing Partner & Co-CEO; heads **Genesis Fund** (mid-market) | London | Genesis = $100-500M revenue band |
 | **Steven Batchelor** | Managing Partner & Co-CEO | London | - |
 | **Nic Humphries** | Senior Partner | London | - |
 
@@ -242,16 +242,16 @@ Email format: `first.last@stg.com`
 Most important contact in the list. As Head of Talent at $45B AUM software-pure PE firm, she's the literal phone call deal partners make when a portco needs a new CEO. Try `grace.kim@franciscopartners.com`.
 
 ### 2. Patrick Severson - SMD & Co-Head of Foundation Fund, Vista Equity Partners (Austin)
-Foundation IS the $100–500M revenue software fund. Pair with **Elizabeth Knuppel** (MD, Talent Value Creation) same day - she's the higher-leverage talent-side contact for CEO conversations. Try `patrick.severson@vistaequitypartners.com` or `psevers@`.
+Foundation IS the $100-500M revenue software fund. Pair with **Elizabeth Knuppel** (MD, Talent Value Creation) same day - she's the higher-leverage talent-side contact for CEO conversations. Try `patrick.severson@vistaequitypartners.com` or `psevers@`.
 
 ### 3. Hudson Smith - Partner, Discover Fund, Thoma Bravo (Miami)
-Discover Fund II ($2.4B) targets exactly $100–500M revenue software. Thoma Bravo is the most active operator-installing PE firm in software. Cc **Robert "Tre" Sayle**.
+Discover Fund II ($2.4B) targets exactly $100-500M revenue software. Thoma Bravo is the most active operator-installing PE firm in software. Cc **Robert "Tre" Sayle**.
 
 ### 4. Hilary Gosher - MD, Founder of Insight Onsite, Insight Partners (NYC)
 130+ person operating bench; dedicated Talent sub-team reports to her. Front door for every CEO-replacement convo across 300+ Insight portfolio.
 
 ### 5. Eli Weiss - Managing Partner & Head of Software, Genstar Capital (SF)
-$12.6B fresh Fund XI; many software portcos in the $100–500M range. Direct line: (415) 834-2350.
+$12.6B fresh Fund XI; many software portcos in the $100-500M range. Direct line: (415) 834-2350.
 
 **Honorable mentions (next 5):** David McGovern (Marlin), William Chisholm (STG), David Humphrey (Bain), Brittany Stewart (FP Sr. Operating Advisor, Executive Talent), Bruce Chizen (Permira Senior Adviser, ex-Adobe CEO).
 

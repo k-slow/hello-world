@@ -1,4 +1,4 @@
-# Master Outreach Plan - Turnaround CEO Search, B2B SaaS $100M–$500M
+# Master Outreach Plan - Turnaround CEO Search, B2B SaaS $100M-$500M
 **Prepared:** 2026-05-24 | **For:** CEO seeking next role | **Action window:** Week of May 25, 2026
 
 ---
@@ -13,7 +13,7 @@ QA flagged 3 corrections from the raw research, applied below. The package is re
 
 ---
 
-## STACK-RANKED TOP 15 - HIT THESE FIRST (Week 1: May 25–29)
+## STACK-RANKED TOP 15 - HIT THESE FIRST (Week 1: May 25-29)
 
 Ordered by combined (a) authority to influence a CEO hire, (b) volume of relevant dealflow, (c) accessibility to credentialed cold inbound, and (d) speed of response.
 
@@ -25,19 +25,19 @@ Ordered by combined (a) authority to influence a CEO hire, (b) volume of relevan
 | **4** | **Andy Thompson** | Notch Partners | CEO & Co-Founder | Recruiter | athompson@notchpartners.com | Notch pairs PE with executive-led theses *pre-deal* - you could shape the situation, not inherit it. Clients: Advent, Charlesbank, Warburg, AEA. |
 | **5** | **Elizabeth Knuppel** | Vista Equity Partners | MD, Talent Value Creation | PE | elizabeth.knuppel@vistaequitypartners.com | Vista's CEO-placement decision-maker across Foundation & Flagship portfolios. Vista publicly committed to portfolio-wide headcount cuts - CEO churn is implicit. |
 | **6** | **Jenny Gray** | Bespoke Partners | Partner, CEO Search Practice | Recruiter | jenny@bespokepartners.com | Active Bespoke CEO-search partner (Thoma Bravo, Insight, Clearlake, K1, PSG clients). Parallel touch to Nova. Cc Eric Walczykowski (CEO). |
-| **7** | **Hudson Smith** | Thoma Bravo | Partner, Discover Fund | PE | hudson.smith@thomabravo.com | Discover Fund II ($2.4B) targets exactly $100–500M revenue software. TB is the most active operator-installing PE firm in software. Cc Robert "Tre" Sayle. |
+| **7** | **Hudson Smith** | Thoma Bravo | Partner, Discover Fund | PE | hudson.smith@thomabravo.com | Discover Fund II ($2.4B) targets exactly $100-500M revenue software. TB is the most active operator-installing PE firm in software. Cc Robert "Tre" Sayle. |
 | **8** | **Jim Citrin** | Spencer Stuart | Chair, Global CEO Practice | Recruiter | jcitrin@spencerstuart.com | Most prominent CEO recruiter on the planet. Even if he doesn't take the search, his endorsement routes you instantly. Responsive to credentialed inbound. |
 | **9** | **Steve Zelin** | PJT Partners | Partner, Global Head of Restructuring & Special Situations | Banker | zelin@pjtpartners.com / 212-364-2400 | Most influential restructuring banker globally. #1 league table 4 years running. Boards listen to him on CRO/CEO picks. Phone is public. |
 | **10** | **Jim Mesterharm** | AlixPartners | MD, Global Co-Lead Turnaround & Restructuring Services | Banker | jmesterharm@alixpartners.com | Alix is the firm boards call to place interim CROs/CEOs. 500-person TRS practice. Single highest-leverage CRO-placement channel. |
 | **11** | **Jason Hancock** | Spencer Stuart | Leader, Global Tech Sector + Co-Leader Global PE | Recruiter | jhancock@spencerstuart.com | Sits at the exact intersection: global tech AND global PE. Places tech CEOs into PE portcos. Warm intro via any PE GP. |
 | **12** | **Nada Usina** | NU Advisory Partners | CEO & Co-Founder | Recruiter | nada.usina@nuadvisorypartners.com | Fastest-growing search firm of 2025. AI-native, PE-portfolio-focused, founder-led - accomplished CEO inbound goes to her personally. |
 | **13** | **Ryan Lund** | Houlihan Lokey | MD, Co-Head US Tech & Global Co-Head Software | Banker | rlund@hl.com | Unique bridge: world's largest restructuring practice + software M&A coverage. Ex-UBS global software. Sees both signals. |
-| **14** | **Patrick Severson** | Vista Equity Partners | SMD, Co-Head of Foundation Funds | PE | patrick.severson@vistaequitypartners.com | Vista Foundation = the $100–500M revenue software fund specifically. Pair with Knuppel (rank 5). |
+| **14** | **Patrick Severson** | Vista Equity Partners | SMD, Co-Head of Foundation Funds | PE | patrick.severson@vistaequitypartners.com | Vista Foundation = the $100-500M revenue software fund specifically. Pair with Knuppel (rank 5). |
 | **15** | **David McGovern** | Marlin Equity Partners | Founder, Chairman & CEO | PE | david.mcgovern@marlinequity.com | Marlin's whole brand IS software turnarounds. Frame the meeting as "turnaround-CEO + team availability." |
 
 ---
 
-## SECOND WAVE (Week 2: June 1–5)
+## SECOND WAVE (Week 2: June 1-5)
 
 Hit these once Week 1 calls/emails are in motion.
 
@@ -49,20 +49,49 @@ Hit these once Week 1 calls/emails are in motion.
 
 ---
 
-## CONCRETE OPPORTUNITIES - Portcos showing public distress (last 12 months)
+## CONCRETE OPPORTUNITIES - Portcos with FRESH distress signals (verified May 24, 2026)
 
-Worth a tailored mention when relevant in outreach - "I noticed [company] has gone through [X]; would be glad to share how I'd approach a turnaround there."
+Worth a tailored mention when relevant in outreach. Verified live before Monday sends.
 
-| Company | Sponsor | Est. Revenue | Distress Signal |
-|---|---|---|---|
-| **Quest Software** | Clearlake / STG | $1B+ | $350M emergency capital June 2025; debt restructured; lenders demoted |
-| **Trellix** | STG | ~$1B+ | Recurring layoffs since 2022 merger |
-| **Coupa** | Thoma Bravo | ~$1B+ | ~30% layoffs post-buyout; strategy reset |
-| **Sophos** | Thoma Bravo | $1B+ | 400+ layoffs Feb 2025 post-Secureworks |
-| **Khoros** | Vista | ~$200M | Multiple layoff rounds through 2025 |
-| **Calabrio** | Thoma Bravo | ~$200M | Job cuts during integration |
-| **Anaplan** | Thoma Bravo | ~$700M | Multi-year restructuring |
-| **Pluralsight** | Now Blue Owl-led lenders (Vista wrote to $0) | ~$400M | 3 CEOs in 12 months; 17% layoffs June 2025 |
+### Top 3 to name freely on Monday calls
+
+| # | Company | Sponsor | Signal | Date |
+|---|---|---|---|---|
+| **1** | **Medallia** | Lenders (Blackstone, KKR, Apollo, Antares) took keys; Thoma Bravo wiped on $5.1B equity | Debt-for-equity swap | **Apr 22, 2026** |
+| **2** | **Symplr** | Clearlake / Charlesbank | Two CEO changes in 6 months (Colpitts interim Nov 2025, Venkat Kavarthapu permanent Apr 2026) | **Apr 13, 2026** |
+| **3** | **Verint (post-Calabrio merger)** | Thoma Bravo | Take-private closed Jan 31, 2026; hundreds of layoffs Mar 2, 2026 | **Mar 2026** |
+
+### Other still-distressed (verified live)
+
+| Company | Sponsor | Signal |
+|---|---|---|
+| **Quest Software** | Clearlake | Two debt restructurings in 3 months 2025; leverage ~11x EBITDA; S&P warned cap structure "may be unsustainable" |
+| **Coupa** | Thoma Bravo | TB seeking price cut on $2.6B private debt; ~65:35 D/E |
+| **Pluralsight** | Lender-owned (Blue Owl/Ares/GS/Oaktree) | Erin Gajdalo CEO; 17% staff cut mid-2025; HQ moved Utah to Texas |
+| **Trellix** | STG | Vishal Rao running both Trellix AND Skyhigh since Jan 2025 (distress tell); WARN layoffs filed Apr 2026 |
+| **LogRhythm / Exabeam** | Thoma Bravo | Pete Harteveld new CEO Oct 2025; ~30% workforce cuts at merger; new CEO <8 months in |
+| **Verifone** | Francisco Partners | $235M preferred equity rescue Apr 2025; situation 13 months old but unresolved |
+| **FinThrive** | Clearlake | Distressed debt talks for ~$1.8B trim ongoing 2026; Hemant Goel CEO |
+| **Perforce Software** | Clearlake | $1.07B 1L term loan in distressed territory; ~$297M pari notes to refi 2L |
+| **Pendo** | Insight Partners | ~10% layoffs Apr 7, 2026 ("refounding"); Todd Olson CEO |
+| **Sapiens** | Advent (just-private late Dec 2025) | Entire senior mgmt replaced; 700-800 layoffs Jan 2026; interim CEO Mike Ettling |
+| **McAfee Consumer** | Various | 2030 notes hit all-time low Feb 2026; buying back unsecured notes at discount |
+| **Precisely** | Clearlake / TA Associates | Loan dropped 8 cents in single week Feb 2026 |
+
+### REMOVED from prior list (moved on, do NOT mention as distressed)
+
+- **Sophos (TB):** Joe Levy CEO; Secureworks integration "moving at pace" per Mar 2026 trade press
+- **Anaplan (TB):** TB positioning Gottdiener positively on their own podcast
+- **Calabrio (TB):** Now part of Verint after Jan 2026 take-private merger (Verint replaces it on the list above)
+- **Khoros:** Vista sold to IgniteTech (ESW Capital / Trilogy) May 2025 - no longer Vista's
+- **Skyhigh (STG):** Record year 2025
+- **Granicus (Vista):** $4B sale process underway, healthy exit
+- **Provation:** Sold to Fortive 2021 (was never current)
+- **Bigtincan:** Vector Capital, not Marlin (research error)
+
+### Macro context to weave in
+
+Feb 2026 Bloomberg: $17.7B of tech loans dropped into distressed in 4 weeks; total tech distressed ~$46.9B; software at record $25B trading below 80 cents. Every PE talent partner on your list is hearing this from their portcos right now.
 
 ---
 
@@ -80,8 +109,8 @@ Worth a tailored mention when relevant in outreach - "I noticed [company] has go
 - Send the final 5 (Jason Hancock, Nada Usina, Ryan Lund, Patrick Severson, David McGovern).
 - Begin scheduling follow-ups for any non-responses from Monday's batch.
 
-**Thursday–Friday:**
-- Field replies, schedule intro calls. Each call should end with: "Who else in your network should I be talking to?" - every contact yields 2–3 referrals if asked.
+**Thursday-Friday:**
+- Field replies, schedule intro calls. Each call should end with: "Who else in your network should I be talking to?" - every contact yields 2-3 referrals if asked.
 
 ---
 
@@ -95,7 +124,7 @@ Worth a tailored mention when relevant in outreach - "I noticed [company] has go
 >
 > I led [Company] for three years as CEO - by [revenue / EBITDA margin / Rule of 40 / whatever the headline metric is], we ran the most profitable B2B SaaS business in [segment]. My senior team - [CFO/CRO/CPO names if you can say them] - would come with me.
 >
-> I'm now actively looking for a turnaround CEO role at a B2B SaaS company in the $100–500M revenue range. [Firm]'s portfolio has the exact mix of scale and complexity I'm built for. I'd value a 20-minute call to share my playbook and understand where I might fit - whether for a current portco or a situation you're tracking.
+> I'm now actively looking for a turnaround CEO role at a B2B SaaS company in the $100-500M revenue range. [Firm]'s portfolio has the exact mix of scale and complexity I'm built for. I'd value a 20-minute call to share my playbook and understand where I might fit - whether for a current portco or a situation you're tracking.
 >
 > [Calendar link] or reply with two windows that work.
 >
@@ -107,7 +136,7 @@ Worth a tailored mention when relevant in outreach - "I noticed [company] has go
 >
 > [Name],
 >
-> Direct ask: I'd like to be on your CEO bench for B2B SaaS turnarounds, $100–500M revenue. Quick context:
+> Direct ask: I'd like to be on your CEO bench for B2B SaaS turnarounds, $100-500M revenue. Quick context:
 >
 > - 3 years CEO of [Company], B2B SaaS, [headline metric - "highest margin in [segment]" / "best Rule of 40 of any [size] SaaS"]
 > - Senior team comes with me (CFO/CRO/CPO - happy to share names)
@@ -123,9 +152,9 @@ Worth a tailored mention when relevant in outreach - "I noticed [company] has go
 >
 > [Name],
 >
-> I led [Company] for three years - highest-margin B2B SaaS in [segment]. Now actively looking for a turnaround CEO role: distressed B2B SaaS, $100–500M revenue. Open to interim, full-time, or CRO-then-CEO transitions.
+> I led [Company] for three years - highest-margin B2B SaaS in [segment]. Now actively looking for a turnaround CEO role: distressed B2B SaaS, $100-500M revenue. Open to interim, full-time, or CRO-then-CEO transitions.
 >
-> Your team likely sees these situations 6–12 months before the rest of the market. I'd value a brief call - whether to be added to your CEO referral list or to discuss specific situations confidentially.
+> Your team likely sees these situations 6-12 months before the rest of the market. I'd value a brief call - whether to be added to your CEO referral list or to discuss specific situations confidentially.
 >
 > [Calendar link] or reply with two windows.
 >
@@ -137,7 +166,7 @@ Worth a tailored mention when relevant in outreach - "I noticed [company] has go
 >
 > [Name],
 >
-> Brief: I led [Company] as CEO for three years - highest-profit B2B SaaS in [segment]. Senior team would follow. I'm looking for a turnaround CEO role in B2B SaaS, $100–500M revenue. Your network is exactly the right one to help me identify the right fit.
+> Brief: I led [Company] as CEO for three years - highest-profit B2B SaaS in [segment]. Senior team would follow. I'm looking for a turnaround CEO role in B2B SaaS, $100-500M revenue. Your network is exactly the right one to help me identify the right fit.
 >
 > 15 minutes this week if you're open?
 >

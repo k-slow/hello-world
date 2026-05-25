@@ -211,7 +211,7 @@
 | **2** | **Ryan Lund** | Houlihan Lokey - Co-Head US Tech & Global Co-Head Software | Bridges the largest restructuring practice with software M&A. |
 | **3** | **Jim Mesterharm** | AlixPartners - Global Co-Lead Turnaround & Restructuring | Highest-leverage CRO-placement channel. |
 | **4** | **Greg Galligan & Pete Fisher** | Vista Credit Partners - Co-Heads | Most software-specialized private credit shop. Hit both. (Flannery - listed elsewhere as President - stepped back to Senior Advisor in 2025; route to Galligan/Fisher.) |
-| **5** | **Ted Smith** | Union Square Advisors - Co-Founder & President | Pure-play software M&A boutique in $100M–$500M band. |
+| **5** | **Ted Smith** | Union Square Advisors - Co-Founder & President | Pure-play software M&A boutique in $100M-$500M band. |
 
 **Second wave:** Bojmel (Guggenheim), Cowan (Lazard), Derrough (Moelis), Bissonnette (Blue Owl), Solovy (Monroe), Casey (Moelis), Kuo (Hercules), Moses (Province), Shah (Evercore), Kussmaul (AGC).
 
