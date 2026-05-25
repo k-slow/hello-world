@@ -30,31 +30,37 @@ gym in the early morning, hard stops to protect energy.
 
 ## AM block (8–9 AM) — the Frog
 
-Goal: **3 new outbound touches** before 9:00 AM.
+Goal: **5 new outbound touches** before 9:00 AM.
 
 Order of operations:
-1. **(0–5 min)** Open the tracker. Identify the 3 hardest names you'd
-   rather skip. Those are the frogs.
-2. **(5–45 min)** Write and send. One paragraph. Personal hook, the ask,
-   a specific next step (15-min intro call this week or next).
-3. **(45–60 min)** Log each touch in the tracker with date, channel,
+1. **(0–5 min)** Open the tracker. Identify the 5 hardest names you'd
+   rather skip. Those are the frogs. Pre-stage them the night before so
+   you're not picking targets at 8:00 AM with cold coffee.
+2. **(5–50 min)** Write and send. One paragraph each. Personal hook, the
+   ask, a specific next step (15-min intro call this week or next).
+   ~8 minutes per touch — keep them tight, not precious.
+3. **(50–60 min)** Log each touch in the tracker with date, channel,
    next-action date.
 
 Hard rules:
-- No inbox before the 3 touches are sent.
+- No inbox before the 5 touches are sent.
 - Drafts are not touches. Sent counts.
-- If you finish early, queue tomorrow's 3 frogs and stop.
+- If you finish early, queue tomorrow's 5 frogs and stop.
+- If you're going to miss 5, send 5 anyway and run 15 min over. Don't
+  ship 4 and call it close.
 
 ## PM block (4–5 PM) — Follow-ups
 
-Goal: **clear every follow-up due today** + send 2–3 nudges on stale threads.
+Goal: **clear every follow-up due today** + **5 nudges** on stale threads.
 
 Order of operations:
 1. **(0–10 min)** Pull the tracker filter: "Next action ≤ today".
-2. **(10–45 min)** Work the list top-to-bottom. Reply, send materials,
+2. **(10–40 min)** Work the list top-to-bottom. Reply, send materials,
    schedule calls, push next-action dates.
-3. **(45–60 min)** 7-day stale sweep — anyone who's gone quiet gets a
-   short, low-pressure nudge.
+3. **(40–60 min)** 7-day stale sweep — pick the 5 quietest threads and
+   send a short, low-pressure nudge to each.
+
+Same rule as the AM: sent counts, drafts don't.
 
 ## Weekly cadence
 
@@ -70,10 +76,15 @@ Order of operations:
 
 Set a number, watch the streak.
 
-- **15 new outbound touches / week** (3/day × 5 days)
+- **25 new outbound touches / week** (5/day × 5 days)
+- **25 follow-up nudges / week** (5/day × 5 days), on top of same-day clears
 - **All same-day follow-ups cleared** by 5 PM
 - **0 threads stale > 10 days** by Friday close
 - **1 pipeline review / week** (Fri 4:00–4:30)
+
+That's **~50 sent touches/week**. Reply rates on cold outreach are
+brutal — assume 10–15%, so 50 sends ≈ 5–8 real conversations in motion.
+That's the math; the schedule serves the math.
 
 ## Tracker fields (minimum)
 
@@ -95,22 +106,27 @@ The two bold fields are the whole game. Everything else is metadata.
 - **The 2-minute rule.** Can't start? Open the doc and write the salutation.
   That's it. Momentum follows.
 - **Streak counter.** Mark an X on the calendar for every day you hit
-  3 frogs. Don't break the chain.
+  5 frogs AM + 5 nudges PM. Don't break the chain.
 - **Reward the reps, not the outcomes.** You don't control replies. You
   control sends. Celebrate sends.
 - **One bad day is fine. Two is a pattern.** If you miss the AM block,
-  do 5 frogs the next morning, not 0.
+  do 7 frogs the next morning, not 0.
 
 ## First-week ramp
 
-| Day | AM frogs | Notes                                              |
-| --- | -------- | -------------------------------------------------- |
-| Mon | 2        | Lower the bar to start the streak                  |
-| Tue | 2        | Same                                               |
-| Wed | 3        | Step up                                            |
-| Thu | 3        | Hold                                               |
-| Fri | 3 + review | Friday review locks in the pattern for next week |
+No ramp. Start at 5/session day one. The whole point of eat-the-frog is
+that the discomfort is the work — easing in just teaches you that the
+target is negotiable. It isn't.
 
-After week 1, hold at 3/day and reassess monthly — bump to 4 if it feels
-easy, or rebalance toward follow-up quality if the pipeline is getting
-crowded.
+| Day | AM frogs | PM nudges | Notes                                    |
+| --- | -------- | --------- | ---------------------------------------- |
+| Mon | 5        | 5         | Pre-stage Sunday night                   |
+| Tue | 5        | 5         |                                          |
+| Wed | 5        | 5         | Mid-week check: is the pipeline keeping up? |
+| Thu | 5        | 5         |                                          |
+| Fri | 5        | 5 + review | Friday review at 4:00–4:30             |
+
+Reassess monthly. If 5/session is comfortably hit 4 weeks straight, bump
+to 7. If you're consistently missing, the problem is target generation
+(no names to send to), not willpower — go fix the top of the funnel
+before lowering the number.
