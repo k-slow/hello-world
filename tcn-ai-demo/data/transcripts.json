@@ -1,0 +1,103 @@
+[
+  {
+    "id": "T01", "contact_id": "C001", "debt_id": "D44120", "channel": "voice",
+    "turns": [
+      {"speaker": "Agent", "text": "Hi, may I speak with James Smith? I need to verify your date of birth."},
+      {"speaker": "Customer", "text": "This is James."},
+      {"speaker": "Agent", "text": "Thank you. This is Dana with Apex Recovery. This is an attempt to collect a debt and any information obtained will be used for that purpose."},
+      {"speaker": "Customer", "text": "Okay, I can pay part of it this week."},
+      {"speaker": "Agent", "text": "Great, I appreciate that. Let's set up a promise to pay for Friday."}
+    ]
+  },
+  {
+    "id": "T02", "contact_id": "C002", "debt_id": "D81233", "channel": "voice",
+    "turns": [
+      {"speaker": "Agent", "text": "Listen, if you don't pay today we will have you arrested and garnish your wages."},
+      {"speaker": "Customer", "text": "That sounds illegal."},
+      {"speaker": "Agent", "text": "Pay now or face a warrant."}
+    ]
+  },
+  {
+    "id": "T03", "contact_id": "C003", "debt_id": "D22019", "channel": "voice",
+    "turns": [
+      {"speaker": "Agent", "text": "Hello, I'm calling about an account."},
+      {"speaker": "Customer", "text": "Please stop calling me, I don't want these calls."},
+      {"speaker": "Agent", "text": "I understand, but you still owe the balance, can we set up payment?"},
+      {"speaker": "Customer", "text": "I said do not call me again."}
+    ]
+  },
+  {
+    "id": "T04", "contact_id": "C004", "debt_id": "D77654", "channel": "voice",
+    "turns": [
+      {"speaker": "Agent", "text": "Hi, is this the wife of Robert Brown? Tell your husband he owes us money."},
+      {"speaker": "Customer", "text": "He's not here."},
+      {"speaker": "Agent", "text": "Well let your husband know the balance is past due."}
+    ]
+  },
+  {
+    "id": "T05", "contact_id": "C005", "debt_id": "D31882", "channel": "voice",
+    "turns": [
+      {"speaker": "Agent", "text": "Good afternoon, this is Sam with Apex Recovery. Can you confirm your address? This is an attempt to collect a debt."},
+      {"speaker": "Customer", "text": "Yes that's me. Honestly this isn't my debt, I think it's wrong."},
+      {"speaker": "Agent", "text": "Thank you for letting me know, I'll open a dispute and pause collection until it's validated."}
+    ]
+  },
+  {
+    "id": "T06", "contact_id": "C006", "debt_id": "D55410", "channel": "voice",
+    "turns": [
+      {"speaker": "Agent", "text": "Hey, you've been ignoring us. You're a deadbeat and frankly irresponsible."},
+      {"speaker": "Customer", "text": "Wow, that's harassing."},
+      {"speaker": "Agent", "text": "Just pay it."}
+    ]
+  },
+  {
+    "id": "T07", "contact_id": "C007", "debt_id": "D90021", "channel": "voice",
+    "turns": [
+      {"speaker": "Agent", "text": "Hello, I'm calling for an unpaid balance."},
+      {"speaker": "Customer", "text": "Who is this?"},
+      {"speaker": "Agent", "text": "Just calling about money you owe, can you pay today?"}
+    ]
+  },
+  {
+    "id": "T08", "contact_id": "C008", "debt_id": "D12388", "channel": "voice",
+    "turns": [
+      {"speaker": "Agent", "text": "Hi Maria, this is Lee with Apex Recovery. Can you verify your date of birth? This is an attempt to collect a debt and any information will be used for that purpose."},
+      {"speaker": "Customer", "text": "Sure. I'm happy to set something up."},
+      {"speaker": "Agent", "text": "Wonderful, thank you. Let's schedule a follow up and I'll send written confirmation."}
+    ]
+  },
+  {
+    "id": "T09", "contact_id": "C009", "debt_id": "D63440", "channel": "sms",
+    "turns": [
+      {"speaker": "Agent", "text": "This is Apex Recovery regarding your account. Reply STOP to opt out."},
+      {"speaker": "Customer", "text": "STOP"},
+      {"speaker": "Agent", "text": "You have been unsubscribed."}
+    ]
+  },
+  {
+    "id": "T10", "contact_id": "C010", "debt_id": "D48771", "channel": "voice",
+    "turns": [
+      {"speaker": "Agent", "text": "Hi, this is Pat with Apex Recovery, this is an attempt to collect a debt. Can I confirm I'm speaking with the account holder?"},
+      {"speaker": "Customer", "text": "Yes."},
+      {"speaker": "Agent", "text": "Great, would you like to settle the balance today or set a payment plan?"},
+      {"speaker": "Customer", "text": "I'll pay the full amount now, thank you."}
+    ]
+  },
+  {
+    "id": "T11", "contact_id": "C011", "debt_id": "D29005", "channel": "voice",
+    "turns": [
+      {"speaker": "Agent", "text": "If you don't pay we'll tell your boss and your neighbors about this debt."},
+      {"speaker": "Customer", "text": "You can't do that."},
+      {"speaker": "Agent", "text": "Watch me."}
+    ]
+  },
+  {
+    "id": "T12", "contact_id": "C012", "debt_id": "D70114", "channel": "voice",
+    "turns": [
+      {"speaker": "Agent", "text": "Good morning, Sam with Apex Recovery, this is an attempt to collect a debt. May I verify your date of birth?"},
+      {"speaker": "Customer", "text": "Okay, go ahead."},
+      {"speaker": "Agent", "text": "Thanks. I appreciate your time. Shall we set up a plan that works for you?"},
+      {"speaker": "Customer", "text": "Sounds good, thank you."}
+    ]
+  }
+]
