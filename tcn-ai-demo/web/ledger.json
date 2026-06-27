@@ -1,0 +1,56 @@
+{
+  "records": 102,
+  "first": [
+    {
+      "seq": 0,
+      "type": "CONSENT_GRANTED",
+      "payload": {
+        "contact_id": "C001",
+        "type": "written"
+      },
+      "hash": "b192db12c7f0"
+    },
+    {
+      "seq": 1,
+      "type": "CONSENT_REVOKED",
+      "payload": {
+        "contact_id": "C008",
+        "channel": "voice"
+      },
+      "hash": "2a83dae302f2"
+    },
+    {
+      "seq": 2,
+      "type": "CONTACT_ATTEMPT",
+      "payload": {
+        "contact_id": "C001",
+        "decision": "ALLOW",
+        "reasons": 0
+      },
+      "hash": "b92eb814f19f"
+    },
+    {
+      "seq": 3,
+      "type": "CONTACT_ATTEMPT",
+      "payload": {
+        "contact_id": "C002",
+        "decision": "BLOCK",
+        "reasons": 1
+      },
+      "hash": "4e6168d19d3c"
+    }
+  ],
+  "integrity": true,
+  "revocation": {
+    "honored": true,
+    "detail": "opt-out at seq 1 honored; no contact after"
+  },
+  "violation": {
+    "detected": true,
+    "detail": "1 contact(s) AFTER opt-out -- VIOLATION"
+  },
+  "tamper": {
+    "detected": true,
+    "bad_seq": 3
+  }
+}
