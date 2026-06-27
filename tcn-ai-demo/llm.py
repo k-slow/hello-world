@@ -57,3 +57,14 @@ def complete_json(system, user, max_tokens=1024):
     if txt.startswith("```"):
         txt = txt.split("```", 2)[1].lstrip("json").strip()
     return json.loads(txt)
+
+
+def selftest():
+    """Ping the model so a viewer can confirm the Claude wiring is live."""
+    if not USE_LLM:
+        return False, "no ANTHROPIC_API_KEY set -> running offline heuristic engine"
+    try:
+        txt = complete("You are a healthcheck.", "Reply with the single word: OK", 10)
+        return True, f"Claude reachable ({MODEL}) -> {txt.strip()[:20]}"
+    except Exception as e:
+        return False, f"key set but call failed ({type(e).__name__}: {e}) -> using offline engine"

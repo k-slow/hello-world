@@ -5,9 +5,11 @@ Reverse-engineered, from-scratch versions of TCN's headline "AI" features, run
 over 100 synthetic collections contacts + 12 call transcripts.
 
     python3 demo.py            # run everything
-    python3 demo.py nlc        # just Natural Language Compliance
-    python3 demo.py analytics  # just conversational analytics + QA
-    python3 demo.py assist      # just agent assist
+    python3 demo.py nlc        # Natural Language Compliance
+    python3 demo.py analytics  # conversational analytics + auto-QA
+    python3 demo.py assist     # agent assist
+    python3 demo.py ledger     # tamper-evident consent/revocation audit ledger
+    python3 demo.py llm        # check whether real-Claude wiring is live
 
 Runs fully offline. If ANTHROPIC_API_KEY is set, the same calls upgrade to Claude.
 """
@@ -20,6 +22,7 @@ import nlc
 import analytics
 import agent_assist
 import qa
+import ledger
 
 HERE = os.path.dirname(__file__)
 CONTACTS = json.load(open(os.path.join(HERE, "data", "contacts.json")))
@@ -36,6 +39,15 @@ def banner(t):
 
 def engine_line():
     print(f"{C['dim']}  engine: {llm.ENGINE}{C['x']}")
+
+
+# ----------------------------------------------------------------- LLM check
+def demo_llm():
+    banner("0. MODEL WIRING  (offline heuristic vs. real Claude)")
+    ok, msg = llm.selftest()
+    color = C['ok'] if ok else C['warn']
+    print(f"  {color}{msg}{C['x']}")
+    print(f"  {C['dim']}set ANTHROPIC_API_KEY (and optionally ANTHROPIC_MODEL) to light up Claude.{C['x']}")
 
 
 # ----------------------------------------------------------------- NLC
@@ -66,7 +78,6 @@ def demo_nlc(rule_text="Don't call anyone in New York, skip national DNC numbers
               f"{c['local_hour']:>2}:00  consent={c['consent']}")
         for r in reasons:
             print(f"         {C['dim']}- {r}{C['x']}")
-    # one allowed example
     for c in CONTACTS:
         ok, _ = nlc.eligible(c, preds)
         if ok:
@@ -117,16 +128,72 @@ def demo_assist():
         print(f"  {C['warn']}compliance nudge:{C['x']} {r['compliance_nudge']}")
 
 
+# ------------------------------------------------------- audit ledger
+def demo_ledger():
+    banner("5. CONSENT / REVOCATION AUDIT LEDGER  (the part with a real moat)")
+    print(f"  {C['dim']}append-only, hash-chained: every dial decision is provable in court{C['x']}")
+    ledger.reset()
+    base = 1_700_000_000  # fixed epoch so the demo is deterministic
+    day = 86400
+
+    # seed a couple of consent events
+    ledger.append("CONSENT_GRANTED", {"contact_id": "C001", "type": "written"}, ts=base)
+    ledger.append("CONSENT_REVOKED", {"contact_id": "C008", "channel": "voice"}, ts=base + day)
+
+    # log a contact-eligibility decision for every contact (the dial-time record)
+    for i, c in enumerate(CONTACTS):
+        ok, reasons = nlc.eligible(c)
+        ledger.append("CONTACT_ATTEMPT",
+                      {"contact_id": c["id"], "decision": "ALLOW" if ok else "BLOCK",
+                       "reasons": len(reasons)}, ts=base + 2 * day + i)
+
+    recs = ledger.read_all()
+    print(f"\n  Ledger now holds {len(recs)} immutable records. First few:")
+    for r in recs[:4]:
+        print(f"    seq {r['seq']:<3} {r['type']:<16} "
+              f"{str(r['payload'])[:42]:<44} {C['dim']}hash {r['hash'][:10]}…{C['x']}")
+
+    ok, bad = ledger.verify()
+    print(f"\n  Chain integrity: {C['ok'] if ok else C['no']}"
+          f"{'VALID -- not tampered' if ok else 'BROKEN at seq ' + str(bad)}{C['x']}")
+
+    hon, detail = ledger.revocation_honored("C008")
+    print(f"  Revocation honored (C008, {ledger.REVOCATION_WINDOW_DAYS}-business-day rule): "
+          f"{C['ok'] if hon else C['no']}{hon}{C['x']} -- {detail}")
+
+    # demonstrate the ledger CATCHING a violation: a rogue dial after opt-out
+    ledger.append("CONTACT_ATTEMPT",
+                  {"contact_id": "C008", "decision": "ALLOW", "reasons": 0}, ts=base + 5 * day)
+    hon, detail = ledger.revocation_honored("C008")
+    print(f"  After a rogue dial post-opt-out: {C['no'] if not hon else C['ok']}"
+          f"{'VIOLATION DETECTED' if not hon else 'ok'}{C['x']} -- {detail}")
+
+    # demonstrate tamper-evidence: edit a record in place, re-verify
+    raw = open(ledger.LEDGER_PATH).read().splitlines()
+    rec = json.loads(raw[3]); rec["payload"]["decision"] = "ALLOW"  # silently flip a BLOCK
+    raw[3] = json.dumps(rec)
+    open(ledger.LEDGER_PATH, "w").write("\n".join(raw) + "\n")
+    ok, bad = ledger.verify()
+    print(f"  Someone edits seq 3 to hide a block -> verify: {C['no']}"
+          f"{'TAMPER DETECTED at seq ' + str(bad) if not ok else 'undetected!'}{C['x']}")
+    ledger.reset()  # keep the repo clean
+    print(f"  {C['dim']}(ledger reset; data/ledger.jsonl is a runtime artifact, git-ignored){C['x']}")
+
+
 def main():
     arg = sys.argv[1] if len(sys.argv) > 1 else "all"
     print(f"{C['hd']}TCN AI components -- reverse-engineered demo{C['x']}")
     print(f"{C['dim']}100 contacts | 12 transcripts | engine: {llm.ENGINE}{C['x']}")
+    if arg in ("all", "llm"):
+        demo_llm()
     if arg in ("all", "nlc"):
         demo_nlc()
     if arg in ("all", "analytics"):
         demo_analytics()
     if arg in ("all", "assist"):
         demo_assist()
+    if arg in ("all", "ledger"):
+        demo_ledger()
     print()
 
 
