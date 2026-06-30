@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Project Dialtone — TCN AI & Technology Diligence | Prepared for BSP</title>
+<style>
+:root{
+  --bg:#070b12; --bg2:#0b111c; --card:#111a28; --card2:#0e1622; --ln:#23304a;
+  --tx:#e8eef7; --dim:#8aa0bf; --faint:#5c6f8c;
+  --c1:#22d3ee; --c2:#818cf8; --c3:#c084fc; --gold:#e8b339; --red:#f0556b; --grn:#34d399; --amb:#f5a623;
+  --serif:"Iowan Old Style",Palatino,"Palatino Linotype",Georgia,serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,sans-serif;
+  --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{background:#05080d;color:var(--tx);font-family:var(--sans);overflow:hidden}
+.deck{position:relative;width:100vw;height:100vh}
+.slide{position:absolute;inset:0;display:none;flex-direction:column;
+  padding:54px 68px 60px;background:
+   radial-gradient(1200px 600px at 85% -10%, #15243d55, transparent),
+   radial-gradient(900px 500px at -10% 110%, #2a1a4d44, transparent),
+   linear-gradient(160deg,var(--bg),var(--bg2));
+  animation:fade .35s ease}
+.slide.active{display:flex}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.eyebrow{font:600 12px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;
+  color:var(--c1);display:flex;gap:10px;align-items:center}
+.eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--c1);
+  box-shadow:0 0 10px var(--c1)}
+h1{font:700 52px/1.05 var(--sans);letter-spacing:-.02em;margin:14px 0}
+h2{font:700 33px/1.1 var(--sans);letter-spacing:-.01em;margin:8px 0 4px}
+.grad{background:linear-gradient(100deg,var(--c1),var(--c2) 55%,var(--c3));
+  -webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{color:var(--dim);font-size:16px;max-width:880px}
+.slide .body{flex:1;display:flex;flex-direction:column;justify-content:center;gap:14px;margin-top:14px}
+.foot{position:absolute;left:68px;right:68px;bottom:20px;display:flex;justify-content:space-between;
+  align-items:center;font:500 11px/1 var(--sans);color:var(--faint);letter-spacing:.04em;
+  border-top:1px solid var(--ln);padding-top:12px}
+.foot .conf{color:#46506a;text-transform:uppercase;letter-spacing:.18em}
+.tag{display:inline-block;font:600 11px/1 var(--sans);letter-spacing:.04em;padding:5px 11px;border-radius:30px;
+  border:1px solid var(--ln);color:var(--dim);background:#0d1626}
+.tag.red{color:var(--red);border-color:#5a2230;background:#2a121a}
+.tag.grn{color:var(--grn);border-color:#1f4d3e;background:#0f241d}
+.tag.gold{color:var(--gold);border-color:#5a4a1e;background:#241d0c}
+.grid{display:grid;gap:14px}
+.card{background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid var(--ln);
+  border-radius:14px;padding:18px 20px}
+.card h3{font:700 15px/1.2 var(--sans);margin-bottom:6px;letter-spacing:.01em}
+.card p{color:var(--dim);font-size:13.5px;line-height:1.5}
+.kpi{font:800 30px/1 var(--mono);letter-spacing:-.02em}
+.kpi.s{font-size:22px}
+ul.lead{list-style:none;display:flex;flex-direction:column;gap:12px}
+ul.lead li{position:relative;padding-left:30px;font-size:16.5px;line-height:1.45;color:#dbe6f5}
+ul.lead li:before{content:"";position:absolute;left:0;top:7px;width:13px;height:13px;border-radius:3px;
+  background:linear-gradient(135deg,var(--c1),var(--c3));box-shadow:0 0 10px #818cf877}
+ul.lead li b{color:#fff}
+.callout{border-left:3px solid;border-image:linear-gradient(var(--c1),var(--c3)) 1;
+  background:linear-gradient(100deg,#0e1b2e,#13112a);padding:18px 22px;border-radius:0 12px 12px 0}
+.callout.verdict{border-image:linear-gradient(var(--red),#b91c4b) 1;background:linear-gradient(100deg,#1f0f17,#160b13)}
+.callout .lbl{font:700 11px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--red);margin-bottom:8px}
+.callout.blue .lbl{color:var(--c1)}
+.callout .q{font-family:var(--serif);font-size:22px;line-height:1.35;color:#fff;font-style:italic}
+.callout .q.sm{font-size:18px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--ln)}
+thead th{font:700 11px/1.2 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--dim);
+  background:#0c1422;position:sticky;top:0}
+tbody td:first-child{font-weight:600;color:#eaf1fb}
+.cap{font-size:18px;text-align:center}.cap.y{color:var(--grn)}.cap.p{color:var(--amb)}.cap.n{color:var(--red)}.cap.o{color:#566}
+td.edge{font-weight:700}
+.barrow{display:grid;grid-template-columns:230px 1fr 70px;align-items:center;gap:14px;margin:9px 0}
+.barrow .nm{font-size:14.5px;color:#dbe6f5}
+.track{height:13px;border-radius:8px;background:#0c1626;border:1px solid var(--ln);overflow:hidden}
+.fill{height:100%;border-radius:8px;background:linear-gradient(90deg,var(--c1),var(--c3))}
+.fill.lo{background:linear-gradient(90deg,#7a2740,var(--red))}
+.fill.md{background:linear-gradient(90deg,#8a6a1e,var(--gold))}
+.fill.hi{background:linear-gradient(90deg,#1f7a5e,var(--grn))}
+.rate{font:700 12px/1 var(--mono);text-align:right;color:var(--dim)}
+.two{grid-template-columns:1fr 1fr}.three{grid-template-columns:1fr 1fr 1fr}.four{grid-template-columns:repeat(4,1fr)}
+.src{font-size:11px;color:var(--faint);line-height:1.6}
+.scorecard td{font-size:13px}
+.pill{font:700 11px/1 var(--mono);padding:4px 9px;border-radius:20px}
+.pill.lo{color:var(--red);background:#2a121a;border:1px solid #5a2230}
+.pill.md{color:var(--gold);background:#241d0c;border:1px solid #5a4a1e}
+.pill.hi{color:var(--grn);background:#0f241d;border:1px solid #1f4d3e}
+.nav{position:fixed;right:20px;bottom:16px;display:flex;gap:8px;z-index:50;align-items:center}
+.nav button{background:#11203a;border:1px solid var(--ln);color:var(--tx);width:34px;height:34px;
+  border-radius:9px;cursor:pointer;font-size:16px}
+.nav button:hover{border-color:var(--c1)}
+.count{font:600 12px/1 var(--mono);color:var(--dim);padding:0 6px}
+.cover-mark{font:700 13px/1 var(--mono);letter-spacing:.3em;color:var(--c1)}
+.cover-meta{display:flex;gap:40px;margin-top:30px}
+.cover-meta div .k{font:600 10px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--faint)}
+.cover-meta div .v{font-size:15px;color:#dbe6f5;margin-top:6px}
+.watermark{position:absolute;top:54px;right:68px;font:700 10px/1 var(--mono);letter-spacing:.2em;
+  color:#33405c;text-transform:uppercase}
+.small{font-size:12.5px;color:var(--dim);line-height:1.5}
+.hl{color:var(--gold);font-weight:600}
+.hr{color:var(--red);font-weight:700}
+@media print{
+  body{overflow:visible}.nav{display:none}
+  .slide{display:flex!important;position:relative;height:100vh;page-break-after:always;animation:none}
+}
+</style>
+</head>
+<body>
+<div class="deck" id="deck">
+
+<!-- 1 COVER -->
+<section class="slide active">
+  <div class="cover-mark">◢ PROJECT&nbsp;&nbsp;DIALTONE</div>
+  <div class="body" style="justify-content:flex-start;margin-top:40px">
+    <div class="eyebrow"><span class="dot"></span>Strictly private &amp; confidential · AI &amp; technology diligence</div>
+    <h1>TCN, Inc. — <span class="grad">AI Differentiation<br>&amp; Competitive Moat</span></h1>
+    <p class="sub">An independent assessment of whether TCN's artificial-intelligence stack constitutes a defensible, cash-flow-protecting moat — or commodity feature parity dressed as franchise value.</p>
+    <div class="cover-meta">
+      <div><div class="k">Prepared for</div><div class="v">Benefit Street Partners</div></div>
+      <div><div class="k">Mandate</div><div class="v">AI / technology advisory</div></div>
+      <div><div class="k">Sector</div><div class="v">CCaaS · Collections / ARM software</div></div>
+      <div><div class="k">Date</div><div class="v">June 2026</div></div>
+    </div>
+  </div>
+  <div class="foot"><span class="conf">Strictly Private &amp; Confidential</span><span>Prepared for Benefit Street Partners · Not investment advice</span><span>01</span></div>
+</section>
+
+<!-- 2 DISCLAIMER -->
+<section class="slide">
+  <div class="watermark">Confidential</div>
+  <div class="eyebrow"><span class="dot"></span>Important notice</div>
+  <h2>Basis of preparation</h2>
+  <div class="body">
+    <div class="grid two">
+      <div class="card"><h3>Scope &amp; purpose</h3><p>This material was prepared at the request of Benefit Street Partners ("BSP") to support internal evaluation of TCN, Inc. ("TCN" or the "Company"). It addresses AI/technology differentiation and competitive moat only, and is not a complete business, financial, legal, or tax assessment.</p></div>
+      <div class="card"><h3>Sources &amp; estimates</h3><p>Analysis relies on public company materials, competitor disclosures, third-party review corpora, and primary technical reconstruction. Financial and headcount figures are third-party estimates, are unaudited, and are labelled where used. No representation or warranty, express or implied, is given as to accuracy or completeness.</p></div>
+      <div class="card"><h3>No advice / forward-looking</h3><p>Nothing herein is investment, legal, or regulatory advice or a recommendation to transact. Forward-looking statements involve risk and may differ materially from outcomes. Recipients should perform independent diligence.</p></div>
+      <div class="card"><h3>Confidentiality</h3><p>For the internal use of BSP investment and diligence teams only. Not to be reproduced or distributed, in whole or in part, without prior written consent of the author.</p></div>
+    </div>
+  </div>
+  <div class="foot"><span class="conf">Strictly Private &amp; Confidential</span><span>Project Dialtone</span><span>02</span></div>
+</section>
+
+<!-- 3 EXEC SUMMARY -->
+<section class="slide">
+  <div class="watermark">Confidential</div>
+  <div class="eyebrow"><span class="dot"></span>Executive summary</div>
+  <h2>The headline: a vertical franchise, <span class="grad">not an AI franchise</span></h2>
+  <div class="body">
+    <div class="callout verdict">
+      <div class="lbl">Verdict</div>
+      <div class="q">TCN has no durable AI moat. Its AI is at competitive parity, built largely on commodity third-party models, and replicable in days. We could not identify a single AI capability TCN offers that its major competitors do not.</div>
+    </div>
+    <div class="grid two" style="margin-top:4px">
+      <ul class="lead">
+        <li><b>Parity, not edge.</b> Agent assist, summaries, analytics, voicebots, auto-QA — all table stakes also shipped by Five9, NICE and Talkdesk, often more maturely.</li>
+        <li><b>Commodity stack.</b> Speech, LLMs and even compliance data are bought, not built. TCN is an integrator, not a model owner.</li>
+      </ul>
+      <ul class="lead">
+        <li><b>The real moat is elsewhere</b> — vertical/compliance depth in collections and switching costs — and it is only <span class="hl">modest</span>.</li>
+        <li><b>The only AI-native moat is labor substitution.</b> Replacing human agents with autonomous AI agents. No vendor — TCN included — has done it at scale. Until then, AI is a feature, not a franchise.</li>
+      </ul>
+    </div>
+    <div class="callout blue">
+      <div class="lbl">Recommendation — credit lens</div>
+      <div class="q sm">Underwrite to the durable vertical + switching-cost cash flows. Do <span class="hr">not</span> capitalize an AI premium. Treat agentic "agent replacement" as unfunded optionality, not base case.</div>
+    </div>
+  </div>
+  <div class="foot"><span class="conf">Strictly Private &amp; Confidential</span><span>Project Dialtone</span><span>03</span></div>
+</section>
+
+<!-- 4 FRAMEWORK -->
+<section class="slide">
+  <div class="watermark">Confidential</div>
+  <div class="eyebrow"><span class="dot"></span>Diligence framework</div>
+  <h2>What would make AI a <span class="grad">moat</span> — and how we tested it</h2>
+  <div class="body">
+    <p class="sub">A capability is only a moat if a well-funded competitor cannot cheaply replicate it or take the customer. We scored TCN against five tests.</p>
+    <div class="grid four">
+      <div class="card"><div class="tag">Test 1</div><h3 style="margin-top:8px">Proprietary models / IP</h3><p>Own models, training pipeline, or technical IP rivals lack.</p></div>
+      <div class="card"><div class="tag">Test 2</div><h3 style="margin-top:8px">Proprietary data &amp; network effects</h3><p>Unique data that compounds and improves the product with scale.</p></div>
+      <div class="card"><div class="tag">Test 3</div><h3 style="margin-top:8px">Workflow lock-in</h3><p>Switching costs, integrations, data gravity, audit/legal record.</p></div>
+      <div class="card"><div class="tag">Test 4</div><h3 style="margin-top:8px">Distribution / vertical depth</h3><p>Channel, brand, and domain depth in a defensible niche.</p></div>
+    </div>
+    <div class="grid" style="grid-template-columns:1fr">
+      <div class="card" style="border-color:#5a4a1e"><div class="tag gold">Test 5 — the decisive one</div><h3 style="margin-top:8px">Economic step-change: labor substitution</h3><p>Does the AI remove the customer's largest cost — human agents — rather than merely assist them? This is the only AI capability that re-bases unit economics and creates new lock-in. <span class="hl">We weight it highest.</span></p></div>
+    </div>
+    <p class="small">Methodology: public materials &amp; competitor disclosures · review corpora (G2/Capterra) · third-party headcount/financial estimates · hands-on reconstruction of TCN's AI components.</p>
+  </div>
+  <div class="foot"><span class="conf">Strictly Private &amp; Confidential</span><span>Project Dialtone</span><span>04</span></div>
+</section>
+
+<!-- 5 COMPANY SNAPSHOT -->
+<section class="slide">
+  <div class="watermark">Confidential</div>
+  <div class="eyebrow"><span class="dot"></span>Target snapshot</div>
+  <h2>TCN, Inc. — small, profitable, vertically focused</h2>
+  <div class="body">
+    <div class="grid four">
+      <div class="card"><div class="small">Revenue (est.)</div><div class="kpi grad">~$20M</div><div class="small">~25% YoY growth</div></div>
+      <div class="card"><div class="small">Customers</div><div class="kpi grad">2,000+</div><div class="small">~$10k blended ACV (implied)</div></div>
+      <div class="card"><div class="small">Headcount (est.)</div><div class="kpi grad">~180–256</div><div class="small">~123 eng/tech · ~50 sales</div></div>
+      <div class="card"><div class="small">Capital raised</div><div class="kpi grad">$0</div><div class="small">Bootstrapped since 1999</div></div>
+    </div>
+    <div class="grid two">
+      <div class="card"><h3>Profile</h3><p>Founded 1999, St. George, Utah. Flagship platform <b>TCN Operator</b> (six modules: omnichannel, compliance/data, analytics, workforce, automation, infrastructure). Verticals: <b>collections / accounts-receivable management</b>, BPO, healthcare RCM, utilities; actively expanding UK/EU.</p></div>
+      <div class="card" style="border-color:#5a2230"><h3 style="color:var(--red)">Credit read — scale risk</h3><p>At ~$20M revenue TCN is <b>1–2 orders of magnitude smaller</b> than CCaaS leaders (Five9 ~$1B; NICE ~$2.7B). That implies a structurally <span class="hr">sub-scale R&amp;D budget</span> — a material disadvantage in any race to lead capital-intensive agentic AI.</p></div>
+    </div>
+  </div>
+  <div class="foot"><span class="conf">Strictly Private &amp; Confidential</span><span>Project Dialtone · figures are third-party estimates</span><span>05</span></div>
+</section>
+
+<!-- 6 AI ANATOMY -->
+<section class="slide">
+  <div class="watermark">Confidential</div>
+  <div class="eyebrow"><span class="dot"></span>Platform anatomy</div>
+  <h2>The AI toolbox — and what's <span class="grad">actually under the hood</span></h2>
+  <div class="body">
+    <table>
+      <thead><tr><th style="width:24%">Component</th><th style="width:38%">Marketed as</th><th>Under the hood (our assessment)</th></tr></thead>
+      <tbody>
+        <tr><td>Conversational / Voice Analytics</td><td>Transcribe, search, flag 100% of calls</td><td>Third-party ASR + keyword/intent scoring — <span class="hr">commodity</span></td></tr>
+        <tr><td>Agent Assist</td><td>Real-time coaching, next-best-action, summaries</td><td>LLM layer over transcripts — <span class="hr">commodity wrapper</span></td></tr>
+        <tr><td>Natural Language Compliance (NLC)</td><td>"Industry-first" plain-English compliance rules</td><td>LLM English→rule parser on a rules engine; <span class="hl">value is the audit trail, not the AI</span></td></tr>
+        <tr><td>Chatbots / Email automation</td><td>Deflect &amp; automate routine inbound</td><td>LLM + RAG — <span class="hr">commodity</span></td></tr>
+        <tr><td>Voicebot / AI IVR</td><td>Self-service voice, intent routing</td><td>ASR + LLM + TTS pipeline — <span class="hr">commodity</span></td></tr>
+        <tr><td>Auto-QA / Workforce Opt.</td><td>Auto-score every conversation</td><td>Scoring rubric over transcripts — <span class="hr">table stakes</span></td></tr>
+      </tbody>
+    </table>
+    <div class="callout blue"><div class="lbl">Signal</div><div class="q sm">Engineering job posts cite PostgreSQL + ClickHouse and "working closely with state-of-the-art AI models." TCN <b>consumes</b> models; there is no evidence of a proprietary model, training pipeline, or ML research function.</div></div>
+  </div>
+  <div class="foot"><span class="conf">Strictly Private &amp; Confidential</span><span>Project Dialtone</span><span>06</span></div>
+</section>
+
+<!-- 7 PARITY TABLE -->
+<section class="slide">
+  <div class="watermark">Confidential</div>
+  <div class="eyebrow"><span class="dot"></span>Competitive parity — the central exhibit</div>
+  <h2>Nothing in the toolbox a major peer <span class="grad">doesn't already have</span></h2>
+  <div class="body">
+    <table>
+      <thead><tr><th style="width:30%">AI capability</th><th>TCN</th><th>Five9 (Genius)</th><th>NICE (Enlighten/Mpower)</th><th>Talkdesk (Ascend)</th><th style="width:16%">TCN edge?</th></tr></thead>
+      <tbody>
+        <tr><td>Real-time agent assist / copilot</td><td class="cap y">●</td><td class="cap y">●</td><td class="cap y">●</td><td class="cap y">●</td><td class="edge"><span class="hr">None</span></td></tr>
+        <tr><td>Automated call summaries</td><td class="cap y">●</td><td class="cap y">●</td><td class="cap y">●</td><td class="cap y">●</td><td class="edge"><span class="hr">None</span></td></tr>
+        <tr><td>Conversational / voice analytics</td><td class="cap y">●</td><td class="cap y">●</td><td class="cap y">●</td><td class="cap y">●</td><td class="edge"><span class="hr">None</span></td></tr>
+        <tr><td>Self-service voicebot / AI IVR</td><td class="cap y">●</td><td class="cap y">●</td><td class="cap y">●</td><td class="cap y">●</td><td class="edge"><span class="hr">None</span></td></tr>
+        <tr><td>Auto-QA (100% of calls)</td><td class="cap y">●</td><td class="cap y">●</td><td class="cap y">●</td><td class="cap y">●</td><td class="edge"><span class="hr">None</span></td></tr>
+        <tr><td>No-code AI agent builder</td><td class="cap n">○</td><td class="cap y">●</td><td class="cap y">●</td><td class="cap y">●</td><td class="edge"><span class="hr">Behind</span></td></tr>
+        <tr><td>Autonomous / agentic AI (acts end-to-end)</td><td class="cap p">◐</td><td class="cap y">●</td><td class="cap y">●</td><td class="cap y">●</td><td class="edge"><span class="hr">Behind</span></td></tr>
+        <tr><td>Proprietary models / data moat</td><td class="cap n">○</td><td class="cap p">◐</td><td class="cap y">●</td><td class="cap p">◐</td><td class="edge"><span class="hr">None</span></td></tr>
+        <tr><td>Compliance / TCPA depth (collections)</td><td class="cap y">●</td><td class="cap p">◐</td><td class="cap y">●</td><td class="cap p">◐</td><td class="edge"><span class="hl">Vertical, not AI</span></td></tr>
+      </tbody>
+    </table>
+    <p class="small">● shipping &nbsp; ◐ partial / emerging &nbsp; ○ absent or trailing. TCN's only relative strength is collections-compliance depth — a <span class="hl">domain</span> advantage, not an AI one. On true agentic AI it trails the leaders.</p>
+  </div>
+  <div class="foot"><span class="conf">Strictly Private &amp; Confidential</span><span>Project Dialtone</span><span>07</span></div>
+</section>
+
+<!-- 8 BUILD VS BUY -->
+<section class="slide">
+  <div class="watermark">Confidential</div>
+  <div class="eyebrow"><span class="dot"></span>Build vs. buy</div>
+  <h2>The AI is rented; the moat would have to be <span class="grad">built</span></h2>
+  <div class="body">
+    <div class="grid two">
+      <div class="card" style="border-color:#5a2230"><h3 style="color:var(--red)">Bought / commodity</h3>
+        <p style="margin-top:6px">• ASR — Whisper / Deepgram / AWS Transcribe class<br>• LLMs — OpenAI / Anthropic / AWS<br>• TTS — ElevenLabs / Cartesia / Polly class<br>• <b>Compliance data</b> — DNC, litigator &amp; reassigned-number lists are a commodity market (DNC.com: 70B+ scrubs; PossibleNOW; Gryphon; Blacklist Alliance)</p></div>
+      <div class="card" style="border-color:#1f4d3e"><h3 style="color:var(--grn)">Built / defensible</h3>
+        <p style="margin-top:6px">• Integrated platform &amp; dialer<br>• Contact-eligibility rules engine + NL authoring<br>• <b>Consent / revocation audit ledger</b> (the courtroom record)<br>• Collections-specific workflows &amp; data gravity</p></div>
+    </div>
+    <div class="callout"><div class="lbl" style="color:var(--c1)">Reproducibility test — the IP barrier is low</div>
+      <div class="q sm">As part of this diligence we rebuilt TCN's four headline AI components <b>plus</b> a tamper-evident consent/audit ledger over a 100-record dataset — offline, with no proprietary data, in a single afternoon. A capability that reproduces that quickly is not a moat.</div></div>
+  </div>
+  <div class="foot"><span class="conf">Strictly Private &amp; Confidential</span><span>Project Dialtone</span><span>08</span></div>
+</section>
+
+<!-- 9 MOAT MAP -->
+<section class="slide">
+  <div class="watermark">Confidential</div>
+  <div class="eyebrow"><span class="dot"></span>Where defensibility actually lives</div>
+  <h2>The castle is the vertical. The AI is <span class="grad">paint on the drawbridge.</span></h2>
+  <div class="body">
+    <div style="margin:6px 0 4px">
+      <div class="barrow"><div class="nm">Vertical / compliance depth (collections)</div><div class="track"><div class="fill hi" style="width:72%"></div></div><div class="rate">MED-HIGH</div></div>
+      <div class="barrow"><div class="nm">Switching costs + data gravity</div><div class="track"><div class="fill md" style="width:58%"></div></div><div class="rate">MEDIUM</div></div>
+      <div class="barrow"><div class="nm">GTM efficiency / distribution</div><div class="track"><div class="fill md" style="width:55%"></div></div><div class="rate">MEDIUM</div></div>
+      <div class="barrow"><div class="nm">Cost / capital efficiency (bootstrapped)</div><div class="track"><div class="fill md" style="width:50%"></div></div><div class="rate">MEDIUM</div></div>
+      <div class="barrow"><div class="nm">AI / technology differentiation</div><div class="track"><div class="fill lo" style="width:14%"></div></div><div class="rate">LOW / NONE</div></div>
+    </div>
+    <div class="grid two">
+      <div class="card"><h3>What's real</h3><p>Purpose-built for debt collection (a customer literally cites "solutions designed for the debt-collection industry"), reinforced by switching costs and the legal-defensibility of consent/audit records.</p></div>
+      <div class="card"><h3>What's not</h3><p>The AI. It neither creates lock-in beyond the platform itself nor compounds with proprietary data. Removing the "AI" branding would not change TCN's competitive position.</p></div>
+    </div>
+  </div>
+  <div class="foot"><span class="conf">Strictly Private &amp; Confidential</span><span>Project Dialtone</span><span>09</span></div>
+</section>
+
+<!-- 10 THE THESIS -->
+<section class="slide">
+  <div class="watermark">Confidential</div>
+  <div class="eyebrow"><span class="dot"></span>The decisive question</div>
+  <h2>The only AI moat is <span class="grad">labor substitution</span></h2>
+  <div class="body">
+    <div class="grid three">
+      <div class="card"><div class="small">Contact-center cost stack</div><div class="kpi grad">~60–70%</div><div class="small">is human agent labor — the prize</div></div>
+      <div class="card"><h3>Augmentation (today)</h3><p>Copilots &amp; summaries trim handle time. <b>Incremental</b> — and equally available to every competitor. No lock-in.</p></div>
+      <div class="card" style="border-color:#5a4a1e"><h3 style="color:var(--gold)">Substitution (the moat)</h3><p>Replace seats with autonomous agents → re-bases unit economics, shifts pricing seat→outcome, and creates an automated-resolution <b>data flywheel</b> + deep lock-in.</p></div>
+    </div>
+    <div class="callout verdict"><div class="lbl">Thesis</div>
+      <div class="q">A moat is created only by convincing customers to remove human agents and replace them with AI agents. Industry-wide that conversion has <b>not</b> happened at scale — "agentic" is still largely demoware. The first mover to convert seats into agents captures the labor budget and the lock-in. <b>Until TCN does this, there is no moat.</b></div></div>
+    <div class="card"><h3>TCN-specific angle</h3><p>Collections is unusually automatable — scripted, repetitive, compliance-bounded — so the <span class="hl">opportunity is genuine</span>. But TCN sells augmentation today and is sub-scale on R&amp;D. This is the single most important item to diligence and to fund.</p></div>
+  </div>
+  <div class="foot"><span class="conf">Strictly Private &amp; Confidential</span><span>Project Dialtone</span><span>10</span></div>
+</section>
+
+<!-- 11 SCORECARD -->
+<section class="slide">
+  <div class="watermark">Confidential</div>
+  <div class="eyebrow"><span class="dot"></span>Moat scorecard</div>
+  <h2>Scored against the five tests</h2>
+  <div class="body">
+    <table class="scorecard">
+      <thead><tr><th style="width:26%">Moat test</th><th style="width:14%">Rating</th><th>Rationale</th></tr></thead>
+      <tbody>
+        <tr><td>1 · Proprietary models / IP</td><td><span class="pill lo">LOW</span></td><td>No owned models or training pipeline; consumes third-party AI.</td></tr>
+        <tr><td>2 · Proprietary data / network effects</td><td><span class="pill lo">LOW</span></td><td>Compliance data is bought; no compounding data advantage.</td></tr>
+        <tr><td>3 · Workflow lock-in / switching costs</td><td><span class="pill md">MEDIUM</span></td><td>Real via integration + consent/audit records; not AI-driven.</td></tr>
+        <tr><td>4 · Distribution / vertical depth</td><td><span class="pill md">MED-HIGH</span></td><td>Genuine collections/ARM domain depth; efficient GTM.</td></tr>
+        <tr><td>5 · Labor substitution (weighted ×)</td><td><span class="pill lo">NOT YET</span></td><td>Sells augmentation, not replacement. The decisive, unrealized lever.</td></tr>
+        <tr style="background:#0c1626"><td><b>Overall AI moat</b></td><td><span class="pill lo">LOW</span></td><td><b>Niche franchise with modest, non-AI defensibility. No AI premium warranted.</b></td></tr>
+      </tbody>
+    </table>
+    <p class="small">Ratings are qualitative judgments for diligence framing, not a quantitative score.</p>
+  </div>
+  <div class="foot"><span class="conf">Strictly Private &amp; Confidential</span><span>Project Dialtone</span><span>11</span></div>
+</section>
+
+<!-- 12 KPIs -->
+<section class="slide">
+  <div class="watermark">Confidential</div>
+  <div class="eyebrow"><span class="dot"></span>What would change our view</div>
+  <h2>KPIs &amp; catalysts to monitor</h2>
+  <div class="body">
+    <div class="grid two">
+      <div class="card"><h3>Substitution is happening (bull signals)</h3>
+        <p style="margin-top:6px">• <b>% interactions fully automated</b> / containment rate rising<br>• Reference customers <b>removing agent seats</b><br>• Pricing shifts from <b>per-seat → per-outcome</b><br>• <b>Gross margin expansion</b> from automation<br>• Agentic product GA with named logos</p></div>
+      <div class="card"><h3>Still a feature (bear signals)</h3>
+        <p style="margin-top:6px">• AI sold only as add-on; <b>low SKU attach / ARPU uplift</b><br>• <b>R&amp;D % of revenue</b> trails peers (scale gap widens)<br>• Logo churn in collections vertical<br>• Larger peers bundle <b>agentic + compliance</b> and undercut<br>• Net revenue retention flat/declining</p></div>
+    </div>
+    <div class="callout blue"><div class="lbl">Diligence ask</div><div class="q sm">Request the automation-rate cohort data and the AI-SKU attach/ARPU bridge. These two series determine whether the AI optionality is real — or narrative.</div></div>
+  </div>
+  <div class="foot"><span class="conf">Strictly Private &amp; Confidential</span><span>Project Dialtone</span><span>12</span></div>
+</section>
+
+<!-- 13 RECOMMENDATION -->
+<section class="slide">
+  <div class="watermark">Confidential</div>
+  <div class="eyebrow"><span class="dot"></span>Recommendation — implications for BSP</div>
+  <h2>Underwrite the franchise, <span class="grad">not the narrative</span></h2>
+  <div class="body">
+    <div class="grid two">
+      <ul class="lead">
+        <li><b>Cash-flow durability</b> rests on the vertical + switching costs — underwrite leverage and value there, not on AI.</li>
+        <li><b>Valuation discipline:</b> resist any AI multiple premium. Agentic upside = <span class="hl">optionality</span>, not base case.</li>
+        <li><b>Downside is contained</b> by sticky collections workflows and audit-record gravity — supportive of a credit thesis.</li>
+      </ul>
+      <ul class="lead">
+        <li><b>Value-creation if invested:</b> (1) lead agentic <span class="hl">substitution</span> in collections; (2) productize the compliance/audit ledger as the moat; (3) shift pricing seat→outcome.</li>
+        <li><b>Key risks:</b> sub-scale R&amp;D, CCaaS commoditization, peers bundling agentic + compliance, regulatory shifts (TCPA/Reg F).</li>
+      </ul>
+    </div>
+    <div class="callout verdict"><div class="lbl">Bottom line</div><div class="q">A solid niche credit with a modest, vertical/switching-cost moat — and <b>no AI moat today</b>. The AI optionality becomes real only if management commits to replacing human agents with AI agents. Price the base case; treat substitution as the upside call option, not the thesis.</div></div>
+  </div>
+  <div class="foot"><span class="conf">Strictly Private &amp; Confidential</span><span>Project Dialtone</span><span>13</span></div>
+</section>
+
+<!-- 14 APPENDIX -->
+<section class="slide">
+  <div class="watermark">Confidential</div>
+  <div class="eyebrow"><span class="dot"></span>Appendix</div>
+  <h2>Sources, method &amp; glossary</h2>
+  <div class="body">
+    <div class="grid three">
+      <div class="card"><h3>Primary sources</h3><p class="src">TCN (tcn.com): AI, Operator, NLC, voice-analytics, careers, case studies, press releases (2025).<br>Competitors: Five9, NICE, Talkdesk newsrooms; CX Today.<br>Compliance market: DNC.com / Contact Center Compliance, PossibleNOW, Blacklist Alliance.<br>Profiles: Crunchbase, ZoomInfo, PitchBook, Top Workplaces; G2 / Capterra reviews.<br>BSP: Franklin Templeton disclosures (2025–26).</p></div>
+      <div class="card"><h3>Method</h3><p class="src">Triangulation of public materials, competitor disclosures and review corpora; third-party financial/headcount estimates (unaudited); and a primary technical reconstruction of TCN's AI components incl. a tamper-evident consent/audit ledger over 100 records. Ratings are qualitative diligence framing.</p></div>
+      <div class="card"><h3>Glossary</h3><p class="src"><b>CCaaS</b> — contact center as a service. <b>ARM</b> — accounts-receivable management (collections). <b>ASR</b> — automatic speech recognition. <b>NLC</b> — TCN's Natural Language Compliance. <b>Agentic AI</b> — AI that autonomously completes multi-step tasks. <b>TCPA / Reg F</b> — US telemarketing &amp; debt-collection rules.</p></div>
+    </div>
+    <p class="small">Companion artifact: a runnable reconstruction of TCN's AI stack (four components + audit ledger) accompanies this deck and is available on request.</p>
+  </div>
+  <div class="foot"><span class="conf">Strictly Private &amp; Confidential</span><span>Project Dialtone · Prepared for Benefit Street Partners</span><span>14</span></div>
+</section>
+
+</div>
+
+<div class="nav">
+  <button id="prev">‹</button><span class="count" id="count">01 / 14</span><button id="next">›</button>
+</div>
+<script>
+const slides=[...document.querySelectorAll('.slide')];let i=0;
+function show(n){i=Math.max(0,Math.min(slides.length-1,n));
+  slides.forEach((s,k)=>s.classList.toggle('active',k===i));
+  document.getElementById('count').textContent=String(i+1).padStart(2,'0')+' / '+String(slides.length).padStart(2,'0');}
+document.getElementById('next').onclick=()=>show(i+1);
+document.getElementById('prev').onclick=()=>show(i-1);
+addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key===' ')show(i+1);
+  else if(e.key==='ArrowLeft')show(i-1);else if(e.key==='Home')show(0);else if(e.key==='End')show(slides.length-1);});
+show(0);
+</script>
+</body>
+</html>
