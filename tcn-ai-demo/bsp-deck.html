@@ -166,7 +166,7 @@ td.edge{font-weight:700}
     </div>
     <div class="callout blue">
       <div class="lbl">Recommendation — credit lens</div>
-      <div class="q sm">Underwrite to the durable vertical + switching-cost cash flows. Do <span class="hr">not</span> capitalize an AI premium. Treat agentic "agent replacement" as unfunded optionality, not base case.</div>
+      <div class="q sm">Underwrite the durable vertical + switching-cost + <span class="hl">consumption-pricing</span> cash flows &mdash; usage pricing lets TCN monetize AI volume, not be cannibalized. Do <span class="hr">not</span> capitalize an AI premium; treat agent-replacement as unfunded optionality.</div>
     </div>
   </div>
   <div class="foot"><span class="conf">Strictly Private &amp; Confidential</span><span>Project Teton</span><span class="pg"></span></div>
@@ -201,13 +201,13 @@ td.edge{font-weight:700}
   <div class="body">
     <div class="grid four">
       <div class="card"><div class="small">ARR (2025A)</div><div class="kpi grad">~$60M</div><div class="small">~$69M Q1&#39;26 &middot; ~37% 2026E</div></div>
-      <div class="card"><div class="small">Customers &middot; ARPA</div><div class="kpi grad">1,000+</div><div class="small">~$60K ARPA (up from $42K)</div></div>
-      <div class="card"><div class="small">Profitability</div><div class="kpi grad">~24%</div><div class="small">Adj. EBITDA &middot; 75%+ GM &middot; Rule-of-60</div></div>
+      <div class="card"><div class="small">Customers &middot; ARPA</div><div class="kpi grad">~1,200</div><div class="small">~$60K ARPA (up from $42K)</div></div>
+      <div class="card"><div class="small">Profitability</div><div class="kpi grad">~20&rarr;24%</div><div class="small">EBITDA LTM&rarr;2026E, 75% GM, NPS 52</div></div>
       <div class="card"><div class="small">Retention</div><div class="kpi grad">112%</div><div class="small">NRR &middot; 81% GRR &middot; 98% logo</div></div>
     </div>
     <div class="grid two">
       <div class="card"><h3>Profile</h3><p>Founded 1999, St. George, Utah. Flagship platform <b>TCN Operator</b> (six modules: omnichannel, compliance/data, analytics, workforce, automation, infrastructure). Verticals: <b>collections / accounts-receivable management</b>, BPO, healthcare RCM, utilities; actively expanding UK/EU.</p></div>
-      <div class="card" style="border-color:#5a4a1e"><h3 style="color:var(--gold)">Credit read</h3><p>A genuinely attractive niche credit: ~$60M ARR, ~30%+ organic growth, ~24% EBITDA, bootstrapped (<b>$0 raised since 1999</b>). But still <b>15&ndash;45&times; smaller</b> than the CCaaS leaders &mdash; <span class="hr">sub-scale to win an AI R&amp;D arms race</span>. Underwrite the franchise, not the AI narrative.</p></div>
+      <div class="card" style="border-color:#5a4a1e"><h3 style="color:var(--gold)">Credit read</h3><p>A genuinely attractive niche credit: ~$60M ARR, ~37% 2026E growth, ~20&rarr;24% EBITDA, Rule-of-60, bootstrapped (<b>$0 raised since 1999</b>). But <b>~17&ndash;45&times; smaller</b> than the three scaled leaders (Five9/Genesys/NICE) &mdash; <span class="hr">sub-scale for an AI R&amp;D arms race</span>. Underwrite the franchise, not the AI narrative.</p></div>
     </div>
   </div>
   <div class="foot"><span class="conf">Strictly Private &amp; Confidential</span><span>Project Teton &middot; figures per CIP / management</span><span class="pg"></span></div>
@@ -230,7 +230,7 @@ td.edge{font-weight:700}
         <tr><td>Auto-QA / Workforce Opt.</td><td>Auto-score every conversation</td><td>Scoring rubric over transcripts — <span class="hr">table stakes</span></td></tr>
       </tbody>
     </table>
-    <div class="callout blue"><div class="lbl">Signal</div><div class="q sm">Engineering job posts cite PostgreSQL + ClickHouse and "working closely with state-of-the-art AI models." TCN <b>consumes</b> models; there is no evidence of a proprietary model, training pipeline, or ML research function.</div></div>
+    <div class="callout blue"><div class="lbl">Signal</div><div class="q sm">TCN's generative AI (transcription, summaries, QA) runs on third-party LLMs (GPT / Gemini / Whisper). Its one proprietary model, <b>SmartAMD</b>, is a narrow answering-machine detector &mdash; real, but not a generative or agentic moat. No general-purpose model or ML research function is evident.</div></div>
   </div>
   <div class="foot"><span class="conf">Strictly Private &amp; Confidential</span><span>Project Teton</span><span class="pg"></span></div>
 </section>
@@ -251,11 +251,11 @@ td.edge{font-weight:700}
         <tr><td>Auto-QA (100% of calls)</td><td class="cap y">●</td><td class="cap y">●</td><td class="cap y">●</td><td class="cap y">●</td><td class="edge"><span class="hr">None</span></td></tr>
         <tr><td>No-code AI agent builder</td><td class="cap n">○</td><td class="cap y">●</td><td class="cap y">●</td><td class="cap y">●</td><td class="edge"><span class="hr">Behind</span></td></tr>
         <tr><td>Autonomous / agentic AI (acts end-to-end)</td><td class="cap p">◐</td><td class="cap y">●</td><td class="cap y">●</td><td class="cap y">●</td><td class="edge"><span class="hr">Behind</span></td></tr>
-        <tr><td>Proprietary models / data moat</td><td class="cap n">○</td><td class="cap p">◐</td><td class="cap y">●</td><td class="cap p">◐</td><td class="edge"><span class="hr">None</span></td></tr>
+        <tr><td>Proprietary models / data moat</td><td class="cap p">&#9680;</td><td class="cap p">&#9680;</td><td class="cap y">&#9679;</td><td class="cap p">&#9680;</td><td class="edge"><span class="hr">None</span></td></tr>
         <tr><td>Compliance / TCPA depth (collections)</td><td class="cap y">●</td><td class="cap p">◐</td><td class="cap y">●</td><td class="cap p">◐</td><td class="edge"><span class="hl">Vertical, not AI</span></td></tr>
       </tbody>
     </table>
-    <p class="small">● shipping &nbsp; ◐ partial / emerging &nbsp; ○ absent or trailing. TCN's only relative strength is collections-compliance depth — a <span class="hl">domain</span> advantage, not an AI one. On true agentic AI it trails the leaders.</p>
+    <p class="small">● shipping &nbsp; ◐ partial / emerging &nbsp; ○ absent or trailing. TCN's only relative strength is collections-compliance depth — a <span class="hl">domain</span> advantage, not an AI one. Its one proprietary model (SmartAMD) is narrow answering-machine detection. On true agentic AI it trails the leaders.</p>
   </div>
   <div class="foot"><span class="conf">Strictly Private &amp; Confidential</span><span>Project Teton</span><span class="pg"></span></div>
 </section>
@@ -283,7 +283,7 @@ td.edge{font-weight:700}
       <div class="barrow"><div class="nm">Talkdesk</div><div class="track"><div class="fill md" style="width:8%"></div></div><div class="rate">~$0.2B</div></div>
       <div class="barrow"><div class="nm">TCN</div><div class="track"><div class="fill lo" style="width:2.2%"></div></div><div class="rate">~$60M</div></div>
     </div>
-    <div class="callout verdict"><div class="lbl">Implication</div><div class="q sm">TCN is roughly <b>15&ndash;45&times; smaller</b> than the category leaders. It cannot out-spend them on AI R&amp;D; it can only win by <span class="hl">vertical depth and price</span>. That is a defensible niche &mdash; not an AI arms-race position.</div></div>
+    <div class="callout verdict"><div class="lbl">Implication</div><div class="q sm">TCN is <b>~17&ndash;45&times; smaller</b> than the three scaled leaders (Five9/Genesys/NICE); only AI-first Talkdesk (~$0.2B) is within ~3&times;. It can't out-spend the majors on AI R&amp;D &mdash; it wins by <span class="hl">vertical depth and price</span>. A defensible niche, not an arms-race position.</div></div>
   </div>
   <div class="foot"><span class="conf">Strictly Private &amp; Confidential</span><span>Project Teton &middot; revenue figures are third-party estimates</span><span class="pg"></span></div>
 </section>
@@ -306,7 +306,7 @@ td.edge{font-weight:700}
         <tr><td>DNC.com / Gryphon / PossibleNOW</td><td class="cap y">&#9679; Yes</td><td>Compliance-as-a-service &mdash; buyable a la carte</td></tr>
       </tbody>
     </table>
-    <div class="callout verdict"><div class="lbl">Why it matters</div><div class="q sm">The AI-native entrants are <b>compliance-native too</b> &mdash; so compliance does not shield TCN from disintermediation. Strip the label and the "compliance moat" is really <span class="hl">switching costs + being the last independent mid-market specialist</span> after LiveVox was absorbed by NICE. A market position, not a technical moat.</div></div>
+    <div class="callout verdict"><div class="lbl">Why it matters</div><div class="q sm">Compliance <i>marketing</i> is table stakes; compliance <i>depth</i> (court-tested audit records, a revocation ledger) is a modest, real <span class="hl">vertical/legal</span> advantage &mdash; but not an AI one, and eroding as the AI-natives go compliance-native. Strip the label and the "moat" is switching costs + being the last independent specialist after LiveVox was absorbed by NICE.</div></div>
   </div>
   <div class="foot"><span class="conf">Strictly Private &amp; Confidential</span><span>Project Teton</span><span class="pg"></span></div>
 </section>
@@ -324,7 +324,7 @@ td.edge{font-weight:700}
         <p style="margin-top:6px">• Integrated platform &amp; dialer<br>• Contact-eligibility rules engine + NL authoring<br>• <b>Consent / revocation audit ledger</b> (the courtroom record)<br>• Collections-specific workflows &amp; data gravity</p></div>
     </div>
     <div class="callout"><div class="lbl" style="color:var(--c1)">Reproducibility test — the IP barrier is low</div>
-      <div class="q sm">As part of this diligence we rebuilt TCN's four headline AI components <b>plus</b> a tamper-evident consent/audit ledger over a 100-record dataset — offline, with no proprietary data, in a single afternoon. A capability that reproduces that quickly is not a moat.</div></div>
+      <div class="q sm">As part of this diligence we reproduced TCN's four headline <b>AI/LLM components</b> offline over a 100-record dataset in an afternoon &mdash; confirming the AI layer is commodity. What we did <b>not</b> reproduce is the <i>production</i> consent/audit ledger at customer scale, with years of legally-defensible history &mdash; which is exactly where the modest, non-AI moat sits.</div></div>
   </div>
   <div class="foot"><span class="conf">Strictly Private &amp; Confidential</span><span>Project Teton</span><span class="pg"></span></div>
 </section>
@@ -339,6 +339,7 @@ td.edge{font-weight:700}
       <div class="barrow"><div class="nm">Vertical / compliance depth (collections)</div><div class="track"><div class="fill hi" style="width:72%"></div></div><div class="rate">MED-HIGH</div></div>
       <div class="barrow"><div class="nm">Switching costs + data gravity</div><div class="track"><div class="fill md" style="width:58%"></div></div><div class="rate">MEDIUM</div></div>
       <div class="barrow"><div class="nm">GTM efficiency / distribution</div><div class="track"><div class="fill md" style="width:55%"></div></div><div class="rate">MEDIUM</div></div>
+      <div class="barrow"><div class="nm">Consumption pricing (monetizes AI, not cannibalized)</div><div class="track"><div class="fill hi" style="width:64%"></div></div><div class="rate">MED-HIGH</div></div>
       <div class="barrow"><div class="nm">Cost / capital efficiency (bootstrapped)</div><div class="track"><div class="fill md" style="width:50%"></div></div><div class="rate">MEDIUM</div></div>
       <div class="barrow"><div class="nm">AI / technology differentiation</div><div class="track"><div class="fill lo" style="width:14%"></div></div><div class="rate">LOW / NONE</div></div>
     </div>
@@ -378,16 +379,16 @@ td.edge{font-weight:700}
     <table>
       <thead><tr><th style="width:13%">Company</th><th style="width:40%">What it does</th><th style="width:20%">Scale</th><th>Threat vector to TCN</th></tr></thead>
       <tbody>
-        <tr><td><b>Decagon</b></td><td>Autonomous "concierge" AI agents resolving chat/email/voice to cut support headcount; plain-English auditable compliance (AOPs) + QA guardrails</td><td>$4.5B val · ~$35M ARR · 2023</td><td class="edge"><span class="hr">Highest</span> — launching outbound voice + NLC-style compliance</td></tr>
-        <tr><td><b>Sierra</b></td><td>Autonomous customer-facing AI agents (voice + digital), outcome-based pricing; founded by Bret Taylor (ex-Salesforce / OpenAI chair)</td><td>~$15B val · ~$200M ARR · 2023</td><td class="edge"><span class="hr">High</span> — capital + trust to move into regulated</td></tr>
+        <tr><td><b>Decagon</b></td><td>Autonomous "concierge" AI agents resolving chat/email/voice to cut support headcount; plain-English auditable compliance (AOPs) + QA guardrails</td><td>$4.5B val · ~$35M ARR (est. late-25) · 2023</td><td class="edge"><span class="hr">Highest</span> — launching outbound voice + NLC-style compliance</td></tr>
+        <tr><td><b>Sierra</b></td><td>Autonomous customer-facing AI agents (voice + digital), outcome-based pricing; founded by Bret Taylor (ex-Salesforce / OpenAI chair)</td><td>$15.8B val · ~$200M ARR · 2023</td><td class="edge"><span class="hr">High</span> — capital + trust to move into regulated</td></tr>
         <tr><td><b>Skit.ai</b></td><td>Collections-<i>native</i> voice AI: automated outbound collections calls with built-in FDCPA / TCPA / Reg F compliance</td><td>~$48M raised · 2016</td><td class="edge"><span class="hr">Direct</span> — TCN's exact use case &amp; buyer</td></tr>
-        <tr><td><b>Cresta</b></td><td>Generative AI for the contact center: real-time agent assist, coaching, and virtual agents; analytics-driven</td><td>$1.6B val · ~$50M ARR · 2017</td><td class="edge">Overlaps agent-assist / analytics; FS vertical</td></tr>
+        <tr><td><b>Cresta</b></td><td>Generative AI for the contact center: real-time agent assist, coaching, and virtual agents; analytics-driven</td><td>$1.6B val · ~$100M ARR · 2017</td><td class="edge">Overlaps agent-assist / analytics; FS vertical</td></tr>
         <tr><td><b>Parloa</b></td><td>Voice-first agentic AI automating inbound/outbound conversations at enterprise scale</td><td>$3.0B val · 2018</td><td class="edge">Voice automation; EU/enterprise-led</td></tr>
       </tbody>
     </table>
     <div class="callout verdict"><div class="lbl">TCN's defenses: holding vs. eroding</div><div class="q sm"><b>Holds:</b> consumption pricing, incumbency in the dial path, vertical/compliance depth, switching costs. <b>Eroding:</b> compliance is now native to the disruptors, Decagon is entering outbound voice, and Skit.ai is collections-native. "Watch them" is the floor — the question is whether TCN partners, acquires, or builds fast enough.</div></div>
   </div>
-  <div class="foot"><span class="conf">Strictly Private &amp; Confidential</span><span>Project Teton · valuations per public reporting</span><span class="pg"></span></div>
+  <div class="foot"><span class="conf">Strictly Private &amp; Confidential</span><span>Project Teton · valuations per public reporting, mid-2026</span><span class="pg"></span></div>
 </section>
 
 <!-- 10c METRICS -->
@@ -421,7 +422,7 @@ td.edge{font-weight:700}
     <table class="scorecard">
       <thead><tr><th style="width:26%">Moat test</th><th style="width:14%">Rating</th><th>Rationale</th></tr></thead>
       <tbody>
-        <tr><td>1 · Proprietary models / IP</td><td><span class="pill lo">LOW</span></td><td>No owned models or training pipeline; consumes third-party AI.</td></tr>
+        <tr><td>1 &middot; Proprietary models / IP</td><td><span class="pill lo">LOW</span></td><td>One narrow proprietary model (SmartAMD, AMD); generative AI is third-party. No franchise-grade IP.</td></tr>
         <tr><td>2 · Proprietary data / network effects</td><td><span class="pill lo">LOW</span></td><td>Compliance data is bought; no compounding data advantage.</td></tr>
         <tr><td>3 · Workflow lock-in / switching costs</td><td><span class="pill md">MEDIUM</span></td><td>Real via integration + consent/audit records; not AI-driven.</td></tr>
         <tr><td>4 · Distribution / vertical depth</td><td><span class="pill md">MED-HIGH</span></td><td>Genuine collections/ARM domain depth; efficient GTM.</td></tr>
