@@ -2,70 +2,70 @@
 <title>Project Teton — AI Moat Memo — K. Slowinski</title>
 <style>
 @page{size:Letter portrait;margin:0}
-:root{--ink:#0f1622;--dim:#55627a;--ln:#d9e0ea;--c1:#0ea5b7;--c2:#6366f1;--gold:#b7791f;--red:#c02b47;--grn:#0f8a5f}
+:root{--ink:#1b2430;--muted:#5c6672;--rule:#d5dbe3;--navy:#1f3a5f;--band1:#152b46;--band2:#25456b;--soft:#f5f7fa}
 *{box-sizing:border-box;margin:0;padding:0}
-body{font:12px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,sans-serif;color:var(--ink);background:#fff}
-.page{width:8.5in;min-height:11in;margin:0 auto;padding:0 0 0.5in}
-.band{background:linear-gradient(115deg,#0b1220,#182a4a 60%,#3b2d6b);color:#fff;padding:26px 42px 20px}
-.band .mark{font:700 11px/1 ui-monospace,monospace;letter-spacing:.34em;color:#5fe0ef}
-.band h1{font-size:21px;letter-spacing:-.01em;margin:9px 0 12px;font-weight:800}
-.band h1 span{background:linear-gradient(100deg,#5fe0ef,#a5b4fc);-webkit-background-clip:text;background-clip:text;color:transparent}
-.meta{display:grid;grid-template-columns:auto 1fr;gap:2px 14px;font-size:11px;color:#c7d2e5}
+body{font:12px/1.5 "Helvetica Neue",Arial,-apple-system,BlinkMacSystemFont,sans-serif;color:var(--ink);background:#fff}
+.page{width:8.5in;min-height:11in;margin:0 auto}
+.band{background:linear-gradient(120deg,var(--band1),var(--band2));color:#fff;padding:26px 46px 20px}
+.band .mark{font:600 10px/1 "Helvetica Neue",Arial,sans-serif;letter-spacing:.34em;color:#c8d6e8}
+.band h1{font-size:20px;letter-spacing:-.01em;margin:8px 0 14px;font-weight:700}
+.rule-under{height:2px;width:46px;background:#8aa6c6;margin:9px 0 13px}
+.meta{display:grid;grid-template-columns:auto 1fr;gap:3px 16px;font-size:10.5px;color:#c7d2e0}
 .meta b{color:#fff;font-weight:600}
-.body{padding:20px 42px 0}
-.bluf{border:1px solid var(--ln);border-left:4px solid var(--red);background:#fbf3f5;padding:12px 16px;border-radius:0 8px 8px 0;margin-bottom:16px}
-.bluf .l{font:700 10px/1 sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--red);margin-bottom:5px}
-.bluf p{font-size:13.5px;font-weight:600;line-height:1.42}
-h2{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--c2);margin:15px 0 7px;padding-bottom:4px;border-bottom:1px solid var(--ln)}
+.body{padding:22px 46px 0}
+.bluf{border:1px solid var(--rule);border-left:3px solid var(--navy);background:var(--soft);padding:12px 16px;margin-bottom:16px}
+.bluf .l{font:700 9.5px/1 sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--navy);margin-bottom:6px}
+.bluf p{font-size:13px;line-height:1.45}
+h2{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--navy);margin:16px 0 8px;padding-bottom:5px;border-bottom:1px solid var(--rule);font-weight:700}
 ul{list-style:none}
-li{position:relative;padding-left:16px;margin:5px 0;line-height:1.42}
-li:before{content:"";position:absolute;left:0;top:6px;width:6px;height:6px;border-radius:2px;background:linear-gradient(135deg,var(--c1),var(--c2))}
-li.n:before{background:var(--red)}li.y:before{background:var(--grn)}
-b.r{color:var(--red)}b.g{color:var(--grn)}.hl{color:var(--gold);font-weight:700}
-.kick{margin-top:15px;background:#0f1622;color:#eaf1fb;border-radius:8px;padding:13px 16px}
-.kick .l{font:700 10px/1 sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#5fe0ef;margin-bottom:5px}
-.kick p{font-size:12.5px;line-height:1.45}
-.sig{margin-top:16px;padding-top:10px;border-top:1px solid var(--ln);font-size:11px;color:var(--dim)}
+li{position:relative;padding-left:15px;margin:6px 0;line-height:1.44}
+li:before{content:"";position:absolute;left:0;top:6px;width:5px;height:5px;background:var(--navy)}
+b{font-weight:700}
+.risk{margin-top:15px;background:var(--soft);border:1px solid var(--rule);border-left:3px solid var(--navy);padding:12px 16px}
+.risk .l{font:700 9.5px/1 sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--navy);margin-bottom:6px}
+.risk p{font-size:12px;line-height:1.46}
+.sig{margin-top:18px;padding-top:11px;border-top:1px solid var(--rule);font-size:11px;color:var(--muted)}
 .sig b{color:var(--ink)}
-.foot{margin-top:8px;font-size:9.5px;color:#9aa6ba;text-align:justify;line-height:1.4}
+.foot{margin-top:9px;font-size:9px;color:#9aa4b2;line-height:1.45;text-align:justify}
 </style></head>
 <body><div class="page">
 <div class="band">
-  <div class="mark">◢ PROJECT TETON</div>
-  <h1>AI &amp; Technology Moat — <span>Signal vs. Sell-Side</span></h1>
+  <div class="mark">PROJECT TETON</div>
+  <h1>AI &amp; Technology Moat — Signal vs. Sell-Side</h1>
+  <div class="rule-under"></div>
   <div class="meta">
     <span>TO</span><b>Benefit Street Partners — Investment Committee</b>
     <span>FROM</span><b>K. Slowinski — Independent AI &amp; Technology Advisor</b>
     <span>RE</span><b>TCN (Project Teton): does the AI constitute a real moat?</b>
-    <span>DATE</span><b>June 2026 &nbsp;·&nbsp; Strictly Private &amp; Confidential</b>
+    <span>DATE</span><b>June 2026&nbsp;&nbsp;·&nbsp;&nbsp;Strictly Private &amp; Confidential</b>
   </div>
 </div>
 <div class="body">
   <div class="bluf"><div class="l">Bottom line up front</div>
-    <p>TCN is a good business with <b class="r">no AI moat</b>. The CIP and the Palo Alto commercial VDD sell an "AI + compliance moat" the technology does not support. Fund the franchise; price the AI as an <span class="hl">option, not a fact</span>.</p></div>
+    <p>TCN is a good business with <b>no AI moat</b>. The CIP and the Palo Alto commercial VDD sell an "AI + compliance moat" the technology does not support. Fund the franchise; price the AI as an option, not a fact.</p></div>
 
   <h2>What's real — fund this</h2>
   <ul>
-    <li class="y"><b class="g">~$60M ARR, ~37% 2026E growth, ~20&rarr;24% EBITDA</b> — a bootstrapped Rule-of-60. Genuinely attractive.</li>
-    <li class="y">Sticky: ~98% logo retention and deep outbound-dialer switching costs.</li>
-    <li class="y"><b class="g">Consumption pricing</b> (not per-seat) — well-positioned to monetize AI usage <i>without</i> cannibalizing itself. This is the single best part of the story.</li>
+    <li><b>~$60M ARR, ~37% 2026E growth, ~20–24% EBITDA</b> — a bootstrapped Rule-of-60. Genuinely attractive.</li>
+    <li>Sticky: ~98% logo retention and deep outbound-dialer switching costs.</li>
+    <li><b>Consumption pricing</b> (not per-seat) — well-positioned to monetize AI usage <i>without</i> cannibalizing itself. The single best part of the story.</li>
   </ul>
 
   <h2>What's hype — don't pay for it</h2>
   <ul>
-    <li class="n"><b class="r">"AI moat."</b> Exactly one proprietary model: SmartAMD, an answering-machine detector. The generative AI (transcription, summaries, QA) runs on <b>GPT / Gemini / Whisper</b> — rented, not owned. Agentic voice = <b>one customer, ~$1M ARR</b>. A launch, not a moat.</li>
-    <li class="n"><b class="r">"Compliance moat."</b> Compliance <i>marketing</i> is table stakes &mdash; LiveVox, Five9, Convoso, AI-native Skit.ai all sell it; buyable a la carte (DNC.com, Gryphon). Compliance <i>depth</i> (court-tested audit records) is a modest vertical/legal edge &mdash; not an AI one, and eroding as AI-natives go compliance-native.</li>
-    <li class="n">The Palo Alto VDD grades <b>nearly every finding maximum-positive</b>. That is a second marketing deck, not independent diligence.</li>
-    <li class="n"><b>"$14.4B AI TAM"</b> assumes 100% AI-agent adoption across all verticals. A ceiling dressed as an opportunity.</li>
+    <li><b>"AI moat."</b> One in-production proprietary model: SmartAMD, an answering-machine detector. The generative AI (transcription, summaries, QA) runs on GPT / Gemini / Whisper — rented. Agentic voice is launched but pre-traction: <b>one customer, ~$1M ARR</b>. A launch, not a moat.</li>
+    <li><b>"Compliance moat."</b> Compliance <i>marketing</i> is table stakes — LiveVox, Five9, Convoso and AI-native Skit.ai all sell it; buyable à la carte (DNC.com, Gryphon). Compliance <i>depth</i> (court-tested audit records) is a modest vertical/legal edge — not an AI one, and eroding as AI-natives go compliance-native.</li>
+    <li>The Palo Alto VDD grades <b>nearly every finding maximum-positive</b> — a second marketing deck, not independent diligence.</li>
+    <li><b>"$14.4B AI TAM"</b> assumes 100% AI-agent adoption across all verticals. A ceiling dressed as an opportunity.</li>
   </ul>
 
-  <div class="kick"><div class="l">The risk nobody priced</div>
-    <p>Consumption pricing means volume shifting to AI is partly <b>monetized, not lost</b> &mdash; <i>as long as calls still traverse TCN's dialer</i>. The real risk is <b>dial-path retention</b>: if AI-natives (<b>Decagon, Sierra, Skit.ai</b>) bring their own compliant telephony and win the dial path, TCN is disintermediated into commodity pipes. Neither document stress-tests this &mdash; it is the gating technical-diligence question.</p></div>
+  <div class="risk"><div class="l">The risk nobody priced</div>
+    <p>Consumption pricing means volume shifting to AI is partly <b>monetized, not lost</b> — as long as calls still traverse TCN's dialer. The real risk is <b>dial-path retention</b>: if AI-natives (Decagon, Sierra, Skit.ai) bring their own compliant telephony and win the dial path, TCN is disintermediated into commodity pipes. Neither document stress-tests this — it is the gating technical-diligence question.</p></div>
 
   <h2>Recommendation</h2>
   <ul>
-    <li>Underwrite the ~$60M franchise on <span class="hl">switching costs + consumption pricing + last-independent-in-a-niche</span> (post-LiveVox/NICE). Treat AI as optionality, not thesis.</li>
-    <li><b class="r">Do not pay an AI premium.</b> Make one question gate the tech DD: <i>does TCN stay in the call path as AI agents replace human seats?</i></li>
+    <li>Underwrite the ~$60M franchise on <b>switching costs + consumption pricing + last-independent-in-a-niche</b> (post-LiveVox/NICE). Treat AI as optionality, not thesis.</li>
+    <li><b>Do not pay an AI premium.</b> One question gates the tech DD: <i>does TCN stay in the call path as AI agents replace human seats?</i></li>
   </ul>
 
   <div class="sig"><b>K. Slowinski</b><br>Independent AI &amp; Technology Advisor</div>
