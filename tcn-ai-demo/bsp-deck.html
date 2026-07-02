@@ -113,6 +113,7 @@ td.edge{font-weight:700}
 <!-- 1 COVER -->
 
 
+
 <section class="slide active">
   <div class="cover-mark">◢ PROJECT&nbsp;&nbsp;TETON</div>
   <div class="body" style="justify-content:flex-start;margin-top:40px">
@@ -133,6 +134,7 @@ td.edge{font-weight:700}
 <!-- 2 DISCLAIMER -->
 
 
+
 <section class="slide">
   <div class="watermark">Confidential</div>
   <div class="eyebrow"><span class="dot"></span>Important notice</div>
@@ -149,6 +151,7 @@ td.edge{font-weight:700}
 </section>
 
 <!-- 3 EXEC SUMMARY -->
+
 
 
 <section class="slide">
@@ -181,6 +184,7 @@ td.edge{font-weight:700}
 <!-- 5 COMPANY SNAPSHOT -->
 
 
+
 <section class="slide">
   <div class="watermark">Confidential</div>
   <div class="eyebrow"><span class="dot"></span>Target snapshot</div>
@@ -194,21 +198,9 @@ td.edge{font-weight:700}
     </div>
     <div class="grid two">
       <div class="card"><h3>Profile</h3><p>Founded 1999, St. George, Utah. Flagship platform <b>TCN Operator</b> (modular platform per the CIP: dialer/telephony, compliance engine, omnichannel, WFM/WFO, AI &amp; automation, payments, reporting/BI). Verticals: <b>collections / accounts-receivable management</b>, BPO, healthcare RCM, utilities; actively expanding UK/EU.</p></div>
-      <div class="card" style="border-color:#5a4a1e"><h3 style="color:var(--gold)">Credit read</h3><p>A genuinely attractive niche credit: ~$60M ARR, ~37% 2026E growth, ~20&rarr;24% EBITDA, clears Rule of 40 (their "Rule of 60" is a 2026E projection), bootstrapped (<b>$0 raised since 1999</b>).</p></div>
+      <div class="card" style="border-color:#5a4a1e"><h3 style="color:var(--gold)">Credit read</h3><p>A genuinely attractive niche credit: ~$60M ARR, ~37% 2026E growth, ~20&rarr;24% EBITDA, clears Rule of 40 (their "Rule of 60" is a 2026E projection), bootstrapped (<b>$0 raised since 1999</b>). But ~14-39x smaller than the scaled CCaaS leaders (below): too small to win an AI R&amp;D arms race. It wins on vertical depth and price.</p></div>
     </div>
   </div>
-  <div class="foot"><span class="conf">Strictly Private &amp; Confidential</span><span>Project Teton &middot; figures per CIP / management</span><span class="pg"></span></div>
-</section>
-
-<!-- 7b CCAAS LANDSCAPE -->
-
-
-<section class="slide">
-  <div class="watermark">Confidential</div>
-  <div class="eyebrow"><span class="dot"></span>Competitive landscape</div>
-  <h2>A niche specialist in a field of <span class="grad">giants</span></h2>
-  <div class="body">
-    
     <div style="margin-top:6px">
       <div class="barrow"><div class="nm">NICE</div><div class="track"><div class="fill hi" style="width:100%"></div></div><div class="rate">~$2.7B</div></div>
       <div class="barrow"><div class="nm">Genesys</div><div class="track"><div class="fill hi" style="width:85%"></div></div><div class="rate">~$2.3B</div></div>
@@ -216,18 +208,18 @@ td.edge{font-weight:700}
       <div class="barrow"><div class="nm">Talkdesk</div><div class="track"><div class="fill md" style="width:8%"></div></div><div class="rate">~$0.2B</div></div>
       <div class="barrow"><div class="nm">TCN</div><div class="track"><div class="fill lo" style="width:2.6%"></div></div><div class="rate">~$69M</div></div>
     </div>
-    <div class="callout verdict"><div class="lbl">Implication</div><div class="q sm">TCN is <b>~14-39&times; smaller</b> than the three scaled leaders (Five9/Genesys/NICE, vs $69M Mar-26 run-rate); only AI-first Talkdesk (~$0.2B) is within ~3&times;. It can't out-spend the majors on AI R&amp;D. It wins by <span class="hl">vertical depth and price</span>. A defensible niche, not an arms-race position.</div></div>
-  </div>
-  <div class="foot"><span class="conf">Strictly Private &amp; Confidential</span><span>Project Teton &middot; revenue figures are third-party estimates</span><span class="pg"></span></div>
+    
+  <div class="foot"><span class="conf">Strictly Private &amp; Confidential</span><span>Project Teton &middot; figures per CIP / management</span><span class="pg"></span></div>
 </section>
 
 <!-- 6 AI ANATOMY -->
 
 
+
 <section class="slide">
   <div class="watermark">Confidential</div>
   <div class="eyebrow"><span class="dot"></span>Platform anatomy</div>
-  <h2>The AI toolbox: what's <span class="grad">actually under the hood</span></h2>
+  <h2>The AI toolbox: <span class="grad">rented parts, buyable compliance</span></h2>
   <div class="body">
     <table>
       <thead><tr><th style="width:24%">Component</th><th style="width:38%">Marketed as</th><th>Under the hood (our assessment)</th></tr></thead>
@@ -242,10 +234,12 @@ td.edge{font-weight:700}
     </table>
     <div class="callout blue"><div class="lbl">Signal</div><div class="q sm">TCN's generative AI (transcription, summaries, QA) runs on third-party LLMs (GPT, Gemini, Mistral, Whisper; CIP p. 36). Its one in-production proprietary model, <b>SmartAMD</b>, is narrow (call classification) but real: answering-machine detection is now an adversarial problem (iOS, Pixel and carrier screeners sit between dialers and humans), and TCN retrains it on its own outcome-labeled dial data at scale. That's a genuine, compounding data loop, and a reason calls stay on TCN's line. It is not a generative or agentic moat. The CIP says "majority of AI in use today is run on TCN's native stack" (p. 35) without stating the counting basis; the only mechanism we can identify that makes it true is per-call SmartAMD execution volume, since every generative feature the CIP itself lists runs on third-party models (p. 36). The CIP also claims in-house Reporting/WFM models and two models in development, which we could not verify. Confirm the denominator and the model inventory on the call.</div></div>
   </div>
+    <div class="callout verdict"><div class="lbl">Why it matters</div><div class="q sm">Compliance is the same story: every peer markets collections compliance (LiveVox's was court-validated as non-ATDS; Skit.ai ships "automatically follows FDCPA, TCPA, Reg F"), and the data underneath is buyable a la carte (DNC.com, Gryphon, PossibleNOW). We credit TCN's depth, per the VDD interviews, but it is a modest <span class="hl">vertical/legal</span> advantage, not an AI one. Strip the label and the "moat" is switching costs + being the last independent specialist after LiveVox was absorbed by NICE.</div></div>
   <div class="foot"><span class="conf">Strictly Private &amp; Confidential</span><span>Project Teton</span><span class="pg"></span></div>
 </section>
 
 <!-- 7 PARITY TABLE -->
+
 
 
 <section class="slide">
@@ -272,34 +266,8 @@ td.edge{font-weight:700}
   <div class="foot"><span class="conf">Strictly Private &amp; Confidential</span><span>Project Teton</span><span class="pg"></span></div>
 </section>
 
-<!-- M1 RENTED-BUYABLE -->
-
-<section class="slide">
-  <div class="watermark">Confidential</div>
-  <div class="eyebrow"><span class="dot"></span>Build vs. buy</div>
-  <h2>The AI is rented; the <span class="grad">compliance data is buyable</span></h2>
-  <div class="body">
-    <div class="grid two">
-      <div class="card" style="border-color:#5a2230"><h3 style="color:var(--red)">Bought / commodity</h3>
-        <p style="margin-top:6px">• ASR: Whisper / Deepgram / AWS Transcribe class<br>• LLMs: OpenAI / Anthropic / AWS<br>• TTS: ElevenLabs / Cartesia / Polly class<br>• <b>Compliance data</b>: DNC, litigator &amp; reassigned-number lists are a commodity market (DNC.com: 70B+ scrubs; PossibleNOW; Gryphon; Blacklist Alliance)</p></div>
-      <div class="card" style="border-color:#1f4d3e"><h3 style="color:var(--grn)">Built / defensible</h3>
-        <p style="margin-top:6px">• Integrated platform &amp; dialer<br>• Contact-eligibility rules engine + NL authoring<br>• <b>Consent / revocation audit ledger</b> (the courtroom record)<br>• Collections-specific workflows &amp; data gravity</p></div>
-    </div>
-    <table>
-      <thead><tr><th style="width:24%">Everyone markets collections compliance</th><th>What they market (claims, not verified)</th></tr></thead>
-      <tbody>
-        <tr><td>LiveVox (now NICE)</td><td>Pioneered "Four Clouds" / Human Call Initiator; court-validated as not an autodialer (non-ATDS) under TCPA</td></tr>
-        <tr><td>Five9 / Convoso / Genesys / Talkdesk</td><td>Dedicated TCPA and debt-collections tooling, guardrails, Reg-F templates</td></tr>
-        <tr><td>Skit.ai (AI-native)</td><td>"Automatically follows FDCPA, TCPA, Reg F" (TCN's NLC pitch, verbatim)</td></tr>
-        <tr><td>DNC.com / Gryphon / PossibleNOW</td><td>Compliance-as-a-service, buyable a la carte</td></tr>
-      </tbody>
-    </table>
-    <div class="callout verdict"><div class="lbl">Why it matters</div><div class="q sm">The VDD's interviews do say peers "lack the compliance features" for collections at scale, and we credit TCN's depth. But compliance <i>marketing</i> is table stakes, the data underneath is buyable, and the AI-natives are shipping compliance-native. Depth is a modest, real <span class="hl">vertical/legal</span> advantage. Not an AI one. Strip the label and the "moat" is switching costs + being the last independent specialist after LiveVox was absorbed by NICE.</div></div>
-  </div>
-  <div class="foot"><span class="conf">Strictly Private &amp; Confidential</span><span>Project Teton</span><span class="pg"></span></div>
-</section>
-
 <!-- 10 THE THESIS -->
+
 
 
 <section class="slide">
@@ -323,6 +291,7 @@ td.edge{font-weight:700}
 </section>
 
 <!-- D1 DISRUPTORS -->
+
 
 <section class="slide">
   <div class="watermark">Confidential</div>
@@ -349,6 +318,7 @@ td.edge{font-weight:700}
 
 <!-- D2 REGULATORY -->
 
+
 <section class="slide">
   <div class="watermark">Confidential</div>
   <div class="eyebrow"><span class="dot"></span>The regulatory layer</div>
@@ -364,6 +334,7 @@ td.edge{font-weight:700}
 </section>
 
 <!-- 10c METRICS -->
+
 
 
 <section class="slide">
@@ -382,28 +353,13 @@ td.edge{font-weight:700}
         <tr><td>Liquidation / recovery lift from AI</td><td class="cap"><span class="hr">Not reported</span> (connect-rate only)</td><td>Intent-to-pay scoring lifts liquidation, cuts collection time (Prodigal)</td></tr>
       </tbody>
     </table>
-    <div class="callout verdict"><div class="lbl">Bottom line</div><div class="q sm">Their numbers prove a good dialer and cheaper QA. That's efficiency. This category gets won on <span class="hl">containment, cost-per-resolution and liquidation</span>, and TCN can't report one of those yet. Strip the AI label and the numbers say: a very good calling platform.</div></div>
+    <div class="callout verdict"><div class="lbl">Bottom line</div><div class="q sm">Their numbers prove a good dialer and cheaper QA: efficiency. The category gets won on <span class="hl">containment, cost-per-resolution and liquidation</span>, where TCN cannot yet report a number. And the AI revenue plan prices $0.30/min <b>flat for five years</b> to reach <b>$174M+ of AI ARR</b> (CIP p. 68), while the COGS of an AI voice minute runs ~$0.05-0.10, model costs fall ~40%+ a year, and self-serve platforms retail at $0.07-0.15/min. Feasible product, fantasy price curve: don't credit it.</div></div>
   </div>
   <div class="foot"><span class="conf">Strictly Private &amp; Confidential</span><span>Project Teton · TCN figures are single-customer CIP case studies (SmartAMD: n=1, 1.6M calls); competitor figures are vendor marketing</span><span class="pg"></span></div>
 </section>
 
-<!-- D3 UNIT ECONOMICS -->
-
-<section class="slide">
-  <div class="watermark">Confidential</div>
-  <div class="eyebrow"><span class="dot"></span>AI voice unit economics</div>
-  <h2>The margin is plausible today. The <span class="grad">flat price is not</span></h2>
-  <div class="body">
-    <div class="grid two">
-      <div class="card"><h3>What an AI voice minute costs (mid-2026)</h3><p>&bull; Speech-to-text: ~$0.005-0.01<br>&bull; LLM inference: ~$0.01-0.03<br>&bull; Text-to-speech: ~$0.02-0.04<br>&bull; Telephony: ~$0.005-0.01<br><b>All-in COGS: ~$0.05-0.10/min.</b> At the CIP's $0.30/min price, TCN's claimed ~80% AI gross margin is credible <i>today</i>.</p></div>
-      <div class="card" style="border-color:#5a2230"><h3 style="color:var(--red)">The assumption that breaks</h3><p>The CIP's model holds the AI price at <b>$0.30/min flat for five years</b> to reach <b>$174M+ of AI agent ARR</b> (CIP p. 68). Meanwhile model costs have been falling ~40%+ per year, self-serve voice-agent platforms retail at $0.07-0.15/min, and the AI-natives price per <b>outcome</b>, not per minute. Price compression, not technical feasibility, is what kills that curve.</p></div>
-    </div>
-    <div class="callout verdict"><div class="lbl">Credit read</div><div class="q sm">Don't credit the $174M. The AI upside case rests on a five-year flat price in the fastest-deflating pricing environment in software. Feasible product, fantasy price curve.</div></div>
-  </div>
-  <div class="foot"><span class="conf">Strictly Private &amp; Confidential</span><span>Project Teton</span><span class="pg"></span></div>
-</section>
-
 <!-- D4 SIZING HEADWIND -->
+
 
 <section class="slide">
   <div class="watermark">Confidential</div>
@@ -427,6 +383,7 @@ td.edge{font-weight:700}
 
 <!-- D5 STEELMAN -->
 
+
 <section class="slide">
   <div class="watermark">Confidential</div>
   <div class="eyebrow"><span class="dot"></span>The other side of the argument</div>
@@ -448,6 +405,7 @@ td.edge{font-weight:700}
 </section>
 
 <!-- M2 TESTS SCORED -->
+
 
 <section class="slide">
   <div class="watermark">Confidential</div>
@@ -472,6 +430,7 @@ td.edge{font-weight:700}
 
 <!-- M3 HEADWIND SCREEN -->
 
+
 <section class="slide">
   <div class="watermark">Confidential</div>
   <div class="eyebrow"><span class="dot"></span>A repeatable screen for the book</div>
@@ -490,6 +449,7 @@ td.edge{font-weight:700}
 </section>
 
 <!-- D6 VERDICT -->
+
 
 <section class="slide">
   <div class="watermark">Confidential</div>
@@ -520,6 +480,7 @@ td.edge{font-weight:700}
 <!-- 12 KPIs -->
 
 
+
 <section class="slide">
   <div class="watermark">Confidential</div>
   <div class="eyebrow"><span class="dot"></span>Monitoring &amp; required reporting</div>
@@ -538,6 +499,7 @@ td.edge{font-weight:700}
 </section>
 
 <!-- 13c MGMT CALL TOPICS -->
+
 
 
 <section class="slide">
@@ -561,6 +523,7 @@ td.edge{font-weight:700}
 <!-- 14 APPENDIX -->
 
 
+
 <section class="slide">
   <div class="watermark">Confidential</div>
   <div class="eyebrow"><span class="dot"></span>Appendix</div>
@@ -568,31 +531,14 @@ td.edge{font-weight:700}
   <div class="body">
     <div class="grid three">
       <div class="card"><h3>Primary sources</h3><p class="src">TCN (tcn.com): AI, Operator, NLC, voice-analytics, careers, case studies, press releases (2025).<br>Competitors: Five9, NICE, Talkdesk newsrooms; CX Today.<br>Compliance market: DNC.com / Contact Center Compliance, PossibleNOW, Blacklist Alliance.<br>Profiles: Crunchbase, ZoomInfo, PitchBook, Top Workplaces; G2 / Capterra reviews.<br>BSP: Franklin Templeton disclosures (2025-26).</p></div>
-      <div class="card"><h3>Method &amp; evidence for the four hardest claims</h3><p class="src">&bull; "0 customers / $0 agentic at end-2025": inferred from CIP p. 54 ("AI Voice Agent: First Customer in April 2026") and p. 55 ($1M 2026E plan). As of this writing (June 2026): one named customer; CIP p. 56 separately claims "early deployment at select large accounts", so reconcile the count on the call.<br>&bull; Leadership/AI-talent: based on CIP org pages and public bios (company site, LinkedIn), searched June 2026; no named AI/ML leader found. Negative evidence; test on the call.<br>&bull; Skit.ai runs end-to-end collections calls with bundled telephony: vendor site and public case studies, June 2026.<br>&bull; Disruptor valuations/ARR: Decagon $4.5B (Bloomberg/TechCrunch, Jan-Mar 2026), Sierra $15.8B and ~$200M ARR (TechCrunch/CNBC, May 2026), Cresta $100M+ ARR (Axios, Apr 2026), Parloa $3B (TechCrunch, Jan 2026); private-market marks, unaudited.</p></div>
+      <div class="card"><h3>Method &amp; evidence for the four hardest claims</h3><p class="src">&bull; "0 customers / $0 agentic at end-2025": inferred from CIP p. 54 ("AI Voice Agent: First Customer in April 2026") and p. 55 ($1M 2026E plan). As of this writing (June 2026): one named customer; CIP p. 56 separately claims "early deployment at select large accounts", so reconcile the count on the call.<br>&bull; Leadership/AI-talent: based on CIP org pages and public bios (company site, LinkedIn), searched June 2026; no named AI/ML leader found. Negative evidence; test on the call.<br>&bull; Skit.ai runs end-to-end collections calls with bundled telephony: vendor site and public case studies, June 2026.<br>&bull; Disruptor valuations/ARR: Decagon $4.5B (Bloomberg/TechCrunch, Jan-Mar 2026), Sierra $15.8B and ~$200M ARR (TechCrunch/CNBC, May 2026), Cresta $100M+ ARR (Axios, Apr 2026), Parloa $3B (TechCrunch, Jan 2026); private-market marks, unaudited.<br>&bull; AI voice COGS stack (mid-2026, advisor estimate): ASR ~$0.005-0.01/min, LLM ~$0.01-0.03, TTS ~$0.02-0.04, telephony ~$0.005-0.01; ~$0.05-0.10 all-in, consistent with the CIP's claimed ~80% AI gross margin at $0.30/min.</p></div>
       <div class="card"><h3>Glossary</h3><p class="src"><b>CCaaS</b>. Contact center as a service. <b>ARM</b>. Accounts-receivable management (collections). <b>ASR</b>. Automatic speech recognition. <b>NLC</b>. TCN's Natural Language Compliance. <b>Agentic AI</b>: AI that autonomously completes multi-step tasks. <b>Containment</b>: % of interactions fully handled by AI with no human. <b>RPC</b>: right-party contact. <b>GRR/NRR</b>: gross/net revenue retention. <b>Dial path</b>: the telephony route a call takes (carrier, numbers, reputation). <b>AMD</b>: answering-machine detection. <b>FDE</b>: forward-deployed engineering. <b>STIR/SHAKEN</b>: caller-ID attestation standards. <b>ATDS</b>: automatic telephone dialing system (autodialer) under TCPA. <b>SIP</b>: the standard protocol for routing voice calls over the internet. <b>RAG</b>: retrieval-augmented generation, an LLM answering from a document store. <b>TCPA / Reg F</b>. US telemarketing &amp; debt-collection rules.</p></div>
     </div>
     
   </div>
   <div class="foot"><span class="conf">Strictly Private &amp; Confidential</span><span>Project Teton · Prepared for Benefit Street Partners</span><span class="pg"></span></div>
 </section>
-<!-- M4 APPENDIX B PLAN BAR -->
 
-
-<section class="slide">
-  <div class="watermark">Confidential</div>
-  <div class="eyebrow"><span class="dot"></span>Appendix: the bar for management's AI plan</div>
-  <h2>What a credible AI plan <span class="grad">must contain</span></h2>
-  <div class="body">
-    <p class="sub">Test management's roadmap against this bar on the call. A credible plan doesn't bolt bots onto human calls; it takes one workflow, makes the AI run it end to end, keeps it on TCN's phone lines, then expands:</p>
-    <div class="grid three">
-      <div class="card"><div class="tag">Now &middot; 0-6 mo</div><h3 style="margin-top:8px">Pick one workflow, own the line</h3><p>One high-volume, scriptable workflow (first-party reminders, inbound payment, promise-to-pay). A forward-deployed team to build it. Defaulted onto TCN's own telephony so the AI call stays on TCN's pipes. Containment, cost-per-resolution and liquidation tracked from day one.</p></div>
-      <div class="card" style="border-color:#5a4a1e"><div class="tag gold">Next &middot; 6-18 mo</div><h3 style="margin-top:8px">Run it end to end, price on outcomes</h3><p>That workflow fully autonomous with compliance in the loop: deterministic pre-call eligibility gating, template-constrained amounts and disclosures, escalation triggers, 100% post-call audit. Priced per resolution. Containment and recovery numbers published with named customers. The phone line locked into the contract.</p></div>
-      <div class="card" style="border-color:#1f4d3e"><div class="tag grn">Later &middot; 18-36 mo</div><h3 style="margin-top:8px">Make it most of the volume</h3><p>Automated resolutions become the majority of calls, with the outcome data compounding (the flywheel). Expansion workflow by workflow, then into healthcare RCM. Defended with compliance and the audit record. Build isn't the only path: partnering with or acquiring a collections-AI player, or opening Operator as the compliance/telephony substrate for third-party agents, gets there with less capital.</p></div>
-    </div>
-    <div class="callout blue"><div class="lbl">The test</div><div class="q sm">It's not "do you have AI features." It's "can the AI run the call end to end and keep the phone line on TCN." That's the whole game, and it's exactly what the AI-natives are already doing.</div></div>
-  </div>
-  <div class="foot"><span class="conf">Strictly Private &amp; Confidential</span><span>Project Teton</span><span class="pg"></span></div>
-</section>
 
 
 </div>
