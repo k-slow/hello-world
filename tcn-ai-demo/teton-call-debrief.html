@@ -1,0 +1,64 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<title>Teton Call Debrief (Internal)</title>
+<style>
+@page{size:Letter portrait;margin:0}
+:root{--ink:#1b2430;--muted:#5c6672;--rule:#d5dbe3;--navy:#1f3a5f;--band1:#152b46;--band2:#25456b;--soft:#f5f7fa;--good:#1f5c46;--bad:#8f2f42}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font:11.5px/1.45 "Helvetica Neue",Arial,sans-serif;color:var(--ink);background:#fff}
+.page{width:8.5in;min-height:11in;margin:0 auto}
+.band{background:linear-gradient(120deg,var(--band1),var(--band2));color:#fff;padding:22px 46px 16px}
+.band .mark{font:600 10px/1 sans-serif;letter-spacing:.34em;color:#c8d6e8}
+.band h1{font-size:18px;margin:7px 0 3px;font-weight:700}
+.band .sub{font-size:11.5px;color:#c7d2e0}
+.body{padding:16px 46px 0}
+.bluf{border:1px solid var(--rule);border-left:3px solid var(--navy);background:var(--soft);padding:10px 14px;margin-bottom:12px;font-size:12px;line-height:1.5}
+h2{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--navy);margin:11px 0 6px;padding-bottom:4px;border-bottom:1px solid var(--rule);font-weight:700}
+ul{list-style:none}
+li{position:relative;padding-left:14px;margin:4px 0;line-height:1.42}
+li:before{content:"";position:absolute;left:0;top:6px;width:5px;height:5px;background:var(--navy)}
+li.g:before{background:var(--good)} li.b:before{background:var(--bad)}
+b{font-weight:700}
+.sig{margin-top:12px;padding-top:8px;border-top:1px solid var(--rule);font-size:9px;color:#9aa4b2;line-height:1.45}
+</style></head>
+<body><div class="page">
+<div class="band">
+  <div class="mark">PROJECT TETON &nbsp;&middot;&nbsp; INTERNAL &nbsp;&middot;&nbsp; DO NOT FORWARD</div>
+  <h1>Management Call Debrief: AI &amp; Technology</h1>
+  <div class="sub">TCN management call, July 13 &middot; K. Slowinski, Independent AI &amp; Technology Advisor &middot; attendees: Terrel (CEO), Jesse (CTO), Darrin (GTM), Adam (CFO)</div>
+</div>
+<div class="body">
+  <div class="bluf"><b>Bottom line:</b> the thesis held. Agentic revenue is still "de minimis" (their word): a couple of production customers, 8-15 implementing, ~150 evaluating, and management confirmed <b>none of the projections bank on AI revenue</b>. They admitted "quite a lot of downsell" behind the 98%-logo / 81%-GRR gap. The live demo was deferred to a follow-up session, and no containment or cost-per-resolution numbers were offered. Two things did move in TCN's favor and deserve honest credit: SmartAMD's attach curve, and an unprompted claim that third-party voice agents already run <b>through</b> TCN's plumbing. And one process reveal changes the frame: this is a founder-exit equity raise with lending attached.</div>
+
+  <h2>Confirmed (thesis intact)</h2>
+  <ul>
+    <li>Virtual-agent revenue near zero: "still de minimis, most are still in trials." Funnel: ~150 evaluating, 8-15 in implementation, "a couple" in production. Projections exclude AI revenue by their own statement.</li>
+    <li>Retention: "We don't have a problem with logos churning. We have quite a lot of upsell and downsell." The GRR bridge is still owed in writing.</li>
+    <li>Displacement exposure: revenue is 75-80% voice (~60/40 outbound/inbound), so the displaceable channel is most of the company.</li>
+    <li>Roadmap gave no dates or owners; the CIP's two in-development items (predictive optimization, real-time audio intelligence) were never mentioned.</li>
+    <li>Demo deferred to a separate session. Not a refusal, but the follow-up session now decides the AI question.</li>
+  </ul>
+
+  <h2>Moved in TCN's favor (credit these honestly)</h2>
+  <ul>
+    <li class="g"><b>SmartAMD traction is real:</b> GA May, "on pace for $600K ARR" by mid-July on one feature. Claims: 20% lift in &gt;40-second human conversations, 5-7% of screened calls now actionable, 10-15% collections lift, a $3K-spend / $25K-collected ROI case. Small but fast, and it's their one proprietary model doing it.</li>
+    <li class="g"><b>Dial-path retention, from their side, unprompted:</b> "Anybody who wants to do anything with virtual agents in credit and collections almost always has to run through TCN at least a little bit... they run through our plumbing." They also claim 30-40 customers run third-party agents through TCN today "that aren't doing very well." If verified, this is the strongest credit-positive fact of the call: third-party agents arriving through, not around, TCN.</li>
+    <li class="g"><b>Deployment friction may be lower than the AI-native norm:</b> "configuration, not code"; a simple KYC agent stands up "in a couple of hours"; customers can self-configure with professional-services assist. Either a real advantage or a claim that dies in the demo. Test it live, timed.</li>
+    <li class="g">Stack: reasoning runs on Gemini today (OpenAI/Anthropic tried; self-hosted open source being explored); they claim telephony, STT, TTS, guardrails, tools and deterministic logic are in-house. The in-house STT/TTS claim needs written confirmation.</li>
+  </ul>
+
+  <h2>New facts to bank</h2>
+  <ul>
+    <li>Agentic economics per management: 30% substitution of human conversations = +$125M revenue; 40% = voice revenue to $167M; explicitly not in the 30-35% growth plan.</li>
+    <li>Sweet spot 50-300 agents, ~$60K ACV, 30-60 day sales cycles; Finvi base holds ~$70M of takeable competitor revenue; ~$9B of payments flow through the platform unmonetized; 31 M&amp;A targets (~$300M acquirable revenue) identified.</li>
+    <li><b>Process reveal:</b> Terrel is 76 and "backing out." Closing ask: "alongside the equity support we're looking for is really the lending support too." Founder-exit equity sale with debt attached. Succession, and who runs AI after the transition, is now a first-order diligence item.</li>
+  </ul>
+
+  <h2>Still owed / next step</h2>
+  <ul>
+    <li class="b">The live demo session (this week): live, off-script, production environment, timed live configuration of a new agent, plus containment and cost-per-resolution from production customers. Watch for an IVR/DTMF flow presented as the AI agent.</li>
+    <li class="b">In writing: GRR bridge (8 quarters, churn vs downsell by segment); ARR split committed vs volume-based; agent-funnel detail with ARR and go-live dates; SmartAMD cohort data behind the $600K pace and lift claims; stack clarification (in-house STT/TTS?); AI org and leadership; roadmap with dates and owners; evidence for the third-party-agents-through-TCN claim and what TCN monetizes per such call.</li>
+  </ul>
+
+  <div class="sig">Companion documents: Teton Deck, Teton Memo, Teton Management Call (full question bank), Teton Call Prep. Follow-up request list (external) accompanies this debrief.</div>
+</div>
+</div></body></html>
