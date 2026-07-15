@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TCN AI teardown — live demo</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22%3E%3Ctext y=%2214%22 font-size=%2214%22%3E%F0%9F%93%9E%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>TCN AI components — reverse-engineered demo</h1>
+  <p class="sub">Rebuilding the "AI" pieces of TCN's contact-center platform over
+  <b>100 synthetic collections contacts</b> + <b>12 call transcripts</b>.
+  Verdict: the AI is commodity; the only defensible piece is the
+  compliance eligibility engine + the tamper-evident audit ledger.</p>
+</header>
+
+<section class="card">
+  <h2>1 · Natural Language Compliance <span class="tag">live</span></h2>
+  <p>Type a compliance rule in plain English. It parses to machine rules and runs
+  real-time eligibility over all 100 contacts — every block carries an audit reason.</p>
+  <textarea id="rule" rows="2">Don't call anyone in New York, skip national DNC numbers, and no more than 5 attempts in 7 days</textarea>
+  <div class="examples">
+    Try:
+    <button class="ex">no calls before 9am or after 8pm</button>
+    <button class="ex">block Florida and Texas, require written consent</button>
+    <button class="ex">skip national DNC, max 3 attempts</button>
+  </div>
+  <div id="parsed" class="parsed"></div>
+  <div class="counts"><span id="allow" class="ok"></span><span id="block" class="no"></span></div>
+  <table id="elig"><thead><tr><th>ID</th><th>Name</th><th>St</th><th>Hr</th>
+    <th>Consent</th><th>Decision</th><th>Reasons</th></tr></thead><tbody></tbody></table>
+</section>
+
+<section class="card">
+  <h2>2 · Conversational Analytics &nbsp;+&nbsp; 3 · Auto-QA <span class="tag dim">precomputed</span></h2>
+  <p>Every call scored for FDCPA risk + a QA rubric. <b id="fails"></b></p>
+  <table id="analytics"><thead><tr><th>Call</th><th>Channel</th><th>Sentiment</th>
+    <th>Risk</th><th>QA</th><th>Grade</th><th>Flags</th></tr></thead><tbody></tbody></table>
+</section>
+
+<section class="card">
+  <h2>5 · Consent / Revocation Audit Ledger <span class="tag gold">the moat piece</span></h2>
+  <p>Append-only, hash-chained. The courtroom record — not the AI.</p>
+  <div id="ledger"></div>
+</section>
+
+<footer>
+  <p>All data fabricated; regulatory rules simplified for demo, not legal advice.
+  Source &amp; full analysis: the project README and PR.</p>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

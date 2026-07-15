@@ -1,0 +1,13 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "builds": [
+    { "src": "tcn-ai-demo/live-demo.html", "use": "@vercel/static" },
+    { "src": "tcn-ai-demo/web/**", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/", "dest": "/tcn-ai-demo/live-demo.html" },
+    { "src": "/web", "dest": "/tcn-ai-demo/web/index.html" },
+    { "src": "/web/(.*)", "dest": "/tcn-ai-demo/web/$1" },
+    { "src": "/(.*)", "dest": "/tcn-ai-demo/web/$1" }
+  ]
+}

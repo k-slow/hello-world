@@ -1,0 +1,163 @@
+{
+  "rows": [
+    {
+      "id": "T01",
+      "channel": "voice",
+      "sentiment": "positive",
+      "risk": 0,
+      "qa": 100,
+      "grade": "PASS",
+      "flags": []
+    },
+    {
+      "id": "T02",
+      "channel": "voice",
+      "sentiment": "neutral",
+      "risk": 75,
+      "qa": 45,
+      "grade": "FAIL",
+      "flags": [
+        {
+          "label": "Threat / false legal claim (FDCPA 807)",
+          "severity": 3
+        },
+        {
+          "label": "Missing mini-Miranda disclosure (FDCPA 807(11))",
+          "severity": 2
+        }
+      ]
+    },
+    {
+      "id": "T03",
+      "channel": "voice",
+      "sentiment": "negative",
+      "risk": 75,
+      "qa": 50,
+      "grade": "FAIL",
+      "flags": [
+        {
+          "label": "Cease-and-desist expressed by consumer",
+          "severity": 3
+        },
+        {
+          "label": "Missing mini-Miranda disclosure (FDCPA 807(11))",
+          "severity": 2
+        }
+      ]
+    },
+    {
+      "id": "T04",
+      "channel": "voice",
+      "sentiment": "neutral",
+      "risk": 75,
+      "qa": 38,
+      "grade": "FAIL",
+      "flags": [
+        {
+          "label": "Possible third-party disclosure (FDCPA 805)",
+          "severity": 3
+        },
+        {
+          "label": "Missing mini-Miranda disclosure (FDCPA 807(11))",
+          "severity": 2
+        }
+      ]
+    },
+    {
+      "id": "T05",
+      "channel": "voice",
+      "sentiment": "positive",
+      "risk": 0,
+      "qa": 100,
+      "grade": "PASS",
+      "flags": []
+    },
+    {
+      "id": "T06",
+      "channel": "voice",
+      "sentiment": "negative",
+      "risk": 60,
+      "qa": 45,
+      "grade": "FAIL",
+      "flags": [
+        {
+          "label": "Abusive / harassing language (FDCPA 806)",
+          "severity": 2
+        },
+        {
+          "label": "Missing mini-Miranda disclosure (FDCPA 807(11))",
+          "severity": 2
+        }
+      ]
+    },
+    {
+      "id": "T07",
+      "channel": "voice",
+      "sentiment": "neutral",
+      "risk": 30,
+      "qa": 70,
+      "grade": "FAIL",
+      "flags": [
+        {
+          "label": "Missing mini-Miranda disclosure (FDCPA 807(11))",
+          "severity": 2
+        }
+      ]
+    },
+    {
+      "id": "T08",
+      "channel": "voice",
+      "sentiment": "positive",
+      "risk": 0,
+      "qa": 100,
+      "grade": "PASS",
+      "flags": []
+    },
+    {
+      "id": "T09",
+      "channel": "sms",
+      "sentiment": "negative",
+      "risk": 0,
+      "qa": 78,
+      "grade": "FAIL",
+      "flags": []
+    },
+    {
+      "id": "T10",
+      "channel": "voice",
+      "sentiment": "positive",
+      "risk": 0,
+      "qa": 100,
+      "grade": "PASS",
+      "flags": []
+    },
+    {
+      "id": "T11",
+      "channel": "voice",
+      "sentiment": "neutral",
+      "risk": 75,
+      "qa": 50,
+      "grade": "FAIL",
+      "flags": [
+        {
+          "label": "Possible third-party disclosure (FDCPA 805)",
+          "severity": 3
+        },
+        {
+          "label": "Missing mini-Miranda disclosure (FDCPA 807(11))",
+          "severity": 2
+        }
+      ]
+    },
+    {
+      "id": "T12",
+      "channel": "voice",
+      "sentiment": "positive",
+      "risk": 0,
+      "qa": 88,
+      "grade": "PASS",
+      "flags": []
+    }
+  ],
+  "fails": 7
+}

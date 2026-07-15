@@ -1,0 +1,41 @@
+:root{--bg:#0d1117;--card:#161b22;--ln:#30363d;--tx:#e6edf3;--dim:#8b949e;
+--ok:#3fb950;--no:#f85149;--gold:#d29922;--hd:#58a6ff}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);
+font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
+header,section,footer{max-width:1000px;margin:0 auto;padding:0 20px}
+header{padding-top:36px}
+h1{color:var(--hd);margin:0 0 6px;font-size:26px}
+.sub{color:var(--dim);max-width:760px}
+.card{background:var(--card);border:1px solid var(--ln);border-radius:10px;
+padding:20px;margin:20px auto}
+h2{margin:0 0 6px;font-size:19px}
+.tag{font-size:11px;font-weight:600;padding:2px 8px;border-radius:20px;
+background:#1f6feb33;color:var(--hd);vertical-align:middle;margin-left:6px}
+.tag.dim{background:#8b949e22;color:var(--dim)}
+.tag.gold{background:#d2992222;color:var(--gold)}
+p{color:var(--dim)}
+textarea{width:100%;background:#0d1117;color:var(--tx);border:1px solid var(--ln);
+border-radius:8px;padding:10px;font:14px/1.4 ui-monospace,Menlo,monospace;resize:vertical}
+.examples{margin:10px 0;color:var(--dim);font-size:13px}
+button.ex{background:#21262d;color:var(--tx);border:1px solid var(--ln);
+border-radius:6px;padding:4px 9px;margin:3px;cursor:pointer;font-size:12px}
+button.ex:hover{border-color:var(--hd)}
+.parsed{font:12px ui-monospace,monospace;color:var(--gold);margin:8px 0;min-height:18px}
+.counts{margin:10px 0;font-weight:600}
+.counts .ok{color:var(--ok);margin-right:18px}
+.counts .no{color:var(--no)}
+table{width:100%;border-collapse:collapse;margin-top:10px;font-size:13px}
+th,td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--ln);vertical-align:top}
+th{color:var(--dim);font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.04em}
+td.ok{color:var(--ok);font-weight:600}
+td.no{color:var(--no);font-weight:600}
+.reasons{color:var(--dim);font-size:12px}
+.grade-PASS{color:var(--ok);font-weight:600}
+.grade-FAIL{color:var(--no);font-weight:600}
+.lrow{display:flex;gap:10px;padding:7px 0;border-bottom:1px solid var(--ln);font-size:14px}
+.lrow .k{color:var(--dim);min-width:230px}
+.lrow .good{color:var(--ok);font-weight:600}
+.lrow .bad{color:var(--no);font-weight:600}
+.lhash{font:12px ui-monospace,monospace;color:var(--dim)}
+footer{color:var(--dim);font-size:12px;padding:10px 20px 50px;text-align:center}
