@@ -14,7 +14,7 @@ Run:  python3 sweep_sensitivity.py            # writes results into Press_Model_
 import openpyxl, os, shutil, json, sys, datetime
 
 MODEL = '/home/user/hello-world/Press_Model_v2.xlsx'
-NDRS = [0.80, 0.85, 0.90, 0.95, 1.00]
+NDRS = [0.85, 0.90, 0.95, 1.00, 1.05]
 # engine -> deal NDR rows (col G)
 ENG_DEAL_ROWS = {'_Engine_NR': range(6, 11), '_Engine_R50': range(6, 15), '_Engine_R100': range(6, 15)}
 # summary cells (identical across engines)
