@@ -1,0 +1,118 @@
+<!--
+  Daily digest template for the I-90 land scout.
+
+  Gmail-safe by construction: table layout, inline styles only, no <style> block,
+  no flexbox/grid, no web fonts, no background images, 600px max width.
+  The digest-writer agent fills the {{placeholders}} and drops empty sections
+  entirely (never render a header with nothing under it).
+
+  Placeholders:
+    {{DATE}} {{N_NEW}} {{N_UPDATES}} {{N_TRACKED}}
+    {{SITE_CARDS}} {{UPDATE_ROWS}} {{BTS_CARDS}} {{OFFMARKET_CARDS}}
+    {{BUILDING_CARDS}} {{COVERAGE_NOTE}} {{RUN_NOTES}}
+-->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#f4f5f7;padding:24px 12px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+  <tr><td align="center">
+    <table width="600" cellpadding="0" cellspacing="0" border="0" style="max-width:600px;background-color:#ffffff;border-radius:8px;overflow:hidden;border:1px solid #e1e4e8;">
+
+      <!-- Header -->
+      <tr><td style="background-color:#1a2b3c;padding:20px 24px;">
+        <div style="color:#ffffff;font-size:18px;font-weight:700;line-height:1.3;">I-90 Corridor Land Scout</div>
+        <div style="color:#9fb3c8;font-size:13px;padding-top:4px;">IL-53 to Huntley &middot; 50,000 SF factory site search &middot; {{DATE}}</div>
+      </td></tr>
+
+      <!-- Summary -->
+      <tr><td style="padding:16px 24px;background-color:#f8f9fa;border-bottom:1px solid #e1e4e8;">
+        <span style="font-size:14px;color:#1a2b3c;font-weight:600;">{{N_NEW}} new qualified</span>
+        <span style="font-size:14px;color:#6b7785;"> &middot; {{N_UPDATES}} updates &middot; {{N_TRACKED}} tracked to date</span>
+      </td></tr>
+
+      <!-- ===== NEW SITES ===== -->
+      <tr><td style="padding:20px 24px 4px 24px;">
+        <div style="font-size:12px;font-weight:700;color:#6b7785;letter-spacing:0.6px;text-transform:uppercase;">New Sites</div>
+      </td></tr>
+      <tr><td style="padding:0 24px;">{{SITE_CARDS}}</td></tr>
+
+      <!--
+        SITE CARD pattern - repeat per site. Grade badge colors:
+        A #1a7f37 / B #2f6f9f / C #a06a00 / D #8b3a3a
+      -->
+      <!--
+      <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin:12px 0;border:1px solid #e1e4e8;border-radius:6px;">
+        <tr><td style="padding:14px 16px;">
+          <table width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
+            <td style="font-size:15px;font-weight:700;color:#1a2b3c;line-height:1.35;">{{ADDRESS}}</td>
+            <td align="right" width="52" valign="top">
+              <span style="display:inline-block;background-color:#2f6f9f;color:#ffffff;font-size:12px;font-weight:700;padding:3px 9px;border-radius:11px;">{{GRADE}} {{SCORE}}</span>
+            </td>
+          </tr></table>
+          <div style="font-size:12px;color:#6b7785;padding-top:3px;">{{MUNI}}, {{COUNTY}} County &middot; {{MILES}} mi to {{INTERCHANGE}}</div>
+
+          <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-top:11px;font-size:13px;color:#24292f;">
+            <tr>
+              <td width="33%" style="padding:3px 0;"><span style="color:#6b7785;">Size</span><br><strong>{{ACRES}} ac</strong></td>
+              <td width="33%" style="padding:3px 0;"><span style="color:#6b7785;">Price</span><br><strong>{{PRICE}}</strong></td>
+              <td width="34%" style="padding:3px 0;"><span style="color:#6b7785;">Per acre</span><br><strong>{{PPA}}</strong></td>
+            </tr>
+            <tr>
+              <td style="padding:3px 0;"><span style="color:#6b7785;">Zoning</span><br><strong>{{ZONING}}</strong></td>
+              <td colspan="2" style="padding:3px 0;"><span style="color:#6b7785;">Utilities</span><br><strong>{{UTILITIES}}</strong></td>
+            </tr>
+          </table>
+
+          BADGES - render only those that apply
+          <div style="margin-top:10px;">
+            <span style="display:inline-block;background-color:#fff4e5;color:#8a5300;border:1px solid #ffd9a0;font-size:11px;font-weight:600;padding:2px 8px;border-radius:10px;margin:0 4px 4px 0;">Tight site &mdash; 50k SF + detention is difficult</span>
+            <span style="display:inline-block;background-color:#eef2ff;color:#3a41a0;border:1px solid #c9d0ff;font-size:11px;font-weight:600;padding:2px 8px;border-radius:10px;margin:0 4px 4px 0;">Edge of range &mdash; Hampshire</span>
+            <span style="display:inline-block;background-color:#fdecec;color:#8b2c2c;border:1px solid #f5c2c2;font-size:11px;font-weight:600;padding:2px 8px;border-radius:10px;margin:0 4px 4px 0;">Sewer extension required</span>
+            <span style="display:inline-block;background-color:#f0f2f4;color:#5a6672;border:1px solid #dde1e6;font-size:11px;font-weight:600;padding:2px 8px;border-radius:10px;margin:0 4px 4px 0;">Utilities per listing, unconfirmed</span>
+          </div>
+
+          <div style="margin-top:11px;font-size:13px;color:#24292f;line-height:1.5;">{{WHY_IT_FITS}}</div>
+          <div style="margin-top:8px;padding:9px 11px;background-color:#fffbf0;border-left:3px solid #e0a500;font-size:12.5px;color:#5c4a00;line-height:1.5;"><strong>Watch out:</strong> {{WATCH_OUTS}}</div>
+          <div style="margin-top:8px;padding:9px 11px;background-color:#f0f7f2;border-left:3px solid #1a7f37;font-size:12.5px;color:#14532d;line-height:1.5;"><strong>Next step:</strong> {{NEXT_STEP}}</div>
+          <div style="margin-top:10px;font-size:12px;"><a href="{{URL}}" style="color:#2f6f9f;text-decoration:none;">View listing &rarr;</a></div>
+        </td></tr>
+      </table>
+      -->
+
+      <!-- ===== UPDATES ===== -->
+      <tr><td style="padding:16px 24px 4px 24px;">
+        <div style="font-size:12px;font-weight:700;color:#6b7785;letter-spacing:0.6px;text-transform:uppercase;">Updates</div>
+      </td></tr>
+      <tr><td style="padding:0 24px;font-size:13px;color:#24292f;line-height:1.6;">{{UPDATE_ROWS}}</td></tr>
+
+      <!-- ===== GROUND LEASE / BTS ===== -->
+      <tr><td style="padding:16px 24px 4px 24px;">
+        <div style="font-size:12px;font-weight:700;color:#6b7785;letter-spacing:0.6px;text-transform:uppercase;">Ground Lease / Build-to-Suit Pads</div>
+      </td></tr>
+      <tr><td style="padding:0 24px;">{{BTS_CARDS}}</td></tr>
+
+      <!-- ===== OFF-MARKET ===== -->
+      <tr><td style="padding:16px 24px 4px 24px;">
+        <div style="font-size:12px;font-weight:700;color:#6b7785;letter-spacing:0.6px;text-transform:uppercase;">Off-Market, Municipal &amp; County-Owned</div>
+      </td></tr>
+      <tr><td style="padding:0 24px;">{{OFFMARKET_CARDS}}</td></tr>
+
+      <!-- ===== EXISTING BUILDINGS ===== -->
+      <tr><td style="padding:16px 24px 4px 24px;">
+        <div style="font-size:12px;font-weight:700;color:#6b7785;letter-spacing:0.6px;text-transform:uppercase;">Existing Vacant Industrial Buildings</div>
+        <div style="font-size:12px;color:#6b7785;padding-top:3px;line-height:1.5;">Alternative to ground-up construction. Not scored against the land sites &mdash; different decision.</div>
+      </td></tr>
+      <tr><td style="padding:0 24px;">{{BUILDING_CARDS}}</td></tr>
+
+      <!-- ===== COVERAGE + FOOTER ===== -->
+      <tr><td style="padding:18px 24px 6px 24px;">
+        <div style="padding:11px 13px;background-color:#f8f9fa;border:1px solid #e1e4e8;border-radius:5px;font-size:12px;color:#6b7785;line-height:1.55;">{{COVERAGE_NOTE}}{{RUN_NOTES}}</div>
+      </td></tr>
+
+      <tr><td style="padding:14px 24px 20px 24px;border-top:1px solid #e1e4e8;">
+        <div style="font-size:11.5px;color:#8b95a1;line-height:1.6;">
+          Criteria: vacant/unimproved land &middot; 2+ acres &middot; gas, electric, water and sanitary sewer to the site &middot; I-90 corridor west of IL-53, no further west than Huntley (Hampshire flagged).<br>
+          Retune in <span style="font-family:ui-monospace,SFMono-Regular,Menlo,monospace;color:#5a6672;">land-scout/config.json</span>. Listing data is aggregated from public sources and is not independently appraised &mdash; verify acreage, zoning and utilities before committing capital.
+        </div>
+      </td></tr>
+
+    </table>
+  </td></tr>
+</table>

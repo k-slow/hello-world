@@ -1,0 +1,29 @@
+{
+  "$comment": "Dedupe ledger. Every site the system has ever evaluated is recorded here so it is never emailed twice. This file is committed and pushed at the end of every run - it is the only state that survives between scheduled sessions, because each run starts in a fresh container.",
+  "schema_version": 1,
+  "last_run_utc": null,
+  "last_run_status": "never_run",
+  "runs_completed": 0,
+  "sites": [],
+  "$site_shape": {
+    "id": "stable slug, e.g. huntley-ruth-rd-main-st-10ac",
+    "normalized_address": "lowercased, abbreviations expanded, unit/suite stripped",
+    "pin": "county parcel identification number if known, else null",
+    "listing_url": "canonical source URL",
+    "muni": "Huntley",
+    "county": "McHenry",
+    "acres": 10.0,
+    "price": 1825000,
+    "price_per_acre": 182500,
+    "deal_type": "land_for_sale | ground_lease_bts | off_market | existing_building",
+    "score": 78,
+    "grade": "B",
+    "status": "active | under_contract | sold | withdrawn",
+    "first_seen_utc": "2026-08-16T11:00:00Z",
+    "last_seen_utc": "2026-08-16T11:00:00Z",
+    "times_seen": 1,
+    "reported": true,
+    "rejected_reason": "null when it passed all hard gates, else the gate it failed",
+    "price_history": [{ "utc": "2026-08-16T11:00:00Z", "price": 1825000 }]
+  }
+}

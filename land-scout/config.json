@@ -1,0 +1,230 @@
+{
+  "$comment": "Single source of truth for the I-90 land scouting agents. Edit this file to retune the search; the agents read it every run and never hardcode criteria.",
+  "version": 1,
+  "project": {
+    "name": "I-90 Corridor Industrial Land Search",
+    "objective": "Site a 50,000 SF manufacturing facility on vacant/unimproved land",
+    "recipient": "keslowinski@gmail.com",
+    "timezone": "America/Chicago"
+  },
+
+  "building_program": {
+    "target_building_sf": 50000,
+    "building_footprint_acres": 1.15,
+    "$comment": "50,000 SF single-story = ~1.15 ac of pure footprint. Real industrial sites also need truck court, trailer/auto parking, setbacks, and stormwater detention. Typical suburban Chicago industrial lot coverage runs 25-35%, which puts the practical land need at 3.5-6 acres. The 2.0 ac floor below is the user's stated minimum and is honored as a hard gate, but anything under 3.5 ac is flagged as a tight-site risk rather than silently recommended.",
+    "practical_acres_low": 3.5,
+    "practical_acres_ideal": 5.0,
+    "clear_height_target_ft": 28,
+    "needs_truck_court": true,
+    "needs_stormwater_detention": true
+  },
+
+  "hard_criteria": {
+    "$comment": "A site failing ANY hard gate is rejected and never emailed. These are non-negotiable.",
+    "min_acres": 2.0,
+    "max_acres": null,
+    "land_condition": ["vacant", "unimproved", "raw", "cleared", "farmland", "greenfield", "pad-ready", "shovel-ready"],
+    "utilities_required_to_site": {
+      "natural_gas": true,
+      "electric": true,
+      "potable_water": true,
+      "sanitary_sewer": true
+    },
+    "$utilities_comment": "User elected sanitary sewer as a HARD requirement. 'To site' means the main is at the property line or within a documented, funded extension. Well-and-septic parcels are rejected. This will legitimately exclude many unincorporated Kane/McHenry parcels - that is intended, not a bug.",
+    "geography_must_match": true
+  },
+
+  "soft_criteria": {
+    "$comment": "Do not reject on these. They drive the 0-100 score and the notes column.",
+    "max_miles_to_i90_interchange": 5.0,
+    "preferred_zoning": ["M-1", "M-2", "M-3", "I-1", "I-2", "I-3", "ORI", "PUD-industrial", "light industrial", "general industrial", "manufacturing"],
+    "acceptable_with_rezoning": true,
+    "rail_served_bonus": true,
+    "avoid_flags": ["floodplain", "wetland", "FEMA Zone A", "Zone AE", "conservation easement", "brownfield", "landfill", "quarry", "known contamination", "Superfund", "karst", "high-tension easement bisecting"],
+    "enterprise_zone_bonus": true,
+    "tif_district_bonus": true
+  },
+
+  "geography": {
+    "corridor": "I-90 / Jane Addams Memorial Tollway, Chicago northwest suburbs",
+    "east_boundary": {
+      "line": "IL-53 / I-290",
+      "rule": "Site must be WEST of IL-53/I-290. Reject anything east of that line (Arlington Heights, Rolling Meadows east side, Des Plaines, Elk Grove Village, O'Hare submarket)."
+    },
+    "west_boundary": {
+      "line": "IL-47 / Huntley interchange",
+      "rule": "Huntley is the stated western bound. The US-20/Hampshire interchange, one exit west, is IN RANGE but must be labeled 'edge of range' in the digest. Reject anything west of Hampshire (Marengo, Belvidere, Rockford, Boone County)."
+    },
+    "north_south_band_miles": 6,
+    "$band_comment": "Corridor means proximity to I-90. Stay within roughly 6 miles north or south of the I-90 mainline. A parcel in far-south Kane County (Aurora, Sugar Grove, Elburn) is NOT the I-90 corridor even though it is in the right county - it belongs to the I-88 corridor. Reject those.",
+
+    "in_scope_municipalities": {
+      "cook": ["Schaumburg", "Hoffman Estates", "Streamwood", "South Barrington", "Barrington Hills", "Hanover Park", "Bartlett"],
+      "kane": ["Elgin", "South Elgin", "Carpentersville", "West Dundee", "East Dundee", "Sleepy Hollow", "Gilberts", "Pingree Grove", "Hampshire", "Burlington"],
+      "mchenry": ["Huntley", "Lake in the Hills", "Algonquin"]
+    },
+    "in_scope_townships": ["Elgin", "Dundee", "Rutland", "Hampshire", "Plato", "Grafton", "Schaumburg", "Hanover"],
+    "in_scope_counties": ["Kane", "McHenry", "Cook (northwest only)"],
+
+    "i90_interchanges_west_to_east": [
+      "US-20 (Hampshire/Marengo) - EDGE OF RANGE",
+      "IL-47 (Huntley) - western bound",
+      "Randall Rd",
+      "IL-31",
+      "IL-25",
+      "Beverly Rd",
+      "IL-59 / Sutton Rd",
+      "Barrington Rd",
+      "Roselle Rd",
+      "IL-53 / I-290 - eastern bound"
+    ],
+
+    "in_scope_zips": ["60142", "60156", "60102", "60140", "60136", "60110", "60118", "60120", "60123", "60124", "60177", "60107", "60103", "60192", "60169", "60195", "60173", "60010"],
+
+    "explicit_exclusions": [
+      "Aurora", "Naperville", "Sugar Grove", "Elburn", "Batavia", "Geneva", "St. Charles",
+      "North Aurora", "Montgomery", "Oswego", "Yorkville", "Plano",
+      "Marengo", "Belvidere", "Rockford", "Woodstock", "Harvard", "Marengo",
+      "Elk Grove Village", "Des Plaines", "Arlington Heights", "Itasca", "Wood Dale", "Bensenville",
+      "Joliet", "Romeoville", "Bolingbrook", "Minooka", "Channahon"
+    ],
+    "$exclusion_comment": "St. Charles/Geneva/Batavia are Kane County but sit on the Fox River well south of I-90 - they are the Randall Rd / IL-38 submarket, not the I-90 corridor. Woodstock and Crystal Lake are McHenry County but north of the corridor band."
+  },
+
+  "deal_types": {
+    "land_for_sale": { "enabled": true, "section": "Land for Sale" },
+    "ground_lease_and_bts": { "enabled": true, "section": "Ground Lease / Build-to-Suit Pads" },
+    "off_market_and_public": { "enabled": true, "section": "Off-Market, Municipal & County-Owned" },
+    "existing_buildings": {
+      "enabled": true,
+      "section": "Existing Vacant Industrial Buildings",
+      "min_sf": 35000,
+      "max_sf": 75000,
+      "$comment": "Reported separately. These are NOT land and are excluded from the land scoring; they are informational alternatives to building."
+    }
+  },
+
+  "utility_providers": {
+    "$comment": "Reference for the underwriter agent when verifying service. Naming the right provider makes utility-availability searches far more accurate.",
+    "electric": ["ComEd (Commonwealth Edison)"],
+    "natural_gas": ["Nicor Gas", "North Shore Gas (limited)"],
+    "water_sewer": [
+      "Municipal systems: City of Elgin, Village of Huntley, Village of Hoffman Estates, Village of Algonquin, Village of Lake in the Hills, Village of Carpentersville, Village of West Dundee, Village of Gilberts, Village of Hampshire, Village of Pingree Grove, City of South Elgin, Village of Schaumburg, Village of Streamwood",
+      "Unincorporated Kane/McHenry parcels are typically private well + septic - these FAIL the hard sewer gate unless annexation with a documented utility extension is in progress"
+    ],
+    "fiber": ["AT&T", "Comcast Business", "Metronet (partial)"],
+    "rail": ["Union Pacific (UP) - Elgin/Huntley line", "Canadian National (CN) - EJ&E belt through Kane/McHenry"]
+  },
+
+  "scoring": {
+    "$comment": "0-100. Computed only for sites that already passed every hard gate.",
+    "weights": {
+      "site_size_fit": 20,
+      "utilities_completeness": 20,
+      "zoning_readiness": 20,
+      "i90_access": 15,
+      "price_per_acre": 15,
+      "site_risk_flags": 10
+    },
+    "price_per_acre_benchmarks": {
+      "$comment": "Rough 2025-2026 corridor comps used to grade value. Refresh periodically; treat as directional, not appraisal.",
+      "excellent_under": 150000,
+      "market_range": [150000, 350000],
+      "rich_over": 450000
+    },
+    "grade_bands": {
+      "A": [85, 100],
+      "B": [70, 84],
+      "C": [55, 69],
+      "D": [0, 54]
+    },
+    "report_threshold": 55,
+    "$threshold_comment": "Sites scoring below this are logged to the ledger (so they are never re-surfaced) but omitted from the email to keep the digest signal-dense."
+  },
+
+  "sources": {
+    "$comment": "tier1 = queried via WebSearch every run. tier2 = deep-fetched via WebFetch ONLY IF the environment egress policy permits (see README 'Unblocking deep fetch'). The runbook probes and degrades gracefully.",
+    "tier1_marketplaces": [
+      "crexi.com", "loopnet.com", "landsearch.com", "landwatch.com",
+      "land.com", "catylist.com", "totalcommercial.com", "commercialsearch.com",
+      "cityfeet.com", "realmo.com", "brevitas.com", "biproxi.com"
+    ],
+    "tier1_brokerages": [
+      "Colliers Chicago", "CBRE Chicago", "JLL Chicago", "Cushman & Wakefield Chicago",
+      "Lee & Associates Chicago", "NAI Hiffman", "Darwin Realty", "Podolsky Circle",
+      "Paine Wetzel", "Kiser Group", "RVG Commercial", "Premier Commercial Realty",
+      "Marcus & Millichap"
+    ],
+    "tier1_public_and_econdev": [
+      "Village of Huntley economic development available sites",
+      "City of Elgin economic development / Elgin Development Group",
+      "Village of Hoffman Estates economic development",
+      "Village of Hampshire / Gilberts / Pingree Grove development",
+      "Village of Algonquin / Lake in the Hills economic development",
+      "Kane County economic development available properties",
+      "McHenry County Economic Development Corporation (MCEDC) site inventory",
+      "Illinois DCEO Vetted Sites / Megasites program",
+      "Intersect Illinois site selection database",
+      "ComEd economic development site database",
+      "Nicor Gas economic development",
+      "Kane County / McHenry County land bank and tax-deed surplus parcels",
+      "Huntley Corporate Park",
+      "Elgin Enterprise Zone / Kane County Enterprise Zone parcels"
+    ],
+    "tier2_parcel_gis": [
+      "Kane County Assessor / KaneGIS parcel viewer",
+      "McHenry County GIS / parcel lookup",
+      "Cook County Assessor parcel search",
+      "FEMA National Flood Hazard Layer",
+      "USFWS National Wetlands Inventory",
+      "Illinois EPA site remediation (SRP) database"
+    ]
+  },
+
+  "query_templates": {
+    "$comment": "The scouts expand {placeholders} against geography.in_scope_municipalities and run these through WebSearch. Vary phrasing across runs so results are not identical day over day.",
+    "for_sale": [
+      "industrial land for sale {muni} IL acres vacant zoned",
+      "commercial vacant land for sale {muni} Illinois {acres} acres utilities",
+      "{muni} IL land for sale industrial development site I-90",
+      "vacant industrial lot {muni} Illinois price per acre listing"
+    ],
+    "new_listing_bias": [
+      "new listing industrial land {muni} IL {month} {year}",
+      "just listed vacant commercial land Kane County McHenry County I-90 {month} {year}"
+    ],
+    "bts_ground_lease": [
+      "build to suit industrial {muni} Illinois I-90 corridor pad ready",
+      "{muni} IL business park lots available ground lease industrial"
+    ],
+    "off_market": [
+      "{muni} Illinois village owned land available for development industrial",
+      "Kane County McHenry County shovel ready certified industrial site I-90"
+    ],
+    "existing_buildings": [
+      "50000 sf industrial building for sale {muni} Illinois vacant",
+      "industrial warehouse manufacturing building for sale {muni} IL 40000 60000 square feet"
+    ]
+  },
+
+  "delivery": {
+    "channel": "gmail",
+    "to": ["keslowinski@gmail.com"],
+    "subject_template": "I-90 Land Scout - {n_new} new site(s) - {date}",
+    "subject_when_empty": "I-90 Land Scout - no new sites - {date}",
+    "send_when_empty": true,
+    "$empty_comment": "A short 'nothing new today, N sites still tracked' note is sent so silence is never ambiguous between 'no results' and 'the job broke'.",
+    "max_sites_per_email": 25
+  },
+
+  "ledger": {
+    "path": "land-scout/ledger/seen.json",
+    "dedupe_keys": ["normalized_address", "pin", "listing_url"],
+    "resurface_if": {
+      "price_drop_pct": 5,
+      "acreage_changed": true,
+      "status_changed": true
+    },
+    "$resurface_comment": "A previously-seen site reappears in the digest under 'Updates' only on a material change - a price cut of 5%+, a corrected acreage, or a status flip (under contract / sold / withdrawn)."
+  }
+}
