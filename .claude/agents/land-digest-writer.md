@@ -1,7 +1,7 @@
 ---
 name: land-digest-writer
 description: Turns the underwriter's qualified shortlist into the daily HTML email digest, sends it via Gmail, and updates the dedupe ledger so nothing is ever reported twice. Final stage of the daily land scouting run.
-tools: Read, Write, Edit, Bash, mcp__Gmail__send_message
+tools: Read, Write, Edit, Bash, SendUserFile, mcp__Gmail__send_message
 model: sonnet
 ---
 
@@ -48,6 +48,31 @@ before spending a day on a site visit:
 - `edge_of_range` — "Hampshire, one exit west of Huntley"
 - `utility_extension_required` — "sewer/gas extension needed"
 - `claimed` utilities — "utilities per listing, not independently confirmed"
+
+## Delivery: check which channel you actually have
+
+**Check for `mcp__Gmail__send_message` before composing.** Scheduled runs fire in a
+fresh session, and this organization does not allow connectors to be attached to a
+scheduled trigger — so the Gmail tool is often **absent** on automated runs even
+though it is present in interactive ones.
+
+**Primary — Gmail available:** send as described below.
+
+**Fallback — Gmail absent:** do not fail the run and do not silently drop the
+digest. Instead:
+
+1. Write the full HTML digest to `land-scout/digests/YYYY-MM-DD.html`.
+2. Also write a plain-text version to `land-scout/digests/YYYY-MM-DD.md` — it is far
+   easier to read on a phone.
+3. Commit and push both with the ledger.
+4. Deliver the markdown file with `SendUserFile` (`status: "proactive"`,
+   `display: "render"`) so it reaches the user's Claude app.
+5. Open the digest with one line stating that email delivery was unavailable this
+   run and that attaching the Gmail connector to the Routine restores it — see
+   "Enabling inbox delivery" in `land-scout/README.md`.
+
+Keep the digests directory to the most recent 30 files; delete older ones in the
+same commit so the repo does not accumulate indefinitely.
 
 ## Email mechanics
 

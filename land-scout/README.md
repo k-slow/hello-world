@@ -127,6 +127,34 @@ msc.fema.gov         fws.gov
 No code change is needed. The agents detect reachability at runtime and upgrade
 themselves to deep-fetch verification on the next run.
 
+## Enabling inbox delivery
+
+There is a second platform constraint worth knowing about, separate from egress.
+
+This organization **does not permit connectors to be attached to a scheduled
+Routine** created programmatically. The Gmail tool is available in interactive
+sessions but is **absent when the daily trigger fires**, so automated runs cannot
+send email out of the box.
+
+The system degrades rather than failing: when Gmail is unavailable the digest
+writer saves the digest to `land-scout/digests/YYYY-MM-DD.{html,md}`, commits and
+pushes it, and delivers the markdown to your Claude app. You still get the results
+daily — just not in your inbox.
+
+**To restore true inbox delivery (one time, ~2 minutes):** recreate the Routine from
+the claude.ai UI, where connectors *can* be attached.
+
+1. Go to **claude.ai → Settings → Routines** (or the Routines tab in Claude Code on
+   the web) and delete the existing "I-90 Corridor Land Scout — daily".
+2. Create a new Routine: schedule **daily at 6:00 AM Central**, environment set to
+   the same one this repo uses, and **attach the Gmail connector**.
+3. Paste the prompt stored in [`trigger-prompt.md`](./trigger-prompt.md) as the
+   Routine's instruction.
+
+Once Gmail is attached, the digest writer detects it automatically and emails
+`keslowinski@gmail.com` — no code change needed. The file-based fallback simply
+stops being used.
+
 ## Tuning
 
 Everything lives in **`config.json`** — every agent reads it at the start of every

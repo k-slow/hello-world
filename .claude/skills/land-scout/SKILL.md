@@ -75,11 +75,23 @@ on the land rubric and go straight to the digest as a separate section.
 
 Pass the underwriter's output plus the building scout's output to
 `land-digest-writer`. It composes the Gmail-safe HTML digest from
-`land-scout/templates/email.html`, sends to the address in `config.delivery.to`,
-then updates and **pushes** the ledger.
+`land-scout/templates/email.html`, delivers it, then updates and **pushes** the
+ledger.
 
-Send even on an empty day — `config.delivery.send_when_empty` is `true`. Silence is
-ambiguous between "nothing new" and "the job broke."
+Delivery has two paths, and the writer picks based on what is actually available:
+
+- **`mcp__Gmail__send_message` present** → email `config.delivery.to`.
+- **Absent** → write `land-scout/digests/YYYY-MM-DD.{html,md}`, commit and push, and
+  deliver the markdown with `SendUserFile`.
+
+The second path is the normal case for **scheduled** runs: this organization does
+not allow connectors to be attached to a programmatically-created Routine, so the
+Gmail tool is usually missing when the trigger fires. That is expected, not an
+error. `land-scout/README.md` documents the one-time UI step that restores inbox
+delivery.
+
+Deliver even on an empty day — `config.delivery.send_when_empty` is `true`. Silence
+is ambiguous between "nothing new" and "the job broke."
 
 ## Run notes to surface in the email
 

@@ -209,6 +209,10 @@
 
   "delivery": {
     "channel": "gmail",
+    "fallback_channel": "repo_file_and_senduserfile",
+    "fallback_dir": "land-scout/digests",
+    "fallback_retention_days": 30,
+    "$fallback_comment": "This organization does not allow connectors to be attached to a programmatically-created Routine, so mcp__Gmail__send_message is usually absent when the daily trigger fires. The digest writer detects this and falls back to committing the digest to fallback_dir and delivering it via SendUserFile. See 'Enabling inbox delivery' in README.md for the one-time UI step that restores email.",
     "to": ["keslowinski@gmail.com"],
     "subject_template": "I-90 Land Scout - {n_new} new site(s) - {date}",
     "subject_when_empty": "I-90 Land Scout - no new sites - {date}",
