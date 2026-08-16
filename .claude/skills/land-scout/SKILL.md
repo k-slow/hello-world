@@ -64,8 +64,9 @@ run notes — a partial run that is honestly labeled beats a failed one.
 
 Pass the listing and off-market candidates to `land-underwriter` (single agent, it
 needs the whole set at once to dedupe across scouts). It applies the hard gates —
-geography, 2-acre floor, vacancy, and **all four utilities including sanitary sewer
-as a hard requirement** — then scores survivors 0–100 and returns a shortlist plus
+geography, the 3.5–15 ac window, vacancy, and **all four utilities including
+sanitary sewer as a hard requirement** — then scores survivors 0–100 and returns a
+shortlist plus
 an audited rejection list.
 
 The building scout's output **bypasses the underwriter** — buildings are not scored
@@ -108,7 +109,7 @@ Be straight with the buyer about coverage. Include, when they apply:
   diligence on a site that does not exist as described.
 - **Reject on uncertainty at the hard gates**, but only after actually trying to
   verify. The scouts optimize recall; the underwriter optimizes precision.
-- **Flag, don't bury, the exceptions** — tight sites under 3.5 ac, Hampshire's
+- **Flag, don't bury, the exceptions** — oversize sites over 15 ac, Hampshire's
   edge-of-range location, and utility extensions all get visible badges.
 - **Push the ledger.** An unpushed ledger is a lost ledger.
 

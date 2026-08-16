@@ -11,23 +11,25 @@ emails a qualified, scored shortlist.
 | **Corridor** | I-90, west of IL-53/I-290, no further west than Huntley (IL-47). Hampshire/US-20 included but flagged *edge of range*. |
 | **Band** | Within ~6 miles north or south of the I-90 mainline |
 | **Counties** | Kane, McHenry, northwest Cook |
-| **Size** | 2.0 acres minimum (hard floor); 3.5–6 ac is the practical sweet spot |
+| **Size** | 3.5–15 acres. Not scored down anywhere in that range; 15–25 ac surfaces flagged "over target"; above 25 ac rejected |
 | **Condition** | Vacant, unimproved, raw, farmland, cleared, or pad-ready |
 | **Utilities** | Natural gas + electric + water + **sanitary sewer**, all to the site — all four are hard gates |
 | **Deal types** | Land for sale, ground lease / build-to-suit pads, off-market & publicly-owned sites, plus existing ~35–75k SF buildings in a separate section |
 | **Delivery** | Daily email to `keslowinski@gmail.com`, 6:00 AM Central |
 
-### Why 2 acres passes but gets flagged
+### Why the floor is 3.5 acres
 
 A 50,000 SF single-story building is about **1.15 acres of footprint**. Add truck
 court, trailer and auto parking, setbacks, and stormwater detention, and suburban
 Chicago industrial sites typically run 25–35% lot coverage — putting the real need
-at **3.5–6 acres**.
+at **3.5–6 acres**. Below 3.5 ac the building plus detention does not realistically
+fit, so the search simply starts there.
 
-The 2.0 acre floor is honored exactly as specified, but any site between 2.0 and
-3.4 acres is badged **"tight site"** in the digest, because fitting 50,000 SF plus
-detention on it is genuinely difficult and may require a variance. The system does
-not silently drop them, and it does not silently recommend them either.
+Within **3.5–15 acres, size is not scored at all** — a 4-acre site and a 13-acre
+site get identical marks on that dimension. Two things are noted in the write-up
+rather than the score: a 3.5–4.0 ac site fits the building but leaves no room to
+expand, and on a 10–15 ac site the digest says whether the excess is subdividable or
+resaleable, since you would be carrying land you will not immediately use.
 
 ### Why sanitary sewer matters more than you'd think
 
@@ -41,10 +43,18 @@ So the underwriter treats *incorporation status* as a first-class question and d
 not trust the mailing address to answer it — parcels routinely carry a village name
 while sitting outside its corporate limits.
 
-One important exception is built in: villages here will often extend mains for a
-50,000 SF manufacturing user. If an annexation-plus-extension is documented, the
-site **passes** and is badged "extension required" with the cost and timeline
-exposure called out, rather than being thrown away.
+The standard is **"some kind of sewer."** Three forms clear the gate, ranked:
+
+1. **Municipal sanitary main** at or adjacent to the property line — clean, full marks.
+2. **Documented, funded extension**, usually via annexation. Passes, badged
+   "extension required," with cost and timeline exposure called out. Villages here
+   will often extend mains for a 50,000 SF manufacturing user, so this is checked
+   before any unincorporated parcel is rejected.
+3. **Permitted or clearly permittable engineered on-site treatment system** sized for
+   the use. Passes, with the IEPA permitting risk flagged.
+
+An ordinary residential septic field does not count, and neither does a listing that
+just asserts "all utilities available" with nothing behind it.
 
 ## The agents
 

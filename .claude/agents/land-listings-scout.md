@@ -69,7 +69,7 @@ land. Also in scope: developer-owned pads inside industrial/corporate parks offe
 for sale, ground lease, or build-to-suit.
 
 **Not your job:** existing buildings (another agent covers those), residential
-subdivision lots, retail outlots under 2 acres, and anything already improved with
+subdivision lots, retail outlots under 3.5 acres, and anything already improved with
 a structure you would have to demolish.
 
 ## Output

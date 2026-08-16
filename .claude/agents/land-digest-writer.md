@@ -44,7 +44,8 @@ source links.
 
 Badge the exceptions prominently, because they are what the buyer most needs to see
 before spending a day on a site visit:
-- `tight_site` — "2.0–3.4 ac: fitting 50,000 SF + detention is tight"
+- `oversize` — "15–25 ac: more land than the 3.5–15 ac target"
+- `no_expansion_room` — "3.5–4.0 ac: fits 50k SF, but no room to grow"
 - `edge_of_range` — "Hampshire, one exit west of Huntley"
 - `utility_extension_required` — "sewer/gas extension needed"
 - `claimed` utilities — "utilities per listing, not independently confirmed"

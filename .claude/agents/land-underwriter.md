@@ -51,7 +51,9 @@ county trap: Aurora, Sugar Grove, Elburn, Batavia, Geneva, St. Charles and
 North Aurora are Kane County but on the **I-88** corridor — reject. Woodstock,
 Harvard and most of Crystal Lake are McHenry County but north of the band — reject.
 
-**Gate 2 — Acreage.** At least `config.hard_criteria.min_acres` (2.0). If acreage is
+**Gate 2 — Acreage.** At least `config.hard_criteria.min_acres` (3.5) and no more
+than `config.hard_criteria.hard_reject_above_acres` (25). Sites between
+`max_acres` (15) and 25 pass but set `oversize: true`. If acreage is
 unstated, try to derive it from price and price-per-acre or from a parcel record,
 and mark it `inferred`. If you cannot establish acreage at all, reject with
 `acreage_unverifiable` rather than guessing.
@@ -79,11 +81,19 @@ that phrase is marketing and is frequently false for raw parcels. Verify:
   has both. An **unincorporated** Kane or McHenry parcel is typically private well
   and septic and **fails this gate**.
 
-  Before rejecting an unincorporated parcel, check one thing: is annexation with a
-  utility extension being offered? Villages in this corridor will often extend mains
-  for a 50,000 SF manufacturing user. If an extension is documented, the site
-  **passes** — record the evidence, set `utility_extension_required: true`, and note
-  the likely cost and timeline exposure.
+  The sewer standard is **"some kind of sewer"** — three forms satisfy the gate, and
+  you should rank them, per `config.hard_criteria.sewer_acceptable_forms`:
+
+  1. **Municipal sanitary main** at or adjacent to the property line. Clean; full marks.
+  2. **Documented, funded extension**, typically via annexation. Passes, but set
+     `utility_extension_required: true` and state the cost and timeline exposure.
+     Villages in this corridor will often extend mains for a 50,000 SF manufacturing
+     user, so always check for this before rejecting an unincorporated parcel.
+  3. **Permitted or clearly permittable engineered on-site treatment system** sized
+     for a 50,000 SF manufacturing use. Passes, but flag the IEPA permitting risk.
+
+  What does **not** satisfy the gate: an ordinary residential septic field, or a bare
+  "all utilities available" assertion with no supporting evidence.
 
   Determining incorporation status is therefore a core part of your job. Search the
   municipality's boundaries and the parcel's jurisdiction; do not assume from the
@@ -99,14 +109,20 @@ but is capped — see scoring.
 
 Use `config.scoring.weights`.
 
-- **Site size fit (20).** Real capacity for a 50,000 SF building. The building alone
-  is ~1.15 acres of footprint, but truck court, parking, setbacks and stormwater
-  detention put the practical need at 3.5–6 acres at typical 25–35% coverage. Score
-  5.0–8.0 ac highest. **A 2.0–3.4 ac site passes the buyer's stated floor but must be
-  flagged `tight_site: true`** with a plain explanation that fitting 50,000 SF plus
-  detention there is difficult and may require a variance or structured parking.
-  Score 15+ acres lower on fit — the buyer pays for land they will not use, though
-  note it if the excess is subdividable or supports future expansion.
+- **Site size fit (20).** The buyer has stated that **anything from 3.5 to 15 acres
+  is equally acceptable** — so do **not** score down within that band. A 4-acre site
+  and a 13-acre site both score full marks here. Resist the temptation to invent a
+  preference the buyer explicitly said they do not have.
+
+  Two things you *do* note, in `why_it_fits` or `watch_outs` rather than in the score:
+  a 3.5–4.0 ac site fits the building but leaves essentially no room for future
+  expansion; and on a 10–15 ac site the buyer is carrying land they will not
+  immediately use, so it is worth saying whether the excess is subdividable or
+  resaleable.
+
+  Sites in the 15–25 ac `oversize_band` set `oversize: true` and take a modest
+  deduction here — real carrying cost against an unstated benefit. Above 25 ac,
+  the acreage gate already rejected it.
 - **Utilities completeness (20).** All four `verified` scores full. `claimed` caps
   this at 60% of the weight. Extension-required sites take a further penalty scaled
   to the documented distance and cost.
@@ -172,7 +188,7 @@ Return **JSON only** — no prose, no markdown fences.
       "incorporated": true,
       "nearest_interchange": "IL-47 (Huntley)",
       "miles_to_i90": 0.8,
-      "tight_site": false,
+      "oversize": false,
       "edge_of_range": false,
       "risk_flags": [],
       "bonuses": ["Enterprise Zone"],

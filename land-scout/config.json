@@ -11,9 +11,11 @@
   "building_program": {
     "target_building_sf": 50000,
     "building_footprint_acres": 1.15,
-    "$comment": "50,000 SF single-story = ~1.15 ac of pure footprint. Real industrial sites also need truck court, trailer/auto parking, setbacks, and stormwater detention. Typical suburban Chicago industrial lot coverage runs 25-35%, which puts the practical land need at 3.5-6 acres. The 2.0 ac floor below is the user's stated minimum and is honored as a hard gate, but anything under 3.5 ac is flagged as a tight-site risk rather than silently recommended.",
+    "$comment": "50,000 SF single-story = ~1.15 ac of pure footprint. Real industrial sites also need truck court, trailer/auto parking, setbacks, and stormwater detention. Typical suburban Chicago industrial lot coverage runs 25-35%, which puts the practical land need at 3.5-6 acres. The floor was raised from 2.0 to 3.5 ac so the search now starts where a 50k SF building actually fits - the old 'tight site' band no longer exists.",
     "practical_acres_low": 3.5,
     "practical_acres_ideal": 5.0,
+    "efficient_band_acres": [4.0, 10.0],
+    "$efficient_comment": "Not a filter. 3.5-4.0 ac fits the building but leaves essentially no room for future expansion, so the digest notes that rather than scoring it down.",
     "clear_height_target_ft": 28,
     "needs_truck_court": true,
     "needs_stormwater_detention": true
@@ -21,8 +23,12 @@
 
   "hard_criteria": {
     "$comment": "A site failing ANY hard gate is rejected and never emailed. These are non-negotiable.",
-    "min_acres": 2.0,
-    "max_acres": null,
+    "min_acres": 3.5,
+    "max_acres": 15.0,
+    "$acreage_comment": "Floor raised to 3.5 ac - below that a 50k SF building plus truck court, parking and detention does not realistically fit. Ceiling set at 15 ac per the buyer: anywhere in 3.5-15 ac is equally acceptable and size is NOT scored down within that band. Sites above 15 ac are not hard-rejected outright; see oversize_band.",
+    "oversize_band_acres": [15.0, 25.0],
+    "$oversize_comment": "15-25 ac sites still surface, badged 'over target - excess acreage'. They are worth seeing when the excess is subdividable, resaleable, or supports future expansion, since the buyer is paying for land they will not immediately use. Above 25 ac, reject.",
+    "hard_reject_above_acres": 25.0,
     "land_condition": ["vacant", "unimproved", "raw", "cleared", "farmland", "greenfield", "pad-ready", "shovel-ready"],
     "utilities_required_to_site": {
       "natural_gas": true,
@@ -30,7 +36,8 @@
       "potable_water": true,
       "sanitary_sewer": true
     },
-    "$utilities_comment": "User elected sanitary sewer as a HARD requirement. 'To site' means the main is at the property line or within a documented, funded extension. Well-and-septic parcels are rejected. This will legitimately exclude many unincorporated Kane/McHenry parcels - that is intended, not a bug.",
+    "$utilities_comment": "Sanitary sewer stays a HARD requirement - the buyer confirmed no-sewer is a deal killer. But the standard is 'some kind of sewer', so THREE things satisfy this gate: (1) municipal sanitary main at or adjacent to the property line, (2) a documented and funded main extension, typically via annexation, or (3) a permitted or clearly permittable engineered on-site treatment system sized for a 50k SF manufacturing use. What does NOT satisfy it: an ordinary residential septic field, or a listing that merely asserts 'utilities available' with no evidence. Rank the three in that order in scoring - option 1 is clean, 2 carries cost and timeline risk, 3 carries permitting and IEPA risk.",
+    "sewer_acceptable_forms": ["municipal_main_to_site", "documented_funded_extension", "permitted_engineered_onsite_system"],
     "geography_must_match": true
   },
 
