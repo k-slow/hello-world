@@ -50,35 +50,81 @@ before spending a day on a site visit:
 - `utility_extension_required` — "sewer/gas extension needed"
 - `claimed` utilities — "utilities per listing, not independently confirmed"
 
-## Delivery: check which channel you actually have
+## Delivery — file first, verify, then send
 
-**Check for `mcp__Gmail__send_message` before composing.** Scheduled runs fire in a
-fresh session, and this organization does not allow connectors to be attached to a
-scheduled trigger — so the Gmail tool is often **absent** on automated runs even
-though it is present in interactive ones.
+**Never compose the digest inline in a send call.** A send is irreversible: once a
+malformed email leaves, no amount of correcting can un-deliver it, and a follow-up
+"ignore the last one" email is itself noise in the buyer's inbox. Always go through
+a file on disk, so there is something you can inspect before anything is sent.
 
-**Primary — Gmail available:** send as described below.
+Follow this order exactly. Do not reorder it, and do not collapse steps.
 
-**Fallback — Gmail absent:** do not fail the run and do not silently drop the
-digest. Instead:
+**Step 1 — Write both files.**
+- Full HTML digest to `land-scout/digests/YYYY-MM-DD.html`
+- Plain-text version to `land-scout/digests/YYYY-MM-DD.md` (easier to read on a phone)
 
-1. Write the full HTML digest to `land-scout/digests/YYYY-MM-DD.html`.
-2. Also write a plain-text version to `land-scout/digests/YYYY-MM-DD.md` — it is far
-   easier to read on a phone.
-3. Commit and push both with the ledger.
-4. Deliver the markdown file with `SendUserFile` (`status: "proactive"`,
-   `display: "render"`) so it reaches the user's Claude app.
-5. Open the digest with one line stating that email delivery was unavailable this
-   run and that attaching the Gmail connector to the Routine restores it — see
-   "Enabling inbox delivery" in `land-scout/README.md`.
+**Step 2 — Verify what you actually wrote. This gate is mandatory.**
+Read both files back and confirm every one of these. If any check fails, fix the
+file and re-verify — do not proceed to Step 3:
+
+- Each file is **at least 2,000 bytes**. A digest with real sites is far larger; a
+  small file means the content never made it in.
+- Neither file contains the literal strings `placeholder`, `TODO`, `TBD`, `lorem`,
+  or `XXX`.
+- **No unreplaced template tokens remain** — search for `{{` and confirm zero hits.
+  A surviving `{{SITE_CARDS}}` means the substitution silently failed.
+- The **first ranked site's address appears verbatim** in both files. This is the
+  single strongest proof that real content, not scaffolding, reached the page.
+- The site count you claim in the summary line matches the number of cards you
+  actually rendered.
+
+A quick way to run the mechanical half of this:
+
+```bash
+D=land-scout/digests/$(date -u +%F)
+for f in "$D.html" "$D.md"; do
+  [ -s "$f" ] || { echo "FAIL missing $f"; continue; }
+  b=$(wc -c < "$f")
+  [ "$b" -ge 2000 ] || echo "FAIL $f only $b bytes"
+  grep -qiE 'placeholder|lorem ipsum|\bTODO\b|\bTBD\b|\bXXX\b' "$f" && echo "FAIL $f has placeholder text"
+  grep -q '{{' "$f" && echo "FAIL $f has unreplaced tokens"
+done
+```
+
+Then confirm the top site's address by eye — the script cannot do that part for you.
+
+**Step 3 — Deliver, using whichever channel exists.**
+
+Check whether `mcp__Gmail__send_message` is available. Scheduled runs fire in a
+fresh session and this organization does not allow connectors on a scheduled
+trigger, so the Gmail tool is often **absent** on automated runs even though it is
+present in interactive ones.
+
+- **Gmail available:** send, passing the verified file contents as `htmlBody` and
+  the verified markdown as the plain-text `body`. Pass the file contents you just
+  read and checked — never a freshly composed string.
+- **Gmail absent:** do not fail the run and do not silently drop the digest.
+  Deliver the markdown with `SendUserFile` (`status: "proactive"`,
+  `display: "render"`), and open the digest with one line noting that email was
+  unavailable this run and that attaching the Gmail connector to the Routine
+  restores it — see "Enabling inbox delivery" in `land-scout/README.md`.
+
+**Step 4 — Commit and push** the digests with the ledger.
+
+**If you do send something broken anyway:** say so plainly in your final report to
+the orchestrator, naming the exact subject line and timestamp so it can be found and
+deleted. Do not send a correction email on your own initiative — that puts a second
+unwanted message in the buyer's inbox to apologize for the first. One clear report
+beats two emails.
 
 Keep the digests directory to the most recent 30 files; delete older ones in the
 same commit so the repo does not accumulate indefinitely.
 
 ## Email mechanics
 
-Send with `mcp__Gmail__send_message` to `config.delivery.to`, passing both
-`htmlBody` and a plain-text `body` fallback.
+Send to `config.delivery.to` with `mcp__Gmail__send_message`, passing the verified
+HTML as `htmlBody` and the verified markdown as the plain-text `body`. Send exactly
+once per run.
 
 Gmail strips `<style>` blocks and does not support flexbox or grid — **use inline
 styles on every element and table-based layout**. Keep the palette neutral and
@@ -86,13 +132,17 @@ high-contrast; do not rely on background images or web fonts. Target 600px width
 it reads on a phone.
 
 Subject line from `config.delivery.subject_template`, or `subject_when_empty` when
-there is nothing new. **Always send, even on an empty day** — a "no new sites, 34
+there is nothing new. **Always deliver, even on an empty day** — a "no new sites, 34
 still tracked" note tells the buyer the system ran. Silence is ambiguous between "no
 results" and "the job crashed," and that ambiguity is worse than a boring email.
 
+An empty day is not an exemption from Step 2. The byte floor drops (an empty digest
+is legitimately short), but the placeholder, unreplaced-token, and count checks all
+still apply.
+
 ## Updating the ledger
 
-After the email sends successfully, update `land-scout/ledger/seen.json`:
+After delivery succeeds, update `land-scout/ledger/seen.json`:
 
 - Add every newly evaluated site — **including rejected ones**, with their
   `rejected_reason`. This is what stops the scouts from re-surfacing the same
