@@ -47,10 +47,14 @@ git checkout claude/midwest-machine-shop-agents-55r814
 
 Two Routines fire a fresh session each weekday morning (US Central):
 
-| Routine | Time | Agent |
-|---|---|---|
-| Deal Scout — Listings | 6:30am CT | `listing-scout` |
-| Deal Scout — Adjacent | 7:15am CT | `adjacent-scout` |
+| Routine | Time | Agent | Trigger ID |
+|---|---|---|---|
+| Deal Scout — Listings | 6:30am CT, Mon–Fri | `listing-scout` | `trig_01FceeXGgRErhUrfQjD5jzFF` |
+| Deal Scout — Adjacent | 7:15am CT, Mon–Fri | `adjacent-scout` | `trig_015vWxKe2GgikSz8btYqVbgM` |
+
+Cron is stored in UTC (`30 11 * * 1-5` and `15 12 * * 1-5`), which is CDT.
+**When daylight saving ends in November these shift an hour later in local
+time** — retime them to `30 12` and `15 13` to hold 6:30/7:15am CST.
 
 They are staggered so the two runs do not commit to the same files at the same
 time. Each run reads the tracker, does its sweep, appends and updates rows,
